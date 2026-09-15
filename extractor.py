@@ -15,15 +15,14 @@ headers = {
 
 all_apps = []
 
-print("Starting to fetch all pages and apps...")
+print("Starting to fetch all apps and dynamic links from CheckOver...")
 
-# ماڵپەڕەکە نزیکەی 160 پەڕەی هەیە، دەتوانیت مەوداکە دیاری بکەیت
+# گەڕان بەناو هەموو پەڕەکاندا بۆ وەرگرتنی نوێترین داتا
 for page in range(1, 161):
   url = f"{base_url}{page}"
   try:
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
-      # دۆزینەوەی داتای JSON لە ناو تگی data-pageـی HTMLـدا
       match = re.search(r'data-page="([^"]+)"', response.text)
       if match:
         html_escape_decoded = (
@@ -34,7 +33,6 @@ for page in range(1, 161):
         )
         page_data = json.loads(html_escape_decoded)
 
-        # وەرگرتنی لیستی یارییەکان لە paginator data
         paginator = (
             page_data.get("props", {})
             .get("paginator", {})
@@ -48,32 +46,32 @@ for page in range(1, 161):
           version = app.get("version")
           size = app.get("size")
           uuid = app.get("uuid")
-          download_page = f"https://check0ver.net/en/iapps/{uuid}"
+          bundle = app.get("bundle")
+          
+          # لینکی ڕەسەن و کارا کە ڕاستەوخۆ دەبەسترێتەوە بە ماڵپەڕەکەوە
+          app_link = f"https://check0ver.net/en/iapps/{uuid}"
 
           app_info = {
               "name": name,
               "version": version,
               "size": size,
-              "link": download_page,
+              "bundle": bundle,
+              "uuid": uuid,
+              "link": app_link,
           }
           all_apps.append(app_info)
 
-        print(f"Page {page} fetched successfully. Total apps so far: {len(all_apps)}")
+        print(f"Page {page} processed. Total apps: {len(all_apps)}")
     else:
-      print(f"Failed to fetch page {page}, status code: {response.status_code}")
+      break
   except Exception as e:
     print(f"Error on page {page}: {e}")
 
-# پاشەکەوتکردنی هەموو یارییەکان لە فایلێکی تێکستدا
-with open("download_links.txt", "w", encoding="utf-8") as f:
-  for app in all_apps:
-    f.write(
-        f"Name: {app['name']} | Version: {app['version']} | Size:"
-        f" {app['size']}\nLink: {app['link']}\n"
-        "--------------------------------------------------\n"
-    )
+# پاشەکەوتکردنی داتاکان لە فایلی JSON بە ناوی داواکراو
+output_filename = "ashtemobile94.json"
+with open(output_filename, "w", encoding="utf-8") as f:
+  json.dump(all_apps, f, ensure_ascii=False, indent=4)
 
 print(
-    f"Successfully extracted {len(all_apps)} apps and saved to"
-    " download_links.txt!"
+    f"Successfully saved {len(all_apps)} apps into '{output_filename}'!"
 )
