@@ -1,0 +1,28 @@
+name: Run Extractor
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run script
+        run: python extractor.py
+
+      - name: Upload result
+        uses: actions/upload-artifact@v3
+        with:
+          name: extracted-files
+          path: download_links.txt
