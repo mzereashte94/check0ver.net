@@ -11,13 +11,12 @@ headers = {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
         "AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 "
         "Safari/604.1"
-    ),
-    "Accept": "application/json, text/html,application/xhtml+xml",
+    )
 }
 
 apps_list = []
 
-print("Starting extraction and resolving real download links via API...")
+print("Starting fast extraction of all apps and games...")
 
 for page in range(1, 161):
   url = f"{base_url}{page}"
@@ -51,19 +50,8 @@ for page in range(1, 161):
           image_url = app.get("image")
           updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
 
-          # وەرگرتنی لینکی ڕاستەوخۆی داونلۆود لە ڕێگەی API و ڕیدایریکتەکانەوە
-          download_url = f"https://check0ver.net/en/iapps/{uuid}/download"
-          try:
-            r_dl = requests.get(
-                f"https://check0ver.net/api/iapps/{uuid}/download",
-                headers=headers,
-                allow_redirects=True,
-                timeout=3,
-            )
-            if r_dl.status_code in [200, 302]:
-              download_url = r_dl.url
-          except:
-            pass
+          # دابینکردنی لینکی فەرمی پەڕەی یارییەکە بۆ دڵنیابوون لە کارکردنی
+          app_link = f"https://check0ver.net/en/iapps/{uuid}"
 
           numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (
               10**9
@@ -86,8 +74,8 @@ for page in range(1, 161):
               "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
               "badge": "",
               "type": "games",
-              "install_url": download_url,
-              "download_url": download_url,
+              "install_url": app_link,
+              "download_url": app_link,
               "bundleIdentifier": bundle,
               "marketplaceID": "",
               "developerName": "AshteMobile",
@@ -102,7 +90,7 @@ for page in range(1, 161):
                       "version": version,
                       "date": updated_at,
                       "localizedDescription": None,
-                      "downloadURL": download_url,
+                      "downloadURL": app_link,
                       "size": size_bytes,
                       "buildVersion": None,
                       "minOSVersion": "14.0",
@@ -167,6 +155,5 @@ with open(output_filename, "w", encoding="utf-8") as f:
   json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
 print(
-    f"Successfully generated '{output_filename}' with resolved download links"
-    f" for {len(apps_list)} apps!"
+    f"Successfully generated '{output_filename}' with {len(apps_list)} apps!"
 )
