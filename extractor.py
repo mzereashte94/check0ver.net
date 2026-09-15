@@ -15,9 +15,8 @@ headers = {
 
 all_apps = []
 
-print("Starting to fetch all apps and dynamic links from CheckOver...")
+print("Starting to fetch all apps automatically...")
 
-# گەڕان بەناو هەموو پەڕەکاندا بۆ وەرگرتنی نوێترین داتا
 for page in range(1, 161):
   url = f"{base_url}{page}"
   try:
@@ -47,8 +46,6 @@ for page in range(1, 161):
           size = app.get("size")
           uuid = app.get("uuid")
           bundle = app.get("bundle")
-          
-          # لینکی ڕەسەن و کارا کە ڕاستەوخۆ دەبەسترێتەوە بە ماڵپەڕەکەوە
           app_link = f"https://check0ver.net/en/iapps/{uuid}"
 
           app_info = {
@@ -60,18 +57,14 @@ for page in range(1, 161):
               "link": app_link,
           }
           all_apps.append(app_info)
-
-        print(f"Page {page} processed. Total apps: {len(all_apps)}")
     else:
       break
   except Exception as e:
     print(f"Error on page {page}: {e}")
 
-# پاشەکەوتکردنی داتاکان لە فایلی JSON بە ناوی داواکراو
+# دروستکردن و پاشەکەوتکردنی فایلی ashtemobile94.json بە شێوەی ئۆتۆماتیکی
 output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
   json.dump(all_apps, f, ensure_ascii=False, indent=4)
 
-print(
-    f"Successfully saved {len(all_apps)} apps into '{output_filename}'!"
-)
+print(f"Successfully saved {len(all_apps)} apps into '{output_filename}'!")
