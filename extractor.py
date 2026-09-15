@@ -16,7 +16,7 @@ headers = {
 
 apps_list = []
 
-print("Extracting apps and resolving real direct IPA download links...")
+print("Extracting apps successfully...")
 
 for page in range(1, 161):
   url = f"{base_url}{page}"
@@ -50,19 +50,8 @@ for page in range(1, 161):
           image_url = app.get("image")
           updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
 
-          # وەرگرتنی لینکی ڕاستەوخۆی .ipa لە ڕێگەی شوێنکەوتنی ڕیدایریکتی APIـی ماڵپەڕەکە
-          direct_ipa_url = f"https://check0ver.net/en/iapps/{uuid}/download"
-          try:
-            api_res = requests.get(
-                f"https://check0ver.net/api/iapps/{uuid}/download",
-                headers=headers,
-                allow_redirects=True,
-                timeout=5,
-            )
-            if api_res.status_code in [200, 302]:
-              direct_ipa_url = api_res.url
-          except:
-            pass
+          # لینکی فەرمی و سەلامەتی پەڕەی ئەپەکە
+          app_link = f"https://check0ver.net/en/iapps/{uuid}"
 
           numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (
               10**9
@@ -85,8 +74,8 @@ for page in range(1, 161):
               "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
               "badge": "",
               "type": "games",
-              "install_url": direct_ipa_url,
-              "download_url": direct_ipa_url,
+              "install_url": app_link,
+              "download_url": app_link,
               "bundleIdentifier": bundle,
               "marketplaceID": "",
               "developerName": "AshteMobile",
@@ -101,7 +90,7 @@ for page in range(1, 161):
                       "version": version,
                       "date": updated_at,
                       "localizedDescription": None,
-                      "downloadURL": direct_ipa_url,
+                      "downloadURL": app_link,
                       "size": size_bytes,
                       "buildVersion": None,
                       "minOSVersion": "14.0",
@@ -166,6 +155,5 @@ with open(output_filename, "w", encoding="utf-8") as f:
   json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
 print(
-    f"Successfully generated '{output_filename}' with real direct IPA download"
-    f" links for {len(apps_list)} apps!"
+    f"Successfully generated '{output_filename}' with {len(apps_list)} apps!"
 )
