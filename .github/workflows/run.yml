@@ -1,16 +1,17 @@
-name: Update JSON Extractor
+name: Auto Generate JSON Every Minute
 
 on:
   workflow_dispatch:
-  # دەتوانیت کاتیشی بۆ دابنێیت بۆ ئەوەی خۆکارانە ڕۆژانە نوێ ببێتەوە
-  # schedule:
-  #   - cron: '0 0 * * *'
+  schedule:
+    - cron: '* * * * *' # هەموو خولەکێک جارێک خۆکارانە کار دەکات
 
 jobs:
-  run:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # پێویستە بۆ ئەوەی ڕێگەی پێدەن بنووسێت لە گیتهاب
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -18,14 +19,15 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install requests
+      - name: Install dependencies
         run: pip install requests
 
       - name: Run script
         run: python extractor.py
 
-      - name: Upload result
-        uses: actions/upload-artifact@v4
-        with:
-          name: json-file
-          path: ashtemobile94.json
+      - name: Commit and push generated JSON
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add ashtemobile94.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update ashtemobile94.json" && git push)
