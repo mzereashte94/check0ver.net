@@ -11,12 +11,13 @@ headers = {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
         "AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 "
         "Safari/604.1"
-    )
+    ),
+    "Accept": "application/json, text/html,application/xhtml+xml",
 }
 
 apps_list = []
 
-print("Starting fast extraction with direct download links...")
+print("Starting extraction and resolving real download links via API...")
 
 for page in range(1, 161):
   url = f"{base_url}{page}"
@@ -50,8 +51,19 @@ for page in range(1, 161):
           image_url = app.get("image")
           updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
 
-          # لینکی ڕاستەوخۆی داونلۆود بۆ هەر ئەپێک بەپێی uuid
-          direct_download_url = f"https://check0ver.net/en/iapps/{uuid}/download"
+          # وەرگرتنی لینکی ڕاستەوخۆی داونلۆود لە ڕێگەی API و ڕیدایریکتەکانەوە
+          download_url = f"https://check0ver.net/en/iapps/{uuid}/download"
+          try:
+            r_dl = requests.get(
+                f"https://check0ver.net/api/iapps/{uuid}/download",
+                headers=headers,
+                allow_redirects=True,
+                timeout=3,
+            )
+            if r_dl.status_code in [200, 302]:
+              download_url = r_dl.url
+          except:
+            pass
 
           numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (
               10**9
@@ -74,8 +86,8 @@ for page in range(1, 161):
               "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
               "badge": "",
               "type": "games",
-              "install_url": direct_download_url,
-              "download_url": direct_download_url,
+              "install_url": download_url,
+              "download_url": download_url,
               "bundleIdentifier": bundle,
               "marketplaceID": "",
               "developerName": "AshteMobile",
@@ -90,7 +102,7 @@ for page in range(1, 161):
                       "version": version,
                       "date": updated_at,
                       "localizedDescription": None,
-                      "downloadURL": direct_download_url,
+                      "downloadURL": download_url,
                       "size": size_bytes,
                       "buildVersion": None,
                       "minOSVersion": "14.0",
@@ -143,6 +155,8 @@ source_structure = {
             "date": "2026-09-15T00:00:00+00:00",
             "tintColor": "#ff007f",
             "imageURL": "https://t.me/ashtemobile",
+            "notify": True,
+            "url": "https://t.me/ashtemobile",
             "appID": None,
         },
     ],
@@ -153,6 +167,6 @@ with open(output_filename, "w", encoding="utf-8") as f:
   json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
 print(
-    f"Successfully generated '{output_filename}' with direct download links for"
-    f" {len(apps_list)} apps!"
+    f"Successfully generated '{output_filename}' with resolved download links"
+    f" for {len(apps_list)} apps!"
 )
