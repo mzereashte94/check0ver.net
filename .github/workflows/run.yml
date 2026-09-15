@@ -1,15 +1,15 @@
-name: Auto Generate JSON Every Minute
+name: Auto Generate JSON Hourly
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '* * * * *' # هەموو خولەکێک جارێک خۆکارانە کار دەکات
+    - cron: '0 * * * *' # هەموو کاتژمێرێک جارێک خۆکارانە کار دەکات
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # پێویستە بۆ ئەوەی ڕێگەی پێدەن بنووسێت لە گیتهاب
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
