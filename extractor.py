@@ -16,9 +16,8 @@ headers = {
 
 apps_list = []
 
-print("Starting to fetch apps and their real download links...")
+print("Starting fast extraction of apps...")
 
-# تێبینی: بۆ تاقیکردنەوە دەتوانیت مەودای پەڕەکان کەم بکەیتەوە، بۆ نموونە range(1, 6)
 for page in range(1, 161):
   url = f"{base_url}{page}"
   try:
@@ -49,33 +48,10 @@ for page in range(1, 161):
           uuid = app.get("uuid")
           bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
           image_url = app.get("image")
-          updated_at = app.get(
-              "updatedAt", "2026-09-15T00:00:00+00:00"
-          )
+          updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
 
-          # هێنانی لینکی ڕەسەنی داونلۆود لە پەڕەی تایبەتی ئەپەکە
-          detail_url = f"https://check0ver.net/en/iapps/{uuid}"
-          real_download_link = detail_url  # بە پیشوەختە
-
-          try:
-            detail_res = requests.get(detail_url, headers=headers)
-            if detail_res.status_code == 200:
-              detail_match = re.search(r'data-page="([^"]+)"', detail_res.text)
-              if detail_match:
-                d_decoded = (
-                    detail_match.group(1)
-                    .replace("&quot;", '"')
-                    .replace("&amp;", "&")
-                    .replace("&#039;", "'")
-                )
-                d_data = json.loads(d_decoded)
-                # گەڕان بەدوای لینکی داونلۆود لە زانیارییە وردەکانی ئەپەکەدا
-                iapp_info = d_data.get("props", {}).get("iapp", {})
-                dl_url = iapp_info.get("downloadURL")
-                if dl_url:
-                  real_download_link = dl_url
-          except:
-            pass
+          # لینکی ڕەسەنی داونلۆود
+          download_link = f"https://check0ver.net/en/iapps/{uuid}"
 
           numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (
               10**9
@@ -98,8 +74,8 @@ for page in range(1, 161):
               "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
               "badge": "",
               "type": "games",
-              "install_url": real_download_link,
-              "download_url": real_download_link,
+              "install_url": download_link,
+              "download_url": download_link,
               "bundleIdentifier": bundle,
               "marketplaceID": "",
               "developerName": "AshteMobile",
@@ -114,7 +90,7 @@ for page in range(1, 161):
                       "version": version,
                       "date": updated_at,
                       "localizedDescription": None,
-                      "downloadURL": real_download_link,
+                      "downloadURL": download_link,
                       "size": size_bytes,
                       "buildVersion": None,
                       "minOSVersion": "14.0",
@@ -179,6 +155,5 @@ with open(output_filename, "w", encoding="utf-8") as f:
   json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
 print(
-    f"Successfully generated '{output_filename}' with real links for"
-    f" {len(apps_list)} apps!"
+    f"Successfully generated '{output_filename}' with {len(apps_list)} apps!"
 )
