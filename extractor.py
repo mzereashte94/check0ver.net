@@ -8,14 +8,14 @@ base_url = "https://check0ver.net/en/iapps?filter%5BinCategories%5D%5B0%5D=9c60f
 
 headers = {
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    "Accept": "application/json, text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "X-Requested-With": "XMLHttpRequest"
 }
 
-print("1. Connecting directly to https://check0ver.net/ ...")
+print("1. Fetching apps to extract direct IPA links...")
 raw_apps = []
 
-# پشکنینی پەڕەکانی ماڵپەڕەکە بە شێوەیەکی گشتی
-for page in range(1, 10): # دەتوانیت ژمارەکە زیاد بکەیت
+for page in range(1, 10):
     url = f"{base_url}{page}"
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -37,13 +37,12 @@ for page in range(1, 10): # دەتوانیت ژمارەکە زیاد بکەیت
                 raw_apps.extend(paginator)
         else:
             break
-    except Exception as e:
-        print(f"Error fetching page {page}: {e}")
+    except:
         pass
 
-print(f"Successfully connected! Found {len(raw_apps)} items from check0ver.net. Processing links...")
+print(f"Found {len(raw_apps)} apps. Extracting direct .ipa?ref= links...")
 
-def process_app_data(app):
+def get_direct_ipa(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -52,8 +51,27 @@ def process_app_data(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    # بەستەری فەرمی پەڕەی یارییەکە لەناو ماڵپەڕەکەدا
-    web_page_link = f"https://check0ver.net/en/iapps/{uuid}"
+    # لینکی فەرمی API بۆ وەرگرتنی لینکە ڕاستەوخۆکە
+    api_download_url = f"https://check0ver.net/api/iapps/{uuid}/download"
+    fallback_url = f"https://check0ver.net/en/iapps/{uuid}"
+    resolved_ipa_url = fallback_url
+
+    try:
+        # هەوڵدان بۆ گرتنی لینکی ڕاستەوخۆ لە ڕێگەی APIـیەوە
+        res = requests.get(api_download_url, headers=headers, allow_redirects=True, timeout=5)
+        
+        # پشکنینی ئایا لینکێکی .ipa لە وەڵامەکەدا هەیە یان نا
+        if ".ipa" in res.text:
+            # گەڕان بەدوای لینکێکی پڕ لە ref یان .ipa لە ناو وەڵامەکەدا
+            url_match = re.search(r'https?://[^\s<>"]+?\.ipa[^\s<>"]*', res.text)
+            if url_match:
+                resolved_ipa_url = url_match.group(0)
+        elif res.status_code in [301, 302, 303, 307, 308]:
+            loc = res.headers.get("Location", "")
+            if ".ipa" in loc:
+                resolved_ipa_url = loc
+    except:
+        pass
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
     
@@ -74,13 +92,13 @@ def process_app_data(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": web_page_link,
-        "download_url": web_page_link,
+        "install_url": resolved_ipa_url,
+        "download_url": resolved_ipa_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "CheckOver App",
-        "localizedDescription": "Extracted directly from check0ver.net",
+        "subtitle": "Direct IPA Source",
+        "localizedDescription": "Extracted with direct .ipa link.",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -90,7 +108,7 @@ def process_app_data(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": web_page_link,
+                "downloadURL": resolved_ipa_url,
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -106,16 +124,16 @@ def process_app_data(app):
     }
 
 apps_list = []
-with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(process_app_data, raw_apps)
+with concurrent.futures.ThreadPoolExecutor(max_workers=30) as executor:
+    results = executor.map(get_direct_ipa, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
 
 source_structure = {
     "name": "Ashtemobile",
-    "subtitle": "Check0ver Direct Source",
-    "description": "Connected directly to check0ver.net",
+    "subtitle": "Direct IPA Source",
+    "description": "Source with extracted direct IPA links.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -142,4 +160,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Successfully processed {len(apps_list)} apps from check0ver.net into {output_filename}.")
+print(f"Done! Processed {len(apps_list)} apps with direct link extraction.")
