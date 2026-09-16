@@ -1,101 +1,52 @@
-import os
-import json
-import subprocess
-import concurrent.futures
 import cloudscraper
+import re
 
-GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY")
-RELEASE_TAG = "tryipa-files"
-
-# دروستکردنی بەشی Releases بۆ فایلی نوێ
-subprocess.run(
-    ["gh", "release", "create", RELEASE_TAG, "--title", "TryIPA Files", "--notes", "Automated IPA uploads from TryIPA"], 
-    env=os.environ, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
-)
-
-existing_files = []
-try:
-    out = subprocess.check_output(["gh", "release", "view", RELEASE_TAG, "--json", "assets"], env=os.environ)
-    existing_files = [asset["name"] for asset in json.loads(out).get("assets", [])]
-except:
-    pass
-
-print("Fetching apps list from tryipa.com using Cloudscraper...")
-
-# لێرەدا کێشەکە چارەسەر کرا، گۆڕدرا بۆ chrome
+print("=== HUNTING FOR HIDDEN API ===")
 scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'ios', 'mobile': True})
-api_url = "https://tryipa.com/api/apps" 
+url = "https://tryipa.com/ipa-library"
 
 try:
-    response = scraper.get(api_url, timeout=15)
-    try:
-        all_apps = response.json()
-    except Exception as e:
-        print("Failed to parse JSON. Website returned this instead (Blocked):")
-        print(response.text[:300]) 
-        all_apps = []
-except Exception as e:
-    print(f"Failed to connect to website: {e}")
-    all_apps = []
-
-print(f"Found {len(all_apps)} apps.")
-
-# بۆ تاقیکردنەوە، تەنها یەکەم 5 بەرنامە وەردەگرین بۆ ئەوەی کات زۆر نەبات
-apps_to_process = all_apps[:5]
-
-def process_app(app):
-    name = app.get("name", "Unknown")
-    version = app.get("version", "1.0")
-    download_url = app.get("download_url")
+    res = scraper.get(url, timeout=15)
     
-    if not download_url:
-        print(f"No download URL for {name}")
-        return None
-
-    safe_name = "".join(x for x in name if x.isalnum() or x in " -_").replace(" ", "_")
-    local_filename = f"{safe_name}_{version}.ipa"
-
-    if local_filename in existing_files:
-        print(f"Already exists: {name}")
-        return app
-
-    print(f"-> Processing: {name}")
-    try:
-        # هەوڵی داونلۆدکردن بە خۆدزینەوەوە
-        with scraper.get(download_url, stream=True, timeout=30) as r:
-            r.raise_for_status()
-            with open(local_filename, 'wb') as f:
-                for chunk in r.iter_content(chunk_size=8192):
-                    f.write(chunk)
-        
-        downloaded_size = os.path.getsize(local_filename)
-        
-        # پشکنین بزانین سایزەکەی زۆر بچووک نییە
-        if downloaded_size < 1 * 1024 * 1024:
-            print(f"--- FAKE/BLOCKED FILE DETECTED for {name} ({downloaded_size} bytes).")
-            os.remove(local_filename)
-            return None
-            
-        print(f"+++ Uploading {name} ({downloaded_size} bytes)...")
-        upload = subprocess.run(["gh", "release", "upload", RELEASE_TAG, local_filename, "--clobber"], env=os.environ, capture_output=True)
-        
-        if upload.returncode == 0:
-            print(f"+++ SUCCESS: {name} uploaded.")
+    print("\n--- CHECKING BOTTOM OF HTML FOR HIDDEN DATA ---")
+    print(res.text[-1000:])
+    print("-----------------------------------------------\n")
+    
+    print("--- HUNTING INSIDE JS FILES ---")
+    # دۆزینەوەی هەموو فایلە JS ەکانی سایتەکە
+    js_files = re.findall(r'src=["\']([^"\']+\.js)["\']', res.text)
+    
+    if not js_files:
+        print("No JS files found in the HTML!")
+    
+    for js in js_files:
+        if js.startswith('/'):
+            js_url = "https://tryipa.com" + js
+        elif not js.startswith('http'):
+            js_url = "https://tryipa.com/" + js
         else:
-            print(f"--- FAILED to upload {name}: {upload.stderr}")
+            js_url = js
             
-        if os.path.exists(local_filename):
-            os.remove(local_filename)
+        print(f"\nScanning: {js_url}")
+        try:
+            js_res = scraper.get(js_url, timeout=10)
             
-        return app
+            # گەڕان بەدوای وشەی api یان json لەناو کۆدەکاندا
+            apis = re.findall(r'https://[^"\']*api[^"\']*|/api/[a-zA-Z0-9_/-]+|\.json', js_res.text)
             
-    except Exception as e:
-        print(f"--- Error with {name}: {e}")
-        if os.path.exists(local_filename):
-            os.remove(local_filename)
-        return None
+            if apis:
+                # سڕینەوەی ئەوانەی دووبارەن بۆ ئەوەی لیستەکە کورت بێت
+                unique_apis = list(set(apis))
+                print(f"Found {len(unique_apis)} possible API endpoints:")
+                for api in unique_apis[:15]:  # نیشاندانی زۆرترین ١٥ دانە
+                    print(f" -> {api}")
+            else:
+                print(" No API links found in this file.")
+                
+        except Exception as e:
+            print(f" Failed to scan this JS file: {e}")
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-    list(executor.map(process_app, apps_to_process))
-
-print("Quick test finished.")
+except Exception as e:
+    print(f"Error fetching main page: {e}")
+    
+print("\n=== HUNT FINISHED ===")
