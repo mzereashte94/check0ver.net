@@ -6,10 +6,8 @@ import subprocess
 import hashlib
 import concurrent.futures
 
-# وەرگرتنی زانیاری لە GitHub Actions ەوە
-GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY") # خۆی ناوی ڕیپۆزیتۆرییەکەت دەدۆزێتەوە
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
-RELEASE_TAG = "ipa-files" # ناوی ئەو بەشەی فایلەکانی تێدەچێت لە Releases
+GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY")
+RELEASE_TAG = "ipa-files"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55",
@@ -17,7 +15,6 @@ headers = {
 }
 
 print("1. Creating Release section if not exists...")
-# بەکارهێنانی GitHub CLI بۆ دروستکردنی ڕیلیز
 subprocess.run(
     ["gh", "release", "create", RELEASE_TAG, "--title", "IPA Files", "--notes", "Automated IPA uploads"], 
     env=os.environ, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
@@ -65,7 +62,6 @@ def process_app(app):
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     image_url = app.get("image", "https://ashtemobile.site/logo.png")
     
-    # فلتەرکردنی قەبارە (ئەگەر لە ١ گێگابایت گەورەتر بوو، بەجێی دەهێڵێت)
     size_bytes = 50 * 1024 * 1024
     try:
         if "GB" in size_str:
@@ -76,18 +72,16 @@ def process_app(app):
         pass
 
     if size_bytes >= (1 * 1024 * 1024 * 1024):
-        return None # ئەمانە دادەنەبەزێنێت
+        print(f"Skipping {name}: Size is over 1GB")
+        return None 
 
-    # دروستکردنی ناوی فایلەکە
     safe_name = "".join(x for x in name if x.isalnum() or x in " -_").replace(" ", "_")
     local_filename = f"{safe_name}_{version}.ipa"
     github_direct_url = f"https://github.com/{GITHUB_REPO}/releases/download/{RELEASE_TAG}/{local_filename}"
 
-    # ئەگەر فایلەکە پێشتر لە بەشی Releases هەبوو، تەنها لینکەکەی تۆمار دەکات و کات بەفیڕۆ نادات
     if local_filename in existing_files:
         final_download_url = github_direct_url
     else:
-        # دۆزینەوەی لینکی ڕاستەقینە
         download_trigger_url = f"https://check0ver.net/en/iapps/{uuid}/download"
         final_ipa_url = download_trigger_url
         try:
@@ -101,25 +95,29 @@ def process_app(app):
 
         final_download_url = final_ipa_url
 
-        # ئەگەر لینکە ڕاستەقینەکە دۆزرایەوە، داونلۆدی دەکات و ئەپلۆدی دەکات
         if ".ipa" in final_ipa_url:
             print(f"Downloading {name} to GitHub Runner...")
             try:
-                with requests.get(final_ipa_url, stream=True, timeout=10) as r:
+                with requests.get(final_ipa_url, stream=True, timeout=15) as r:
                     r.raise_for_status()
                     with open(local_filename, 'wb') as f:
                         for chunk in r.iter_content(chunk_size=8192):
                             f.write(chunk)
                 
-                # ئەپلۆدکردن بۆ Releases بە بەکارهێنانی GitHub CLI
                 print(f"Uploading {name} to Releases...")
-                subprocess.run(
+                upload_result = subprocess.run(
                     ["gh", "release", "upload", RELEASE_TAG, local_filename, "--clobber"], 
-                    env=os.environ, check=True
+                    env=os.environ, capture_output=True, text=True
                 )
                 
-                final_download_url = github_direct_url # لینکەکە دەگۆڕێت بۆ گیت هاب دوای سەرکەوتن
-                os.remove(local_filename) # سڕینەوە بۆ ئەوەی شوێن نەگرێت
+                if upload_result.returncode == 0:
+                    final_download_url = github_direct_url
+                    print(f"Successfully uploaded {name}")
+                else:
+                    print(f"Failed to upload {name}: {upload_result.stderr}")
+                
+                if os.path.exists(local_filename):
+                    os.remove(local_filename)
             except Exception as e:
                 print(f"Error processing {name}: {e}")
                 if os.path.exists(local_filename):
@@ -134,12 +132,20 @@ def process_app(app):
         "size": size_bytes,
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "downloadURL": final_download_url,
-        "localizedDescription": "Hosted on GitHub Releases by Ashtemobile Auto-Bot."
+        "developerName": "AshteMobile",
+        "localizedDescription": "Hosted on GitHub Releases by Ashtemobile Auto-Bot.",
+        "versions": [
+            {
+                "version": version,
+                "downloadURL": final_download_url,
+                "size": size_bytes,
+                "minOSVersion": "14.0",
+            }
+        ]
     }
 
 apps_list = []
-# دانانی 5 کرێکار لە ناو GitHub Action (ئینتەرنێتی گیت هاب زۆر خێرایە و بەرگە دەگرێت)
-with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
     results = executor.map(process_app, raw_apps)
     for res in results:
         if res:
