@@ -10,10 +10,48 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 157129783,
+            "name": "Wordscapes - Word Game",
+            "version": "3.13.60",
+            "size": "191.14 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/123153/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a14258a8-5129-47d2-8175-a999c8bc1d20",
+            "download_url": "https://check0ver.net/en/iapps/a14258a8-5129-47d2-8175-a999c8bc1d20",
+            "bundleIdentifier": "com.peoplefun.wordcross",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/123153/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "3.13.60",
+                    "date": "2026-09-16T06:54:18.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a14258a8-5129-47d2-8175-a999c8bc1d20",
+                    "size": 200424816,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 866356748,
             "name": "Super Stylist Fashion Makeover",
             "version": "3.9.7",
-            "size": "1.29 GB",
+            "size": "1.3 GB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/111985/512x512bb.jpg",
             "badge": "",
             "type": "games",
@@ -34,7 +72,7 @@
                     "date": "2026-09-16T06:15:23.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
-                    "size": 1385126952,
+                    "size": 1395864371,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -14855,44 +14893,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a17068df-4830-4ca5-94e5-acf16f399d9e",
                     "size": 238005780,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 157129783,
-            "name": "Wordscapes - Word Game",
-            "version": "3.13.50",
-            "size": "178.88 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/123153/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a14258a8-5129-47d2-8175-a999c8bc1d20",
-            "download_url": "https://check0ver.net/en/iapps/a14258a8-5129-47d2-8175-a999c8bc1d20",
-            "bundleIdentifier": "com.peoplefun.wordcross",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/123153/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "3.13.50",
-                    "date": "2026-09-09T22:49:05.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a14258a8-5129-47d2-8175-a999c8bc1d20",
-                    "size": 187569274,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
