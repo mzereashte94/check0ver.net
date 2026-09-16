@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 206045127,
+            "name": "Plato: Fun Multiplayer Games",
+            "version": "7.6.0",
+            "size": "251.01 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150696/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2136750-bde7-4376-b541-afa236d6d677/download",
+            "download_url": "https://check0ver.net/en/iapps/a2136750-bde7-4376-b541-afa236d6d677/download",
+            "bundleIdentifier": "com.platoapp.Plato",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150696/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "7.6.0",
+                    "date": "2026-09-16T11:40:09.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2136750-bde7-4376-b541-afa236d6d677/download",
+                    "size": 263203061,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 953027968,
             "name": "Tiny Cafe",
             "version": "1.16.2",
@@ -38681,44 +38719,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1bf1a7b-6b7d-4c98-94fc-f43b88fef4b5/download",
                     "size": 158156718,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 206045127,
-            "name": "Plato: Fun Multiplayer Games",
-            "version": "7.4.0",
-            "size": "256.06 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150696/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2136750-bde7-4376-b541-afa236d6d677/download",
-            "download_url": "https://check0ver.net/en/iapps/a2136750-bde7-4376-b541-afa236d6d677/download",
-            "bundleIdentifier": "com.platoapp.Plato",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150696/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "7.4.0",
-                    "date": "2026-08-19T11:54:41.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2136750-bde7-4376-b541-afa236d6d677/download",
-                    "size": 268498370,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
