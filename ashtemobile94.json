@@ -10,6 +10,234 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 671971997,
+            "name": "SHIN MEGAMI TENSEI D×２",
+            "version": "9.2.20",
+            "size": "159.4 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142094/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e7e27f8-f312-4ef5-9367-8440dc524daa",
+            "download_url": "https://check0ver.net/en/iapps/9e7e27f8-f312-4ef5-9367-8440dc524daa",
+            "bundleIdentifier": "com.sega.d2megaten.en",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142094/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "9.2.20",
+                    "date": "2026-09-16T04:55:01.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e7e27f8-f312-4ef5-9367-8440dc524daa",
+                    "size": 167143014,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 150985965,
+            "name": "Block Crush！",
+            "version": "4.1.4",
+            "size": "182.89 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122067/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a068ee38-1265-4cce-b906-035994d3e934",
+            "download_url": "https://check0ver.net/en/iapps/a068ee38-1265-4cce-b906-035994d3e934",
+            "bundleIdentifier": "com.blockcrush.travelmaster",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122067/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "4.1.4",
+                    "date": "2026-09-16T04:49:00.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a068ee38-1265-4cce-b906-035994d3e934",
+                    "size": 191774064,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 127044278,
+            "name": "PickCrafter: Mining & Crafting",
+            "version": "6.0.42",
+            "size": "96.64 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114961/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0330d2d-bc2d-4729-b368-dd4e6d5357ea",
+            "download_url": "https://check0ver.net/en/iapps/a0330d2d-bc2d-4729-b368-dd4e6d5357ea",
+            "bundleIdentifier": "com.fiveamp.pickcrafterapp",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114961/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "6.0.42",
+                    "date": "2026-09-16T04:47:13.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0330d2d-bc2d-4729-b368-dd4e6d5357ea",
+                    "size": 101334384,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 115431123,
+            "name": "Micro RPG",
+            "version": "1.30.10",
+            "size": "130.92 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132876/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a18f26a4-0153-4bcf-8f33-5cd461253fe8",
+            "download_url": "https://check0ver.net/en/iapps/a18f26a4-0153-4bcf-8f33-5cd461253fe8",
+            "bundleIdentifier": "com.joliyeti.microrpg",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132876/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.30.10",
+                    "date": "2026-09-16T04:36:50.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a18f26a4-0153-4bcf-8f33-5cd461253fe8",
+                    "size": 137279569,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 202063378,
+            "name": "Revolution Idle",
+            "version": "1.076",
+            "size": "71.83 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/130095/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0d0237b-9200-4588-b720-190302bec588",
+            "download_url": "https://check0ver.net/en/iapps/a0d0237b-9200-4588-b720-190302bec588",
+            "bundleIdentifier": "com.oninou.REVO",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/130095/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.076",
+                    "date": "2026-09-16T04:29:27.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0d0237b-9200-4588-b720-190302bec588",
+                    "size": 75319214,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 653458260,
+            "name": "Happy Citizens - Mayor Sim",
+            "version": "2.5.2",
+            "size": "351.9 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115247/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9feac86b-0fac-4d2c-bf23-135ff406ccc7",
+            "download_url": "https://check0ver.net/en/iapps/9feac86b-0fac-4d2c-bf23-135ff406ccc7",
+            "bundleIdentifier": "com.miyagames.happycitizen.ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115247/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.5.2",
+                    "date": "2026-09-16T04:28:49.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9feac86b-0fac-4d2c-bf23-135ff406ccc7",
+                    "size": 368993894,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 135355013,
             "name": "Goods Master 3D: Matching Game",
             "version": "1.15.7",
@@ -6267,44 +6495,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9c7d6d0d-8144-4893-9c7f-2c085ee402b1",
                     "size": 256659947,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 150985965,
-            "name": "Block Crush！",
-            "version": "4.1.3",
-            "size": "181.9 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122067/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a068ee38-1265-4cce-b906-035994d3e934",
-            "download_url": "https://check0ver.net/en/iapps/a068ee38-1265-4cce-b906-035994d3e934",
-            "bundleIdentifier": "com.blockcrush.travelmaster",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122067/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "4.1.3",
-                    "date": "2026-09-14T07:56:44.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a068ee38-1265-4cce-b906-035994d3e934",
-                    "size": 190735974,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -14551,44 +14741,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a17068df-4830-4ca5-94e5-acf16f399d9e",
                     "size": 238005780,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 115431123,
-            "name": "Micro RPG",
-            "version": "1.30.7",
-            "size": "133.16 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132876/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a18f26a4-0153-4bcf-8f33-5cd461253fe8",
-            "download_url": "https://check0ver.net/en/iapps/a18f26a4-0153-4bcf-8f33-5cd461253fe8",
-            "bundleIdentifier": "com.joliyeti.microrpg",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132876/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.30.7",
-                    "date": "2026-09-09T22:51:02.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a18f26a4-0153-4bcf-8f33-5cd461253fe8",
-                    "size": 139628380,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -24735,44 +24887,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9fd7fe8d-2287-4255-8f7b-9341260e8743",
                     "size": 121603358,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 671971997,
-            "name": "SHIN MEGAMI TENSEI D×２",
-            "version": "9.2.11",
-            "size": "159.96 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142094/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e7e27f8-f312-4ef5-9367-8440dc524daa",
-            "download_url": "https://check0ver.net/en/iapps/9e7e27f8-f312-4ef5-9367-8440dc524daa",
-            "bundleIdentifier": "com.sega.d2megaten.en",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142094/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "9.2.11",
-                    "date": "2026-09-02T11:52:33.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e7e27f8-f312-4ef5-9367-8440dc524daa",
-                    "size": 167730216,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -36072,44 +36186,6 @@
             "patreon": []
         },
         {
-            "id": 127044278,
-            "name": "PickCrafter: Mining & Crafting",
-            "version": "6.0.41",
-            "size": "96.64 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114961/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0330d2d-bc2d-4729-b368-dd4e6d5357ea",
-            "download_url": "https://check0ver.net/en/iapps/a0330d2d-bc2d-4729-b368-dd4e6d5357ea",
-            "bundleIdentifier": "com.fiveamp.pickcrafterapp",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114961/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "6.0.41",
-                    "date": "2026-08-21T17:42:17.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0330d2d-bc2d-4729-b368-dd4e6d5357ea",
-                    "size": 101334384,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 450686234,
             "name": "جوالك ع راسك : لعبة جماعية",
             "version": "1.0.7",
@@ -45420,44 +45496,6 @@
             "patreon": []
         },
         {
-            "id": 202063378,
-            "name": "Revolution Idle",
-            "version": "1.072",
-            "size": "70.87 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/130095/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0d0237b-9200-4588-b720-190302bec588",
-            "download_url": "https://check0ver.net/en/iapps/a0d0237b-9200-4588-b720-190302bec588",
-            "bundleIdentifier": "com.oninou.REVO",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/130095/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.072",
-                    "date": "2026-08-07T23:56:47.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0d0237b-9200-4588-b720-190302bec588",
-                    "size": 74312581,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 44480626,
             "name": "Space Heroes: Epic Galaxy RPG",
             "version": "1.4.1",
@@ -51487,44 +51525,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a25226dc-d4be-446f-ad08-e124bbd1d415",
                     "size": 42498785,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 653458260,
-            "name": "Happy Citizens - Mayor Sim",
-            "version": "2.3.0",
-            "size": "318.89 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115247/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9feac86b-0fac-4d2c-bf23-135ff406ccc7",
-            "download_url": "https://check0ver.net/en/iapps/9feac86b-0fac-4d2c-bf23-135ff406ccc7",
-            "bundleIdentifier": "com.miyagames.happycitizen.ios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115247/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.3.0",
-                    "date": "2026-07-22T15:36:31.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9feac86b-0fac-4d2c-bf23-135ff406ccc7",
-                    "size": 334380400,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
