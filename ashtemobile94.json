@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 135355013,
+            "name": "Goods Master 3D: Matching Game",
+            "version": "1.15.7",
+            "size": "193.1 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/112012/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1249c1f-524b-4164-948c-a84b3f0c7d8b",
+            "download_url": "https://check0ver.net/en/iapps/a1249c1f-524b-4164-948c-a84b3f0c7d8b",
+            "bundleIdentifier": "com.higgs.bubblematch",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/112012/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.15.7",
+                    "date": "2026-09-16T03:27:30.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1249c1f-524b-4164-948c-a84b3f0c7d8b",
+                    "size": 202480025,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 595173492,
             "name": "Super Goal: Fun Soccer Game",
             "version": "0.2.51",
@@ -3623,7 +3661,7 @@
             "id": 595339221,
             "name": "My Sushi Story",
             "version": "5.6.0",
-            "size": "201.99 MB",
+            "size": "210.58 MB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/163714/d6d33223-6507-4b0e-bdbc-2bca5137f9d9.png",
             "badge": "",
             "type": "games",
@@ -3644,7 +3682,7 @@
                     "date": "2026-09-15T03:30:13.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a2a80efd-70d4-4025-bb19-e11fa019a73a",
-                    "size": 211801866,
+                    "size": 220809134,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -118937,44 +118975,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a0e7c222-1c4d-4cc4-8394-eea3c5f6b151",
                     "size": 115259473,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 135355013,
-            "name": "Goods Master 3D: Matching Game",
-            "version": "1.14.6",
-            "size": "190.74 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/112012/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1249c1f-524b-4164-948c-a84b3f0c7d8b",
-            "download_url": "https://check0ver.net/en/iapps/a1249c1f-524b-4164-948c-a84b3f0c7d8b",
-            "bundleIdentifier": "com.higgs.bubblematch",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/112012/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.14.6",
-                    "date": "2026-02-23T14:06:57.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1249c1f-524b-4164-948c-a84b3f0c7d8b",
-                    "size": 200005386,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
