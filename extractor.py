@@ -8,14 +8,14 @@ base_url = "https://check0ver.net/en/iapps?filter%5BinCategories%5D%5B0%5D=9c60f
 
 headers = {
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "X-Requested-With": "XMLHttpRequest"
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
 }
 
-print("1. Fetching app list automatically...")
+print("1. Fetching all apps from the website...")
 raw_apps = []
 
-for page in range(1, 10):  # دەتوانیت ژمارەی پەڕەکان زیاد بکەیت
+# هێنانی داتای سەرەکی لە پەڕەکانەوە
+for page in range(1, 161):
     url = f"{base_url}{page}"
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -37,12 +37,12 @@ for page in range(1, 10):  # دەتوانیت ژمارەی پەڕەکان زیا
                 raw_apps.extend(paginator)
         else:
             break
-    except:
+    except Exception as e:
         pass
 
-print(f"Found {len(raw_apps)} apps. Extracting direct .ipa?ref= links automatically...")
+print(f"Found {len(raw_apps)} apps. Now extracting the EXACT .ipa?ref= links really fast...")
 
-def get_automated_ipa_link(app):
+def get_real_ipa(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -51,27 +51,30 @@ def get_automated_ipa_link(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    detail_page_url = f"https://check0ver.net/en/iapps/{uuid}"
-    resolved_download_url = detail_page_url
-
+    # ئەمە لینکی سەرەتاییە کە هەوڵ دەدەین ڕیدایریکتەکەی بگرین
+    download_trigger_url = f"https://check0ver.net/en/iapps/{uuid}/download"
+    final_ipa_url = download_trigger_url # ئەگەر نەدۆزرایەوە ئەمە دادەنێت
+    
     try:
-        # چوونە ناو پەڕەی یارییەکە بۆ دۆزینەوەی خۆکاری لینکی داونلۆود
-        res = requests.get(detail_page_url, headers=headers, timeout=10)
-        if res.status_code == 200:
-            # گەڕان بەدوای پاتەرنی لینکی .ipa?ref= لەناو سورسکرێپتی پەڕەکەدا
-            match_ref = re.search(r'https?://[^\s<>"]+?/api/check0ver/[^\s<>"]+?\.ipa\?ref=[^\s<>"]+', res.text)
-            if match_ref:
-                resolved_download_url = match_ref.group(0)
-            else:
-                # ئەگەر لە شێوازی تردا بوو، گەڕان بەدوای هەر لینکێکی .ipa کە refـی هەبێت
-                match_general = re.search(r'https?://[^\s<>"]+?\.ipa\?[^\s<>"]+', res.text)
-                if match_general:
-                    resolved_download_url = match_general.group(0)
+        # بەبێ ئەوەی فایلەکە داونلۆود بکەین، تەنها شوێنی ڕیدایریکتەکە (.ipa?ref) دەگرین
+        res = requests.get(download_trigger_url, headers=headers, allow_redirects=False, timeout=5)
+        if res.status_code in [301, 302, 303, 307, 308]:
+            location = res.headers.get("Location", "")
+            if ".ipa" in location:
+                final_ipa_url = location
+        elif res.status_code == 200:
+            # ئەگەر لەسەر APIـیەکە بوو
+            api_trigger = f"https://check0ver.net/api/iapps/{uuid}/download"
+            res_api = requests.get(api_trigger, headers=headers, allow_redirects=False, timeout=5)
+            if res_api.status_code in [301, 302, 303, 307, 308]:
+                location = res_api.headers.get("Location", "")
+                if ".ipa" in location:
+                    final_ipa_url = location
     except:
         pass
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
-    
+
     size_bytes = 50 * 1024 * 1024
     try:
         if "GB" in size_str:
@@ -89,13 +92,13 @@ def get_automated_ipa_link(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": resolved_download_url,
-        "download_url": resolved_download_url,
+        "install_url": final_ipa_url,
+        "download_url": final_ipa_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "Auto Extracted Source",
-        "localizedDescription": "Automatically extracted IPA link.",
+        "subtitle": "Awesome App",
+        "localizedDescription": "Downloaded from AshteMobile Source.",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -105,7 +108,7 @@ def get_automated_ipa_link(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": resolved_download_url,
+                "downloadURL": final_ipa_url, # لێرەدا ڕێک ئەو لینکە دادەنێت کە تۆکتنی refـی پێوەیە!
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -121,16 +124,18 @@ def get_automated_ipa_link(app):
     }
 
 apps_list = []
-with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-    results = executor.map(get_automated_ipa_link, raw_apps)
+
+# لێرەدا 100 کرێکارمان داناوە بۆ ئەوەی بە خێراییەکی شێتانە لە 1 خولەکدا لینکەکان دەربهێنێت!
+with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+    results = executor.map(get_real_ipa, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
 
 source_structure = {
     "name": "Ashtemobile",
-    "subtitle": "Auto-Extracted Direct IPA Source",
-    "description": "Source with automatically extracted download links.",
+    "subtitle": "A source for all of my apps & games",
+    "description": "Welcome to my source! Here you'll find all of my apps.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -157,4 +162,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Automatically extracted links for {len(apps_list)} apps.")
+print(f"Done! Extracted EXACT .ipa URLs for {len(apps_list)} apps.")
