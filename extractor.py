@@ -11,10 +11,10 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
-print("1. Fetching all apps successfully...")
+print("1. Fetching app list...")
 raw_apps = []
 
-for page in range(1, 161):
+for page in range(1, 10):  # دەتوانیت ژمارەی پەڕەکان زیاد بکەیت
     url = f"{base_url}{page}"
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -39,9 +39,9 @@ for page in range(1, 161):
     except:
         pass
 
-print(f"Found {len(raw_apps)} apps. Building stable source links...")
+print(f"Found {len(raw_apps)} apps. Extracting direct IPA links from detail pages...")
 
-def build_app(app):
+def process_app_detail(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -50,7 +50,19 @@ def build_app(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    web_page_link = f"https://check0ver.net/en/iapps/{uuid}"
+    detail_page_url = f"https://check0ver.net/en/iapps/{uuid}"
+    resolved_download_url = detail_page_url
+
+    try:
+        # سەردانکردنی پەڕەی تایبەتی یارییەکە بۆ دۆزینەوەی لینکی 'Click to copy'
+        res = requests.get(detail_page_url, headers=headers, timeout=10)
+        if res.status_code == 200:
+            # گەڕان بەدوای لینکی .ipa یان داتای کۆپی لەناو HTMLـی پەڕەکەدا
+            ipa_match = re.search(r'https?://[^\s<>"]+?\.ipa[^\s<>"]*', res.text)
+            if ipa_match:
+                resolved_download_url = ipa_match.group(0)
+    except:
+        pass
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
     
@@ -71,13 +83,13 @@ def build_app(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": web_page_link,
-        "download_url": web_page_link,
+        "install_url": resolved_download_url,
+        "download_url": resolved_download_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "AshteMobile Source",
-        "localizedDescription": "Available on AshteMobile Source.",
+        "subtitle": "Direct IPA Source",
+        "localizedDescription": "Extracted from Copy Link.",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -87,7 +99,7 @@ def build_app(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": web_page_link,
+                "downloadURL": resolved_download_url,
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -103,16 +115,16 @@ def build_app(app):
     }
 
 apps_list = []
-with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(build_app, raw_apps)
+with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+    results = executor.map(process_app_detail, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
 
 source_structure = {
     "name": "Ashtemobile",
-    "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "subtitle": "Direct IPA Source",
+    "description": "Source extracted using detail page copy links.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -139,4 +151,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Successfully generated {len(apps_list)} apps.")
+print(f"Done! Successfully generated {len(apps_list)} apps with direct extracted links.")
