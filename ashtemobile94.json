@@ -10,6 +10,120 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 60887394,
+            "name": "DATE A LIVE: Love Limit Break",
+            "version": "1.5.3",
+            "size": "115.14 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/126325/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1586a08-a270-49e6-96c3-f9ad2bc9622e/download",
+            "download_url": "https://check0ver.net/en/iapps/a1586a08-a270-49e6-96c3-f9ad2bc9622e/download",
+            "bundleIdentifier": "jp.clyre.pjda",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/126325/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.5.3",
+                    "date": "2026-09-16T13:28:29.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1586a08-a270-49e6-96c3-f9ad2bc9622e/download",
+                    "size": 120733040,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 775113798,
+            "name": "Last Day on Earth: Survival",
+            "version": "1.52.0",
+            "size": "1.01 GB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115074/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c6d1d5a-72eb-475e-8d37-c189230f4f2b/download",
+            "download_url": "https://check0ver.net/en/iapps/9c6d1d5a-72eb-475e-8d37-c189230f4f2b/download",
+            "bundleIdentifier": "zombie.survival.craft.z",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115074/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.52.0",
+                    "date": "2026-09-16T13:24:44.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c6d1d5a-72eb-475e-8d37-c189230f4f2b/download",
+                    "size": 1084479242,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 935524217,
+            "name": "Rodeo Stampede: Sky Zoo Safari",
+            "version": "4.25.0",
+            "size": "362.38 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/145838/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1f93399-78ea-4c4a-a6fd-00aa704219fe/download",
+            "download_url": "https://check0ver.net/en/iapps/a1f93399-78ea-4c4a-a6fd-00aa704219fe/download",
+            "bundleIdentifier": "com.featherweightgames.stampede",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/145838/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "4.25.0",
+                    "date": "2026-09-16T13:21:23.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1f93399-78ea-4c4a-a6fd-00aa704219fe/download",
+                    "size": 379982970,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 206045127,
             "name": "Plato: Fun Multiplayer Games",
             "version": "7.6.0",
@@ -5216,6 +5330,44 @@
             "patreon": []
         },
         {
+            "id": 919046724,
+            "name": "PreCats! -Idle Cat Raising",
+            "version": "2.1.32",
+            "size": "128.57 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165558/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2bc6f96-a983-4302-b0d8-819298e6adfc/download",
+            "download_url": "https://check0ver.net/en/iapps/a2bc6f96-a983-4302-b0d8-819298e6adfc/download",
+            "bundleIdentifier": "com.ignm.puri",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165558/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.1.32",
+                    "date": "2026-09-14T23:52:23.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2bc6f96-a983-4302-b0d8-819298e6adfc/download",
+                    "size": 134815416,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 223142444,
             "name": "Mystery Match",
             "version": "2.71.0",
@@ -8319,44 +8471,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a218994f-7260-406e-8631-5d5c9ad1ed2d/download",
                     "size": 137227141,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 180774207,
-            "name": "Auto-Battle Got Me Killed",
-            "version": "1.0.42",
-            "size": "117.17 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162033/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d/download",
-            "download_url": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d/download",
-            "bundleIdentifier": "com.kgameboys.abgmk",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162033/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.0.42",
-                    "date": "2026-09-13T12:45:10.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d/download",
-                    "size": 122861649,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -23912,44 +24026,6 @@
             "patreon": []
         },
         {
-            "id": 60887394,
-            "name": "DATE A LIVE: Love Limit Break",
-            "version": "1.5.2",
-            "size": "118.28 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/126325/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1586a08-a270-49e6-96c3-f9ad2bc9622e/download",
-            "download_url": "https://check0ver.net/en/iapps/a1586a08-a270-49e6-96c3-f9ad2bc9622e/download",
-            "bundleIdentifier": "jp.clyre.pjda",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/126325/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.5.2",
-                    "date": "2026-09-03T12:22:46.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1586a08-a270-49e6-96c3-f9ad2bc9622e/download",
-                    "size": 124025569,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 343022830,
             "name": "DEAD TRIGGER: Survival Shooter",
             "version": "2.3.4",
@@ -32614,44 +32690,6 @@
             "patreon": []
         },
         {
-            "id": 775113798,
-            "name": "Last Day on Earth: Survival",
-            "version": "1.51.6",
-            "size": "1.01 GB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115074/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c6d1d5a-72eb-475e-8d37-c189230f4f2b/download",
-            "download_url": "https://check0ver.net/en/iapps/9c6d1d5a-72eb-475e-8d37-c189230f4f2b/download",
-            "bundleIdentifier": "zombie.survival.craft.z",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115074/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.51.6",
-                    "date": "2026-08-27T16:33:36.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c6d1d5a-72eb-475e-8d37-c189230f4f2b/download",
-                    "size": 1084479242,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 23790180,
             "name": "My Car Empire: Idle Tycoon 3D",
             "version": "0.0.94",
@@ -32981,44 +33019,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a12ab9f6-1592-46ed-8286-71a801a69618/download",
                     "size": 550292684,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 935524217,
-            "name": "Rodeo Stampede: Sky Zoo Safari",
-            "version": "4.24.0",
-            "size": "347.05 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/145838/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1f93399-78ea-4c4a-a6fd-00aa704219fe/download",
-            "download_url": "https://check0ver.net/en/iapps/a1f93399-78ea-4c4a-a6fd-00aa704219fe/download",
-            "bundleIdentifier": "com.featherweightgames.stampede",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/145838/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "4.24.0",
-                    "date": "2026-08-27T11:45:29.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1f93399-78ea-4c4a-a6fd-00aa704219fe/download",
-                    "size": 363908300,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
