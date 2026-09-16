@@ -1,74 +1,125 @@
 import os
 import json
-import re
 import requests
 import subprocess
+import concurrent.futures
 
 GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY")
 RELEASE_TAG = "ipa-files"
 
+# 1. دروستکردنی بەشی Releases ئەگەر نەبوو
+subprocess.run(
+    ["gh", "release", "create", RELEASE_TAG, "--title", "IPA Files", "--notes", "Automated IPA uploads"], 
+    env=os.environ, check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+)
+
+# 2. هێنانی لیستی ئەو فایلانەی پێشتر ئەپلۆد کراون بۆ ئەوەی دووبارە نەکرێنەوە
+existing_files = []
+try:
+    out = subprocess.check_output(["gh", "release", "view", RELEASE_TAG, "--json", "assets"], env=os.environ)
+    existing_files = [asset["name"] for asset in json.loads(out).get("assets", [])]
+except:
+    pass
+
+# 3. خوێندنەوەی فایلی JSON ەکەی خۆت
+json_file = "ashtemobile94.json"
+with open(json_file, "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+apps = data.get("apps", [])
+print(f"Found {len(apps)} apps in {json_file}")
+
 headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55"
 }
 
-print("--- STARTING QUICK TEST (ONLY 3 APPS) ---")
-
-url = "https://check0ver.net/en/iapps?filter%5BinCategories%5D%5B0%5D=9c60f563-1983-42f0-8882-a26207bd4aaf&page=1"
-try:
-    response = requests.get(url, headers=headers, timeout=10)
-    print(f"Website connection status: {response.status_code}")
+def process_app(app):
+    name = app.get("name", "Unknown")
+    version = app.get("version", "1.0")
     
-    match = re.search(r'data-page="([^"]+)"', response.text)
-    if not match:
-        print("ERROR: Could not find apps data on the page! Maybe blocked.")
-        exit(1)
+    # پشکنینی قەبارە (ئەگەر لە ١ گێگا زیاتر بوو، وازی لێ دەهێنێت)
+    size = app.get("size", 0)
+    size_bytes = 0
+    if isinstance(size, int) or isinstance(size, float):
+        size_bytes = int(size)
+    elif isinstance(size, str):
+        try:
+            if "GB" in size.upper():
+                size_bytes = int(float(size.upper().replace("GB", "").strip()) * 1024 * 1024 * 1024)
+            elif "MB" in size.upper():
+                size_bytes = int(float(size.upper().replace("MB", "").strip()) * 1024 * 1024)
+        except:
+            pass
+            
+    if size_bytes >= (1 * 1024 * 1024 * 1024):
+        print(f"Skipping {name}: Size is over 1GB")
+        return app
 
-    html_escape_decoded = match.group(1).replace("&quot;", '"').replace("&amp;", "&").replace("&#039;", "'")
-    page_data = json.loads(html_escape_decoded)
-    raw_apps = page_data.get("props", {}).get("paginator", {}).get("data", [])
-    
-    print(f"Found apps on page 1. Taking ONLY the first 3 to test...")
-    test_apps = raw_apps[:3]
+    # وەرگرتنی لینکەکە لەناو فایلەکەی خۆت
+    original_url = app.get("downloadURL") or app.get("install_url")
 
-    for app in test_apps:
-        name = app.get("name", "Unknown")
-        uuid = app.get("uuid")
-        print(f"\n>>> Checking App: {name}")
+    # ئەگەر پێشتر لینکەکەی کرابوو بە گیت هاب یان بەتاڵ بوو، وازی لێ بهێنە
+    if not original_url or "github.com" in original_url:
+        return app
 
-        trigger_url = f"https://check0ver.net/en/iapps/{uuid}/download"
-        api_url = f"https://check0ver.net/api/iapps/{uuid}/download"
+    safe_name = "".join(x for x in name if x.isalnum() or x in " -_").replace(" ", "_")
+    local_filename = f"{safe_name}_{version}.ipa"
+    github_direct_url = f"https://github.com/{GITHUB_REPO}/releases/download/{RELEASE_TAG}/{local_filename}"
 
-        print("Step 1: Trying to get direct link...")
-        final_link = None
+    # ئەگەر پێشتر ئەپلۆد کراوە بەس لینکەکەی دەگۆڕێت
+    if local_filename in existing_files:
+        app["downloadURL"] = github_direct_url
+        app["install_url"] = github_direct_url
+        if "versions" in app and len(app["versions"]) > 0:
+            app["versions"][0]["downloadURL"] = github_direct_url
+        return app
 
-        res1 = requests.get(trigger_url, headers=headers, allow_redirects=False, timeout=10)
-        print(f"Trigger Status: {res1.status_code}")
+    print(f"Downloading: {name} ...")
+    try:
+        # چارەسەرکردنی ڕیدایریکت (بۆ دۆزینەوەی فایلی ipa ی ڕاستەقینە)
+        final_link = original_url
+        res = requests.get(original_url, headers=headers, allow_redirects=False, timeout=10)
+        if res.status_code in [301, 302, 303, 307, 308] and "Location" in res.headers:
+            final_link = res.headers["Location"]
+            
+        # داونلۆدکردن
+        with requests.get(final_link, stream=True, timeout=30) as r:
+            r.raise_for_status()
+            with open(local_filename, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192):
+                    f.write(chunk)
         
-        if "Location" in res1.headers and ".ipa" in res1.headers["Location"]:
-            final_link = res1.headers["Location"]
-        elif res1.status_code == 200:
-            res2 = requests.get(api_url, headers=headers, allow_redirects=False, timeout=10)
-            print(f"API Status: {res2.status_code}")
-            if "Location" in res2.headers and ".ipa" in res2.headers["Location"]:
-                final_link = res2.headers["Location"]
-
-        if final_link:
-            print(f"SUCCESS! Found IPA Link: {final_link[:50]}...")
-            local_filename = f"{name.replace(' ', '_')}.ipa"
-            print("Step 2: Downloading...")
-            with requests.get(final_link, stream=True, timeout=20) as r:
-                r.raise_for_status()
-                with open(local_filename, 'wb') as f:
-                    # تەنها ١ مێگابایت داونلۆد دەکات بۆ تاقیکردنەوە خێراکە
-                    for chunk in r.iter_content(chunk_size=8192):
-                        f.write(chunk)
-                        break 
-            print("Step 3: Download test passed! App is NOT blocking GitHub.")
+        print(f"Uploading {name} to GitHub Releases...")
+        upload = subprocess.run(["gh", "release", "upload", RELEASE_TAG, local_filename, "--clobber"], env=os.environ, capture_output=True)
+        
+        if upload.returncode == 0:
+            # لێرەدا لینکە کۆنەکە دەسڕێتەوە و هی گیت هاب دادەنێت!
+            app["downloadURL"] = github_direct_url
+            app["install_url"] = github_direct_url
+            if "versions" in app and len(app["versions"]) > 0:
+                app["versions"][0]["downloadURL"] = github_direct_url
+            print(f"SUCCESS: {name}")
         else:
-            print(f"FAILED to find .ipa link for {name}. The website is blocking GitHub Actions.")
+            print(f"FAILED to upload {name}")
+            
+        if os.path.exists(local_filename):
+            os.remove(local_filename)
+            
+    except Exception as e:
+        print(f"Error with {name}: {e}")
+        if os.path.exists(local_filename):
+            os.remove(local_filename)
 
-except Exception as e:
-    print(f"FATAL ERROR: {e}")
+    return app
 
-print("\n--- TEST COMPLETE ---")
+# کارپێکردنی ٣ داونلۆد لە یەک کاتدا بۆ خێرایی
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+    updated_apps = list(executor.map(process_app, apps))
+
+data["apps"] = updated_apps
+
+# خەزنکردنەوەی فایلی JSON ەکە بە لینکە نوێکانەوە
+with open(json_file, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+
+print("Done! JSON file updated successfully.")
