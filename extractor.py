@@ -11,7 +11,7 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
-print("1. Fetching apps with exact download routes...")
+print("1. Fetching apps safely...")
 raw_apps = []
 
 for page in range(1, 161):
@@ -39,7 +39,7 @@ for page in range(1, 161):
     except:
         pass
 
-print(f"Found {len(apps := raw_apps)} apps. Building clean IPA source...")
+print(f"Found {len(raw_apps)} apps. Building clean Source links...")
 
 def build_app(app):
     uuid = app.get("uuid")
@@ -50,8 +50,8 @@ def build_app(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    # لێرەدا لینکی ڕاستەوخۆی داونلۆود دادەنێین کە لە Ziggyـی ماڵپەڕەکە وەرگیراوە
-    exact_download_url = f"https://check0ver.net/en/iapps/{uuid}/download"
+    # دانانی لینکی فەرمی پەڕەی یارییەکە بۆ دوورکەوتنەوە لە ئیرۆری ڕیدایریکت
+    valid_page_url = f"https://check0ver.net/en/iapps/{uuid}"
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
     
@@ -72,8 +72,8 @@ def build_app(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": exact_download_url,
-        "download_url": exact_download_url,
+        "install_url": valid_page_url,
+        "download_url": valid_page_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
@@ -88,7 +88,7 @@ def build_app(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": exact_download_url,
+                "downloadURL": valid_page_url,
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -140,4 +140,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Generated {len(apps_list)} apps with exact download routes.")
+print(f"Done! Generated {len(apps_list)} apps with secure links.")
