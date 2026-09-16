@@ -10,7 +10,6 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
-<<<<<<< Updated upstream
             "id": 595173492,
             "name": "Super Goal: Fun Soccer Game",
             "version": "0.2.51",
@@ -391,8 +390,6 @@
             "patreon": []
         },
         {
-=======
->>>>>>> Stashed changes
             "id": 969695454,
             "name": "Twisted Tangle",
             "version": "2.14.1",
@@ -400,13 +397,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117277/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a006487b-f1f8-48b9-ae17-50b34e0767ac",
             "download_url": "https://check0ver.net/en/iapps/a006487b-f1f8-48b9-ae17-50b34e0767ac",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.crescivegames.twistedtangle",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -421,11 +413,7 @@
                     "version": "2.14.1",
                     "date": "2026-09-15T23:00:29.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a006487b-f1f8-48b9-ae17-50b34e0767ac",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 253493248,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -447,13 +435,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/127191/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a16086ec-d28f-40f1-900d-cef96bdbfc86",
             "download_url": "https://check0ver.net/en/iapps/a16086ec-d28f-40f1-900d-cef96bdbfc86",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.ratherunique.bogeyball",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -468,11 +451,7 @@
                     "version": "3.7.7",
                     "date": "2026-09-15T22:46:22.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a16086ec-d28f-40f1-900d-cef96bdbfc86",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 383160156,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -494,13 +473,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116959/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0176ad7-711d-428b-b8dc-ec5117b1d908",
             "download_url": "https://check0ver.net/en/iapps/a0176ad7-711d-428b-b8dc-ec5117b1d908",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.sega.ColorfulStage.en",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -515,11 +489,7 @@
                     "version": "5.6.1",
                     "date": "2026-09-15T22:33:08.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0176ad7-711d-428b-b8dc-ec5117b1d908",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 168820736,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -541,13 +511,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114695/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9e527baf-8e19-42a0-9f22-65191f00620d",
             "download_url": "https://check0ver.net/en/iapps/9e527baf-8e19-42a0-9f22-65191f00620d",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.alien.shooter.galaxy.attack",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -562,11 +527,7 @@
                     "version": "75.5",
                     "date": "2026-09-15T22:32:08.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9e527baf-8e19-42a0-9f22-65191f00620d",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 333226967,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -588,13 +549,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/130627/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a10c742d-c308-4741-a8dc-ccfda4a3b833",
             "download_url": "https://check0ver.net/en/iapps/a10c742d-c308-4741-a8dc-ccfda4a3b833",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "net.gameduo.bbc",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -609,11 +565,7 @@
                     "version": "2.8.5",
                     "date": "2026-09-15T21:08:08.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a10c742d-c308-4741-a8dc-ccfda4a3b833",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 221679452,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -635,13 +587,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115577/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9e5a00af-7243-4e03-a5a3-579826a4f959",
             "download_url": "https://check0ver.net/en/iapps/9e5a00af-7243-4e03-a5a3-579826a4f959",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.Melesta.MyCafe",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -656,11 +603,7 @@
                     "version": "2026100.0.958",
                     "date": "2026-09-15T21:06:07.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9e5a00af-7243-4e03-a5a3-579826a4f959",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 718557675,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -682,13 +625,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116809/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9ebe66a9-ec7c-4395-98e2-6b5ce533a942",
             "download_url": "https://check0ver.net/en/iapps/9ebe66a9-ec7c-4395-98e2-6b5ce533a942",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.mobirix.valkyrieidle",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -703,11 +641,7 @@
                     "version": "3.23.0",
                     "date": "2026-09-15T20:54:58.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9ebe66a9-ec7c-4395-98e2-6b5ce533a942",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 350864015,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -729,13 +663,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132204/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a18afa27-ea7b-4b03-89e0-3df477cfb0bf",
             "download_url": "https://check0ver.net/en/iapps/a18afa27-ea7b-4b03-89e0-3df477cfb0bf",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.halfbrick.aeroracer",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -750,11 +679,7 @@
                     "version": "1.3.0",
                     "date": "2026-09-15T20:23:53.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a18afa27-ea7b-4b03-89e0-3df477cfb0bf",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 379102167,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -776,13 +701,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117677/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9fa689bc-5501-41c5-b7fc-1f0ec3195001",
             "download_url": "https://check0ver.net/en/iapps/9fa689bc-5501-41c5-b7fc-1f0ec3195001",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.seasoninggames.endlessbricks",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -797,11 +717,7 @@
                     "version": "2.6.0",
                     "date": "2026-09-15T20:20:57.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9fa689bc-5501-41c5-b7fc-1f0ec3195001",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 149338193,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -823,13 +739,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/136473/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a1b0fdc0-0dfa-4be4-a467-e5d5e2d3c7b2",
             "download_url": "https://check0ver.net/en/iapps/a1b0fdc0-0dfa-4be4-a467-e5d5e2d3c7b2",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.hutchgames.rebelracing",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -844,11 +755,7 @@
                     "version": "27.05.19389",
                     "date": "2026-09-15T20:16:52.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a1b0fdc0-0dfa-4be4-a467-e5d5e2d3c7b2",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 75403100,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -870,13 +777,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114968/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9cbb8f53-a024-4d5d-bfb0-0b17cfc04b29",
             "download_url": "https://check0ver.net/en/iapps/9cbb8f53-a024-4d5d-bfb0-0b17cfc04b29",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.mobirate.DeadAheadTactics",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -891,11 +793,7 @@
                     "version": "4.4.3",
                     "date": "2026-09-15T20:11:58.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9cbb8f53-a024-4d5d-bfb0-0b17cfc04b29",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 155178762,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -917,13 +815,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114689/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9caf77ce-3e11-4738-b182-da20ded8f525",
             "download_url": "https://check0ver.net/en/iapps/9caf77ce-3e11-4738-b182-da20ded8f525",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.FreeDust.UnderDark",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -938,11 +831,7 @@
                     "version": "3.3.11",
                     "date": "2026-09-15T20:10:47.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9caf77ce-3e11-4738-b182-da20ded8f525",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 200802304,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -964,13 +853,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117267/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9e98904e-14ec-44b3-8ca4-bcdd74293ee2",
             "download_url": "https://check0ver.net/en/iapps/9e98904e-14ec-44b3-8ca4-bcdd74293ee2",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.ea.starwarscapital.bv",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -985,11 +869,7 @@
                     "version": "0.40.6",
                     "date": "2026-09-15T20:08:55.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9e98904e-14ec-44b3-8ca4-bcdd74293ee2",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 173717585,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -1011,13 +891,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125276/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0fae95a-e69e-4473-b7bf-5804b8e199c2",
             "download_url": "https://check0ver.net/en/iapps/a0fae95a-e69e-4473-b7bf-5804b8e199c2",
-=======
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.d3p.olympic",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -1032,11 +907,7 @@
                     "version": "8.1.1",
                     "date": "2026-09-15T20:07:16.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0fae95a-e69e-4473-b7bf-5804b8e199c2",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 124214312,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -7382,11 +7253,7 @@
                     "version": "1.0.42",
                     "date": "2026-09-13T12:45:10.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 122861649,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -9438,11 +9305,7 @@
                     "version": "1.9.95",
                     "date": "2026-09-12T06:23:12.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0cddfa4-daa3-4ada-824a-b5b7c5792198",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 149600337,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -11532,11 +11395,7 @@
                     "version": "6.58.2",
                     "date": "2026-09-11T13:30:00.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9d46bda7-7e27-4560-8ed9-9e3ef6d2e4aa",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 151466803,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -13550,11 +13409,7 @@
                     "version": "2.80.5",
                     "date": "2026-09-10T14:22:28.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9e4de057-020b-41ec-8a91-aa338990b2dc",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 195590881,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -19824,11 +19679,7 @@
                     "version": "8.22.1",
                     "date": "2026-09-06T03:09:13.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a133e1ed-cda4-4091-848e-01c75e6c17e1",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 125462118,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -24996,11 +24847,7 @@
                     "version": "9.800",
                     "date": "2026-09-02T11:17:31.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9c76b990-a913-4a6d-880b-89be0ca06753",
-=======
-                    "downloadURL": "https://check0ver.net/en",
->>>>>>> Stashed changes
                     "size": 152316149,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -29195,47 +29042,6 @@
             "patreon": []
         },
         {
-<<<<<<< Updated upstream
-=======
-            "id": 656478244,
-            "name": "Colopl Rune Story",
-            "version": "5.57.1",
-            "size": "93.18 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/158279/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
-            "bundleIdentifier": "jp.colopl.wcat",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/158279/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "5.57.1",
-                    "date": "2026-08-30T23:23:44.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en",
-                    "size": 97706311,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
->>>>>>> Stashed changes
             "id": 485519083,
             "name": "Egypt Treasure Endless Runner",
             "version": "1.8",
@@ -31198,44 +31004,6 @@
                     "date": "2026-08-28T07:56:22.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9c69edca-3e92-4ccb-90e0-8bacd452aa18",
-                    "size": 129562050,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 186663342,
-            "name": "Puzzle Games for Kids 2-6 year",
-            "version": "2.94",
-            "size": "123.56 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117049/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
-            "bundleIdentifier": "com.bimiboo.kids.puzzles",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117049/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.94",
-                    "date": "2026-08-28T07:56:22.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en",
                     "size": 129562050,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -43942,44 +43710,6 @@
             "patreon": []
         },
         {
-            "id": 647060260,
-            "name": "Raising Reincarnated SwordMage",
-            "version": "1.25",
-            "size": "378.42 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/119745/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
-            "bundleIdentifier": "com.lunosoft.swordsman",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/119745/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.25",
-                    "date": "2026-08-12T13:54:32.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en",
-                    "size": 396802129,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 617177627,
             "name": "Dungeon Odyssey",
             "version": "1.0.6",
@@ -50295,13 +50025,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/157601/8393b9b6-dfb5-43c9-9e47-0ea848070e51.png",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a258b405-aa96-47d3-866e-dc44628dedde",
             "download_url": "https://check0ver.net/en/iapps/a258b405-aa96-47d3-866e-dc44628dedde",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a258b405-aa96-47d3-866e-dc44628dedde/download",
-            "download_url": "https://check0ver.net/en/iapps/a258b405-aa96-47d3-866e-dc44628dedde/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.glaznev.inn",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -50316,11 +50041,7 @@
                     "version": "2.15.126",
                     "date": "2026-07-26T05:39:12.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a258b405-aa96-47d3-866e-dc44628dedde",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a258b405-aa96-47d3-866e-dc44628dedde/download",
->>>>>>> Stashed changes
                     "size": 56476303,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -50950,13 +50671,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/157413/images.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a2562a4e-7775-4969-891e-763f3e80d12c",
             "download_url": "https://check0ver.net/en/iapps/a2562a4e-7775-4969-891e-763f3e80d12c",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a2562a4e-7775-4969-891e-763f3e80d12c/download",
-            "download_url": "https://check0ver.net/en/iapps/a2562a4e-7775-4969-891e-763f3e80d12c/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.sega.tokyo.Offline",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -50971,11 +50687,7 @@
                     "version": "1.0.0",
                     "date": "2026-07-24T16:15:13.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a2562a4e-7775-4969-891e-763f3e80d12c",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a2562a4e-7775-4969-891e-763f3e80d12c/download",
->>>>>>> Stashed changes
                     "size": 583322828,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -52479,13 +52191,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/141566/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a1dd81c4-7259-46c9-9a6e-021af17e3599",
             "download_url": "https://check0ver.net/en/iapps/a1dd81c4-7259-46c9-9a6e-021af17e3599",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a1dd81c4-7259-46c9-9a6e-021af17e3599/download",
-            "download_url": "https://check0ver.net/en/iapps/a1dd81c4-7259-46c9-9a6e-021af17e3599/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.memory.tiles",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -52500,11 +52207,7 @@
                     "version": "1.2.2",
                     "date": "2026-07-22T00:37:59.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a1dd81c4-7259-46c9-9a6e-021af17e3599",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a1dd81c4-7259-46c9-9a6e-021af17e3599/download",
->>>>>>> Stashed changes
                     "size": 218491781,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -52678,13 +52381,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156449/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a24c1ad1-aed8-48c0-8dab-e26fa25b429d",
             "download_url": "https://check0ver.net/en/iapps/a24c1ad1-aed8-48c0-8dab-e26fa25b429d",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a24c1ad1-aed8-48c0-8dab-e26fa25b429d/download",
-            "download_url": "https://check0ver.net/en/iapps/a24c1ad1-aed8-48c0-8dab-e26fa25b429d/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.yazanabdouni.didyouknow",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -52699,11 +52397,7 @@
                     "version": "3.0.2",
                     "date": "2026-07-21T15:33:36.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a24c1ad1-aed8-48c0-8dab-e26fa25b429d",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a24c1ad1-aed8-48c0-8dab-e26fa25b429d/download",
->>>>>>> Stashed changes
                     "size": 13662945,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -68419,13 +68113,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116061/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9fa1c07b-3227-4350-bad4-b3c944c82b7f",
             "download_url": "https://check0ver.net/en/iapps/9fa1c07b-3227-4350-bad4-b3c944c82b7f",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9fa1c07b-3227-4350-bad4-b3c944c82b7f/download",
-            "download_url": "https://check0ver.net/en/iapps/9fa1c07b-3227-4350-bad4-b3c944c82b7f/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.highbrow.games.mnf",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -68440,11 +68129,7 @@
                     "version": "1.0.33",
                     "date": "2026-06-23T19:19:06.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9fa1c07b-3227-4350-bad4-b3c944c82b7f",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9fa1c07b-3227-4350-bad4-b3c944c82b7f/download",
->>>>>>> Stashed changes
                     "size": 485920604,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -69568,13 +69253,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150756/7cd4166f-261e-4dd8-aebc-b618db2630f4.png",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a2136fbc-8eb3-45eb-b577-aab3780b9a58",
             "download_url": "https://check0ver.net/en/iapps/a2136fbc-8eb3-45eb-b577-aab3780b9a58",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a2136fbc-8eb3-45eb-b577-aab3780b9a58/download",
-            "download_url": "https://check0ver.net/en/iapps/a2136fbc-8eb3-45eb-b577-aab3780b9a58/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "net.ilyon.tiles",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -69589,11 +69269,7 @@
                     "version": "3.0.3",
                     "date": "2026-06-22T17:53:11.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a2136fbc-8eb3-45eb-b577-aab3780b9a58",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a2136fbc-8eb3-45eb-b577-aab3780b9a58/download",
->>>>>>> Stashed changes
                     "size": 121162956,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -118476,44 +118152,6 @@
             "patreon": []
         },
         {
-            "id": 104832162,
-            "name": "Cataclysm Dark Days Ahead & BN",
-            "version": "5.2",
-            "size": "221.15 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/127733/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en",
-            "download_url": "https://check0ver.net/en",
-            "bundleIdentifier": "tk.apollov.CBNfreeIAP",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/127733/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "5.2",
-                    "date": "2026-02-28T16:14:08.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en",
-                    "size": 231892582,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 696118490,
             "name": "Elvenrage: Fight & Survive",
             "version": "1.0.7",
@@ -128895,13 +128533,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117682/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0330cf9-c945-4759-ac9d-ca58436e8e1f",
             "download_url": "https://check0ver.net/en/iapps/a0330cf9-c945-4759-ac9d-ca58436e8e1f",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0330cf9-c945-4759-ac9d-ca58436e8e1f/download",
-            "download_url": "https://check0ver.net/en/iapps/a0330cf9-c945-4759-ac9d-ca58436e8e1f/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "net.kairosoft.iOS.kingdomEN",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -128916,11 +128549,7 @@
                     "version": "2.60",
                     "date": "2026-01-01T10:24:53.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0330cf9-c945-4759-ac9d-ca58436e8e1f",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0330cf9-c945-4759-ac9d-ca58436e8e1f/download",
->>>>>>> Stashed changes
                     "size": 52439285,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -128942,13 +128571,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117684/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9cbdbbb2-1de2-42e5-b99d-56363e09143c",
             "download_url": "https://check0ver.net/en/iapps/9cbdbbb2-1de2-42e5-b99d-56363e09143c",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9cbdbbb2-1de2-42e5-b99d-56363e09143c/download",
-            "download_url": "https://check0ver.net/en/iapps/9cbdbbb2-1de2-42e5-b99d-56363e09143c/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.sozap.questopia",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -128963,11 +128587,7 @@
                     "version": "1.6.7",
                     "date": "2026-01-01T10:24:37.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9cbdbbb2-1de2-42e5-b99d-56363e09143c",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9cbdbbb2-1de2-42e5-b99d-56363e09143c/download",
->>>>>>> Stashed changes
                     "size": 150260940,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -128989,13 +128609,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/88638/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a04e87ff-924e-4d03-89f4-90bb2fe8bd52",
             "download_url": "https://check0ver.net/en/iapps/a04e87ff-924e-4d03-89f4-90bb2fe8bd52",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a04e87ff-924e-4d03-89f4-90bb2fe8bd52/download",
-            "download_url": "https://check0ver.net/en/iapps/a04e87ff-924e-4d03-89f4-90bb2fe8bd52/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.ondi.shadowslayer",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129010,11 +128625,7 @@
                     "version": "1.5.00",
                     "date": "2026-01-01T10:20:15.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a04e87ff-924e-4d03-89f4-90bb2fe8bd52",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a04e87ff-924e-4d03-89f4-90bb2fe8bd52/download",
->>>>>>> Stashed changes
                     "size": 281815285,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129036,13 +128647,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117687/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0213b62-dc5a-4477-a2d7-6e12159aa3f4",
             "download_url": "https://check0ver.net/en/iapps/a0213b62-dc5a-4477-a2d7-6e12159aa3f4",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0213b62-dc5a-4477-a2d7-6e12159aa3f4/download",
-            "download_url": "https://check0ver.net/en/iapps/a0213b62-dc5a-4477-a2d7-6e12159aa3f4/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.epic.towerdefense.td.legend",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129057,11 +128663,7 @@
                     "version": "1.2.8",
                     "date": "2026-01-01T10:16:54.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0213b62-dc5a-4477-a2d7-6e12159aa3f4",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0213b62-dc5a-4477-a2d7-6e12159aa3f4/download",
->>>>>>> Stashed changes
                     "size": 139848581,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129083,13 +128685,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/147131/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0b5c530-45f0-4726-a725-859e622f74ee",
             "download_url": "https://check0ver.net/en/iapps/a0b5c530-45f0-4726-a725-859e622f74ee",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0b5c530-45f0-4726-a725-859e622f74ee/download",
-            "download_url": "https://check0ver.net/en/iapps/a0b5c530-45f0-4726-a725-859e622f74ee/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.red.business",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129104,11 +128701,7 @@
                     "version": "2.1.36",
                     "date": "2025-12-30T12:13:56.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0b5c530-45f0-4726-a725-859e622f74ee",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0b5c530-45f0-4726-a725-859e622f74ee/download",
->>>>>>> Stashed changes
                     "size": 88793415,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129130,13 +128723,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/98563/ea3ee926-3251-4996-9061-e3bf44faa42b.png",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0adcee3-3609-45e6-b9a2-1fda65350cdf",
             "download_url": "https://check0ver.net/en/iapps/a0adcee3-3609-45e6-b9a2-1fda65350cdf",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0adcee3-3609-45e6-b9a2-1fda65350cdf/download",
-            "download_url": "https://check0ver.net/en/iapps/a0adcee3-3609-45e6-b9a2-1fda65350cdf/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.raadgames.OffRoadPro4x4",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129151,11 +128739,7 @@
                     "version": "5805",
                     "date": "2025-12-26T21:00:50.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0adcee3-3609-45e6-b9a2-1fda65350cdf",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0adcee3-3609-45e6-b9a2-1fda65350cdf/download",
->>>>>>> Stashed changes
                     "size": 491624857,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129177,13 +128761,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117707/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9f696e37-bc86-4dd2-9c76-ded924986f78",
             "download_url": "https://check0ver.net/en/iapps/9f696e37-bc86-4dd2-9c76-ded924986f78",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9f696e37-bc86-4dd2-9c76-ded924986f78/download",
-            "download_url": "https://check0ver.net/en/iapps/9f696e37-bc86-4dd2-9c76-ded924986f78/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.mohanadgames.iArabChallenge",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129198,11 +128777,7 @@
                     "version": "2.7",
                     "date": "2025-12-26T20:38:35.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9f696e37-bc86-4dd2-9c76-ded924986f78",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9f696e37-bc86-4dd2-9c76-ded924986f78/download",
->>>>>>> Stashed changes
                     "size": 36846960,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129224,13 +128799,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/98449/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0abda0b-f5ba-4b7a-afd0-00192a1f952e",
             "download_url": "https://check0ver.net/en/iapps/a0abda0b-f5ba-4b7a-afd0-00192a1f952e",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0abda0b-f5ba-4b7a-afd0-00192a1f952e/download",
-            "download_url": "https://check0ver.net/en/iapps/a0abda0b-f5ba-4b7a-afd0-00192a1f952e/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.matabstudio.shawarma",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129245,11 +128815,7 @@
                     "version": "1.0.3",
                     "date": "2025-12-25T17:04:49.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0abda0b-f5ba-4b7a-afd0-00192a1f952e",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0abda0b-f5ba-4b7a-afd0-00192a1f952e/download",
->>>>>>> Stashed changes
                     "size": 65714257,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129271,13 +128837,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117713/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9e9fcd80-ac02-47aa-a77c-69b9f44aff01",
             "download_url": "https://check0ver.net/en/iapps/9e9fcd80-ac02-47aa-a77c-69b9f44aff01",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9e9fcd80-ac02-47aa-a77c-69b9f44aff01/download",
-            "download_url": "https://check0ver.net/en/iapps/9e9fcd80-ac02-47aa-a77c-69b9f44aff01/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.redforcegames.stack.colors",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129292,11 +128853,7 @@
                     "version": "4.5.44",
                     "date": "2025-12-24T10:08:34.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9e9fcd80-ac02-47aa-a77c-69b9f44aff01",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9e9fcd80-ac02-47aa-a77c-69b9f44aff01/download",
->>>>>>> Stashed changes
                     "size": 76755763,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129318,13 +128875,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122615/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0a75709-4d8f-407c-bd49-c917f653d673",
             "download_url": "https://check0ver.net/en/iapps/a0a75709-4d8f-407c-bd49-c917f653d673",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0a75709-4d8f-407c-bd49-c917f653d673/download",
-            "download_url": "https://check0ver.net/en/iapps/a0a75709-4d8f-407c-bd49-c917f653d673/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.soontothemoon.8.ball.pool.1vs1",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129339,11 +128891,7 @@
                     "version": "1.0.1",
                     "date": "2025-12-23T16:14:02.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0a75709-4d8f-407c-bd49-c917f653d673",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0a75709-4d8f-407c-bd49-c917f653d673/download",
->>>>>>> Stashed changes
                     "size": 125566976,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129365,13 +128913,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/98054/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0a7571d-1202-47c1-ac3e-883b47f82fa8",
             "download_url": "https://check0ver.net/en/iapps/a0a7571d-1202-47c1-ac3e-883b47f82fa8",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0a7571d-1202-47c1-ac3e-883b47f82fa8/download",
-            "download_url": "https://check0ver.net/en/iapps/a0a7571d-1202-47c1-ac3e-883b47f82fa8/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.soontothemoon.onlyupparkour",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129386,11 +128929,7 @@
                     "version": "1.2.5",
                     "date": "2025-12-23T16:13:54.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0a7571d-1202-47c1-ac3e-883b47f82fa8",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0a7571d-1202-47c1-ac3e-883b47f82fa8/download",
->>>>>>> Stashed changes
                     "size": 107227381,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129412,13 +128951,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/97898/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0a70448-ed56-4a8e-bdc0-899a7d406312",
             "download_url": "https://check0ver.net/en/iapps/a0a70448-ed56-4a8e-bdc0-899a7d406312",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0a70448-ed56-4a8e-bdc0-899a7d406312/download",
-            "download_url": "https://check0ver.net/en/iapps/a0a70448-ed56-4a8e-bdc0-899a7d406312/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.plazmastudio.matchcruise",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129433,11 +128967,7 @@
                     "version": "1.14.2",
                     "date": "2025-12-22T09:37:36.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0a70448-ed56-4a8e-bdc0-899a7d406312",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0a70448-ed56-4a8e-bdc0-899a7d406312/download",
->>>>>>> Stashed changes
                     "size": 181382676,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129459,13 +128989,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/97900/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0a7047b-fa62-4ac4-9798-ed6d04fa22cc",
             "download_url": "https://check0ver.net/en/iapps/a0a7047b-fa62-4ac4-9798-ed6d04fa22cc",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0a7047b-fa62-4ac4-9798-ed6d04fa22cc/download",
-            "download_url": "https://check0ver.net/en/iapps/a0a7047b-fa62-4ac4-9798-ed6d04fa22cc/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.pusugames.burjuva",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129480,11 +129005,7 @@
                     "version": "0.1",
                     "date": "2025-12-22T09:37:21.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0a7047b-fa62-4ac4-9798-ed6d04fa22cc",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0a7047b-fa62-4ac4-9798-ed6d04fa22cc/download",
->>>>>>> Stashed changes
                     "size": 210281431,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129506,13 +129027,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117731/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9f5c0068-72cd-48b7-ad00-36b11b8c108d",
             "download_url": "https://check0ver.net/en/iapps/9f5c0068-72cd-48b7-ad00-36b11b8c108d",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9f5c0068-72cd-48b7-ad00-36b11b8c108d/download",
-            "download_url": "https://check0ver.net/en/iapps/9f5c0068-72cd-48b7-ad00-36b11b8c108d/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.hpb.slitherblast",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129527,11 +129043,7 @@
                     "version": "2.11",
                     "date": "2025-12-21T17:24:32.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9f5c0068-72cd-48b7-ad00-36b11b8c108d",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9f5c0068-72cd-48b7-ad00-36b11b8c108d/download",
->>>>>>> Stashed changes
                     "size": 83980451,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129553,13 +129065,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/97565/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0a1d82e-7957-42d9-85ca-7f98cde12880",
             "download_url": "https://check0ver.net/en/iapps/a0a1d82e-7957-42d9-85ca-7f98cde12880",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0a1d82e-7957-42d9-85ca-7f98cde12880/download",
-            "download_url": "https://check0ver.net/en/iapps/a0a1d82e-7957-42d9-85ca-7f98cde12880/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "games.star.trooper",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129574,11 +129081,7 @@
                     "version": "1.5.3",
                     "date": "2025-12-20T12:54:13.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0a1d82e-7957-42d9-85ca-7f98cde12880",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0a1d82e-7957-42d9-85ca-7f98cde12880/download",
->>>>>>> Stashed changes
                     "size": 147933102,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129600,13 +129103,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/97373/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0a11c58-452f-46bd-9811-a7347a4dc7c2",
             "download_url": "https://check0ver.net/en/iapps/a0a11c58-452f-46bd-9811-a7347a4dc7c2",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0a11c58-452f-46bd-9811-a7347a4dc7c2/download",
-            "download_url": "https://check0ver.net/en/iapps/a0a11c58-452f-46bd-9811-a7347a4dc7c2/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "bus.mania.away.car.traffic.escape.parking.jam",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129621,11 +129119,7 @@
                     "version": "1.0.8",
                     "date": "2025-12-19T15:18:49.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0a11c58-452f-46bd-9811-a7347a4dc7c2",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0a11c58-452f-46bd-9811-a7347a4dc7c2/download",
->>>>>>> Stashed changes
                     "size": 41869639,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129647,13 +129141,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/97209/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a09f6062-fc69-4e3f-a8ad-4c207c184216",
             "download_url": "https://check0ver.net/en/iapps/a09f6062-fc69-4e3f-a8ad-4c207c184216",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a09f6062-fc69-4e3f-a8ad-4c207c184216/download",
-            "download_url": "https://check0ver.net/en/iapps/a09f6062-fc69-4e3f-a8ad-4c207c184216/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.rommanapps.zahmeh",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129668,11 +129157,7 @@
                     "version": "1.1",
                     "date": "2025-12-19T15:18:42.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a09f6062-fc69-4e3f-a8ad-4c207c184216",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a09f6062-fc69-4e3f-a8ad-4c207c184216/download",
->>>>>>> Stashed changes
                     "size": 24389877,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129694,13 +129179,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117750/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9d85152a-2329-43bc-8307-9bc2a79ad92b",
             "download_url": "https://check0ver.net/en/iapps/9d85152a-2329-43bc-8307-9bc2a79ad92b",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9d85152a-2329-43bc-8307-9bc2a79ad92b/download",
-            "download_url": "https://check0ver.net/en/iapps/9d85152a-2329-43bc-8307-9bc2a79ad92b/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.zytoona.WordsCrush",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129715,11 +129195,7 @@
                     "version": "8.2",
                     "date": "2025-12-19T15:00:35.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9d85152a-2329-43bc-8307-9bc2a79ad92b",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9d85152a-2329-43bc-8307-9bc2a79ad92b/download",
->>>>>>> Stashed changes
                     "size": 105381888,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129741,13 +129217,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/95536/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a08f79b6-d42a-4a5c-822a-b6e9b6d00904",
             "download_url": "https://check0ver.net/en/iapps/a08f79b6-d42a-4a5c-822a-b6e9b6d00904",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a08f79b6-d42a-4a5c-822a-b6e9b6d00904/download",
-            "download_url": "https://check0ver.net/en/iapps/a08f79b6-d42a-4a5c-822a-b6e9b6d00904/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "IdeaStudio.CatchTheSun",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129762,11 +129233,7 @@
                     "version": "1.2",
                     "date": "2025-12-11T15:06:56.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a08f79b6-d42a-4a5c-822a-b6e9b6d00904",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a08f79b6-d42a-4a5c-822a-b6e9b6d00904/download",
->>>>>>> Stashed changes
                     "size": 5484052,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129788,13 +129255,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117790/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9d996167-153c-44c6-bec4-dd4f1265e4f3",
             "download_url": "https://check0ver.net/en/iapps/9d996167-153c-44c6-bec4-dd4f1265e4f3",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9d996167-153c-44c6-bec4-dd4f1265e4f3/download",
-            "download_url": "https://check0ver.net/en/iapps/9d996167-153c-44c6-bec4-dd4f1265e4f3/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.rommanapps.wyr",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129809,11 +129271,7 @@
                     "version": "1.3.4",
                     "date": "2025-12-11T12:45:22.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9d996167-153c-44c6-bec4-dd4f1265e4f3",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9d996167-153c-44c6-bec4-dd4f1265e4f3/download",
->>>>>>> Stashed changes
                     "size": 37958451,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129835,13 +129293,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117796/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9e280f57-0a1f-40f7-a1e4-3288a3cc4b5b",
             "download_url": "https://check0ver.net/en/iapps/9e280f57-0a1f-40f7-a1e4-3288a3cc4b5b",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9e280f57-0a1f-40f7-a1e4-3288a3cc4b5b/download",
-            "download_url": "https://check0ver.net/en/iapps/9e280f57-0a1f-40f7-a1e4-3288a3cc4b5b/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.jamesanthonycastrejon.Hang-Man",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129856,11 +129309,7 @@
                     "version": "4.9",
                     "date": "2025-12-10T12:34:23.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9e280f57-0a1f-40f7-a1e4-3288a3cc4b5b",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9e280f57-0a1f-40f7-a1e4-3288a3cc4b5b/download",
->>>>>>> Stashed changes
                     "size": 139942952,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129882,13 +129331,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117799/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a028b932-b442-4a75-b627-031e7bb518e6",
             "download_url": "https://check0ver.net/en/iapps/a028b932-b442-4a75-b627-031e7bb518e6",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a028b932-b442-4a75-b627-031e7bb518e6/download",
-            "download_url": "https://check0ver.net/en/iapps/a028b932-b442-4a75-b627-031e7bb518e6/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.joygo.gangbrawl",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129903,11 +129347,7 @@
                     "version": "4.3",
                     "date": "2025-12-10T12:33:18.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a028b932-b442-4a75-b627-031e7bb518e6",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a028b932-b442-4a75-b627-031e7bb518e6/download",
->>>>>>> Stashed changes
                     "size": 54347694,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129929,13 +129369,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/92099/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a069b785-8b0d-478e-b4ae-33adaaec8dcc",
             "download_url": "https://check0ver.net/en/iapps/a069b785-8b0d-478e-b4ae-33adaaec8dcc",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a069b785-8b0d-478e-b4ae-33adaaec8dcc/download",
-            "download_url": "https://check0ver.net/en/iapps/a069b785-8b0d-478e-b4ae-33adaaec8dcc/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.unicostudio.triplematch",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129950,11 +129385,7 @@
                     "version": "1.309",
                     "date": "2025-12-08T13:16:25.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a069b785-8b0d-478e-b4ae-33adaaec8dcc",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a069b785-8b0d-478e-b4ae-33adaaec8dcc/download",
->>>>>>> Stashed changes
                     "size": 139963924,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -129976,13 +129407,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/94867/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0897cce-8335-49a8-8aed-9b6af71d7c89",
             "download_url": "https://check0ver.net/en/iapps/a0897cce-8335-49a8-8aed-9b6af71d7c89",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0897cce-8335-49a8-8aed-9b6af71d7c89/download",
-            "download_url": "https://check0ver.net/en/iapps/a0897cce-8335-49a8-8aed-9b6af71d7c89/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.sgp.police.car.chase.games",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -129997,11 +129423,7 @@
                     "version": "2.3",
                     "date": "2025-12-08T12:38:03.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0897cce-8335-49a8-8aed-9b6af71d7c89",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0897cce-8335-49a8-8aed-9b6af71d7c89/download",
->>>>>>> Stashed changes
                     "size": 142165934,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130023,13 +129445,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/94330/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a082e257-4401-4d6f-9b5a-b88a10ee52a9",
             "download_url": "https://check0ver.net/en/iapps/a082e257-4401-4d6f-9b5a-b88a10ee52a9",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a082e257-4401-4d6f-9b5a-b88a10ee52a9/download",
-            "download_url": "https://check0ver.net/en/iapps/a082e257-4401-4d6f-9b5a-b88a10ee52a9/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.gigaswords.archtdsurv",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130044,11 +129461,7 @@
                     "version": "1.3.4",
                     "date": "2025-12-04T13:47:27.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a082e257-4401-4d6f-9b5a-b88a10ee52a9",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a082e257-4401-4d6f-9b5a-b88a10ee52a9/download",
->>>>>>> Stashed changes
                     "size": 159876382,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130070,13 +129483,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/94360/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0831872-af79-4121-93a6-99bd1ce2a7b1",
             "download_url": "https://check0ver.net/en/iapps/a0831872-af79-4121-93a6-99bd1ce2a7b1",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0831872-af79-4121-93a6-99bd1ce2a7b1/download",
-            "download_url": "https://check0ver.net/en/iapps/a0831872-af79-4121-93a6-99bd1ce2a7b1/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "last.legion.tower.defense.survival.war.fortress.idle.td",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130091,11 +129499,7 @@
                     "version": "1.1.1",
                     "date": "2025-12-04T13:47:18.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0831872-af79-4121-93a6-99bd1ce2a7b1",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0831872-af79-4121-93a6-99bd1ce2a7b1/download",
->>>>>>> Stashed changes
                     "size": 203549573,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130117,13 +129521,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117822/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0224b7c-5208-404e-8392-c544874a340e",
             "download_url": "https://check0ver.net/en/iapps/a0224b7c-5208-404e-8392-c544874a340e",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0224b7c-5208-404e-8392-c544874a340e/download",
-            "download_url": "https://check0ver.net/en/iapps/a0224b7c-5208-404e-8392-c544874a340e/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.hi.horror.story.tricky.quest",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130138,11 +129537,7 @@
                     "version": "1.2.3",
                     "date": "2025-12-03T13:47:09.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0224b7c-5208-404e-8392-c544874a340e",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0224b7c-5208-404e-8392-c544874a340e/download",
->>>>>>> Stashed changes
                     "size": 125703290,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130164,13 +129559,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93498/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0791d99-3066-4450-bbac-3a5198273c49",
             "download_url": "https://check0ver.net/en/iapps/a0791d99-3066-4450-bbac-3a5198273c49",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0791d99-3066-4450-bbac-3a5198273c49/download",
-            "download_url": "https://check0ver.net/en/iapps/a0791d99-3066-4450-bbac-3a5198273c49/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.fty.collectown",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130185,11 +129575,7 @@
                     "version": "1.2.0",
                     "date": "2025-12-02T11:30:18.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0791d99-3066-4450-bbac-3a5198273c49",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0791d99-3066-4450-bbac-3a5198273c49/download",
->>>>>>> Stashed changes
                     "size": 171075174,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130211,13 +129597,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93493/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a07919df-f314-4857-ae08-99871a2279ba",
             "download_url": "https://check0ver.net/en/iapps/a07919df-f314-4857-ae08-99871a2279ba",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a07919df-f314-4857-ae08-99871a2279ba/download",
-            "download_url": "https://check0ver.net/en/iapps/a07919df-f314-4857-ae08-99871a2279ba/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.fty.treasure",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130232,11 +129613,7 @@
                     "version": "1.0.8",
                     "date": "2025-12-02T11:30:11.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a07919df-f314-4857-ae08-99871a2279ba",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a07919df-f314-4857-ae08-99871a2279ba/download",
->>>>>>> Stashed changes
                     "size": 145615749,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130258,13 +129635,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93368/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a07725cc-e036-4de9-9411-409fadb97002",
             "download_url": "https://check0ver.net/en/iapps/a07725cc-e036-4de9-9411-409fadb97002",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a07725cc-e036-4de9-9411-409fadb97002/download",
-            "download_url": "https://check0ver.net/en/iapps/a07725cc-e036-4de9-9411-409fadb97002/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "tr.com.tiramisu.driftmax",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130279,11 +129651,7 @@
                     "version": "10.6",
                     "date": "2025-11-29T11:48:33.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a07725cc-e036-4de9-9411-409fadb97002",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a07725cc-e036-4de9-9411-409fadb97002/download",
->>>>>>> Stashed changes
                     "size": 182284451,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130305,13 +129673,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93199/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0754943-337a-4a50-b7f4-3d77182d2f7b",
             "download_url": "https://check0ver.net/en/iapps/a0754943-337a-4a50-b7f4-3d77182d2f7b",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0754943-337a-4a50-b7f4-3d77182d2f7b/download",
-            "download_url": "https://check0ver.net/en/iapps/a0754943-337a-4a50-b7f4-3d77182d2f7b/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.fty.hexabattles",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130326,11 +129689,7 @@
                     "version": "1.1.2",
                     "date": "2025-11-29T11:48:22.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0754943-337a-4a50-b7f4-3d77182d2f7b",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0754943-337a-4a50-b7f4-3d77182d2f7b/download",
->>>>>>> Stashed changes
                     "size": 118153543,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130352,13 +129711,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93374/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a077435b-1f2e-4937-8099-d90b1630eb43",
             "download_url": "https://check0ver.net/en/iapps/a077435b-1f2e-4937-8099-d90b1630eb43",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a077435b-1f2e-4937-8099-d90b1630eb43/download",
-            "download_url": "https://check0ver.net/en/iapps/a077435b-1f2e-4937-8099-d90b1630eb43/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.big.vendetta",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130373,11 +129727,7 @@
                     "version": "1.7.2",
                     "date": "2025-11-29T11:48:10.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a077435b-1f2e-4937-8099-d90b1630eb43",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a077435b-1f2e-4937-8099-d90b1630eb43/download",
->>>>>>> Stashed changes
                     "size": 185398722,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130399,13 +129749,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93390/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a077853b-3a3f-470a-aab0-fdb539181734",
             "download_url": "https://check0ver.net/en/iapps/a077853b-3a3f-470a-aab0-fdb539181734",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a077853b-3a3f-470a-aab0-fdb539181734/download",
-            "download_url": "https://check0ver.net/en/iapps/a077853b-3a3f-470a-aab0-fdb539181734/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.real.city.train.driving.simulator.game",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130420,11 +129765,7 @@
                     "version": "1.4",
                     "date": "2025-11-29T11:48:00.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a077853b-3a3f-470a-aab0-fdb539181734",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a077853b-3a3f-470a-aab0-fdb539181734/download",
->>>>>>> Stashed changes
                     "size": 164207001,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130446,13 +129787,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/136183/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0778a72-19e2-44f6-98bb-abbedf431d98",
             "download_url": "https://check0ver.net/en/iapps/a0778a72-19e2-44f6-98bb-abbedf431d98",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0778a72-19e2-44f6-98bb-abbedf431d98/download",
-            "download_url": "https://check0ver.net/en/iapps/a0778a72-19e2-44f6-98bb-abbedf431d98/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.garena.ball.run.goingball.ironball.rollingball",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130467,11 +129803,7 @@
                     "version": "1.37",
                     "date": "2025-11-29T11:47:53.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0778a72-19e2-44f6-98bb-abbedf431d98",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0778a72-19e2-44f6-98bb-abbedf431d98/download",
->>>>>>> Stashed changes
                     "size": 261756026,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130493,13 +129825,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/93397/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a07792ea-d42a-484f-9781-1284cf9e88f4",
             "download_url": "https://check0ver.net/en/iapps/a07792ea-d42a-484f-9781-1284cf9e88f4",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a07792ea-d42a-484f-9781-1284cf9e88f4/download",
-            "download_url": "https://check0ver.net/en/iapps/a07792ea-d42a-484f-9781-1284cf9e88f4/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.spiky.DinoRun",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130514,11 +129841,7 @@
                     "version": "10.4",
                     "date": "2025-11-29T11:47:45.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a07792ea-d42a-484f-9781-1284cf9e88f4",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a07792ea-d42a-484f-9781-1284cf9e88f4/download",
->>>>>>> Stashed changes
                     "size": 143612968,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130540,13 +129863,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117841/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9fc403a1-7797-4350-9fe3-1c246c316f7c",
             "download_url": "https://check0ver.net/en/iapps/9fc403a1-7797-4350-9fe3-1c246c316f7c",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9fc403a1-7797-4350-9fe3-1c246c316f7c/download",
-            "download_url": "https://check0ver.net/en/iapps/9fc403a1-7797-4350-9fe3-1c246c316f7c/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.snapbreak.snufkin",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130561,11 +129879,7 @@
                     "version": "1.1.0",
                     "date": "2025-11-27T10:30:53.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9fc403a1-7797-4350-9fe3-1c246c316f7c",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9fc403a1-7797-4350-9fe3-1c246c316f7c/download",
->>>>>>> Stashed changes
                     "size": 568915394,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130587,13 +129901,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/92579/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0703940-61a9-4000-b4c7-c34ecb00a3f6",
             "download_url": "https://check0ver.net/en/iapps/a0703940-61a9-4000-b4c7-c34ecb00a3f6",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0703940-61a9-4000-b4c7-c34ecb00a3f6/download",
-            "download_url": "https://check0ver.net/en/iapps/a0703940-61a9-4000-b4c7-c34ecb00a3f6/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.metime.movingtower",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130608,11 +129917,7 @@
                     "version": "0.11.33",
                     "date": "2025-11-25T10:42:13.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0703940-61a9-4000-b4c7-c34ecb00a3f6",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0703940-61a9-4000-b4c7-c34ecb00a3f6/download",
->>>>>>> Stashed changes
                     "size": 176622141,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130634,13 +129939,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/92028/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a06963ac-597a-4260-a841-2c52746bf458",
             "download_url": "https://check0ver.net/en/iapps/a06963ac-597a-4260-a841-2c52746bf458",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a06963ac-597a-4260-a841-2c52746bf458/download",
-            "download_url": "https://check0ver.net/en/iapps/a06963ac-597a-4260-a841-2c52746bf458/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "troll.brain.test.puzzle.com",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130655,11 +129955,7 @@
                     "version": "1.2",
                     "date": "2025-11-22T17:56:48.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a06963ac-597a-4260-a841-2c52746bf458",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a06963ac-597a-4260-a841-2c52746bf458/download",
->>>>>>> Stashed changes
                     "size": 91372912,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130681,13 +129977,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/92025/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a069618c-8f73-47c1-ab15-8f4c58177810",
             "download_url": "https://check0ver.net/en/iapps/a069618c-8f73-47c1-ab15-8f4c58177810",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a069618c-8f73-47c1-ab15-8f4c58177810/download",
-            "download_url": "https://check0ver.net/en/iapps/a069618c-8f73-47c1-ab15-8f4c58177810/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "stickman.delete.troll.pencil",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130702,11 +129993,7 @@
                     "version": "1.1",
                     "date": "2025-11-22T17:56:33.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a069618c-8f73-47c1-ab15-8f4c58177810",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a069618c-8f73-47c1-ab15-8f4c58177810/download",
->>>>>>> Stashed changes
                     "size": 117482455,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -130728,13 +130015,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/92023/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/a0695ff9-eded-49d3-9b5d-08b97d8de171",
             "download_url": "https://check0ver.net/en/iapps/a0695ff9-eded-49d3-9b5d-08b97d8de171",
-=======
-            "install_url": "https://check0ver.net/en/iapps/a0695ff9-eded-49d3-9b5d-08b97d8de171/download",
-            "download_url": "https://check0ver.net/en/iapps/a0695ff9-eded-49d3-9b5d-08b97d8de171/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "adventure.miner.jungle.com",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -130749,11 +130031,7 @@
                     "version": "0.1",
                     "date": "2025-11-22T17:56:25.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/a0695ff9-eded-49d3-9b5d-08b97d8de171",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/a0695ff9-eded-49d3-9b5d-08b97d8de171/download",
->>>>>>> Stashed changes
                     "size": 51841597,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -148749,13 +148027,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120192/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9f1115a5-edb2-4bb3-9679-45c66f74a79f",
             "download_url": "https://check0ver.net/en/iapps/9f1115a5-edb2-4bb3-9679-45c66f74a79f",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9f1115a5-edb2-4bb3-9679-45c66f74a79f/download",
-            "download_url": "https://check0ver.net/en/iapps/9f1115a5-edb2-4bb3-9679-45c66f74a79f/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.EOAG.Trimo",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -148770,11 +148043,7 @@
                     "version": "2.0.2",
                     "date": "2025-06-10T10:25:41.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9f1115a5-edb2-4bb3-9679-45c66f74a79f",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9f1115a5-edb2-4bb3-9679-45c66f74a79f/download",
->>>>>>> Stashed changes
                     "size": 67213721,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -149100,13 +148369,8 @@
             "icon": "https://ashtemobile.site/logo.png",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9f132c5d-3d30-4166-a988-419ed814cbd6",
             "download_url": "https://check0ver.net/en/iapps/9f132c5d-3d30-4166-a988-419ed814cbd6",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9f132c5d-3d30-4166-a988-419ed814cbd6/download",
-            "download_url": "https://check0ver.net/en/iapps/9f132c5d-3d30-4166-a988-419ed814cbd6/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.twopence.bunny",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -149121,11 +148385,7 @@
                     "version": "0.0.4",
                     "date": "2025-06-04T15:07:30.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9f132c5d-3d30-4166-a988-419ed814cbd6",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9f132c5d-3d30-4166-a988-419ed814cbd6/download",
->>>>>>> Stashed changes
                     "size": 114944901,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -149565,13 +148825,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120244/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9efcd3d6-6d44-4ea1-b756-04e64401839f",
             "download_url": "https://check0ver.net/en/iapps/9efcd3d6-6d44-4ea1-b756-04e64401839f",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9efcd3d6-6d44-4ea1-b756-04e64401839f/download",
-            "download_url": "https://check0ver.net/en/iapps/9efcd3d6-6d44-4ea1-b756-04e64401839f/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.timeplusq.drawnguess",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -149586,11 +148841,7 @@
                     "version": "7010",
                     "date": "2025-05-29T12:38:31.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9efcd3d6-6d44-4ea1-b756-04e64401839f",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9efcd3d6-6d44-4ea1-b756-04e64401839f/download",
->>>>>>> Stashed changes
                     "size": 44973424,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
@@ -149612,13 +148863,8 @@
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120245/512x512bb.jpg",
             "badge": "",
             "type": "games",
-<<<<<<< Updated upstream
             "install_url": "https://check0ver.net/en/iapps/9efcd553-fcc9-41bf-8b3b-d3f37c0535b9",
             "download_url": "https://check0ver.net/en/iapps/9efcd553-fcc9-41bf-8b3b-d3f37c0535b9",
-=======
-            "install_url": "https://check0ver.net/en/iapps/9efcd553-fcc9-41bf-8b3b-d3f37c0535b9/download",
-            "download_url": "https://check0ver.net/en/iapps/9efcd553-fcc9-41bf-8b3b-d3f37c0535b9/download",
->>>>>>> Stashed changes
             "bundleIdentifier": "com.fatchickenstudios.charadespictures",
             "marketplaceID": "",
             "developerName": "AshteMobile",
@@ -149633,11 +148879,7 @@
                     "version": "2.59",
                     "date": "2025-05-29T12:38:25.000000Z",
                     "localizedDescription": null,
-<<<<<<< Updated upstream
                     "downloadURL": "https://check0ver.net/en/iapps/9efcd553-fcc9-41bf-8b3b-d3f37c0535b9",
-=======
-                    "downloadURL": "https://check0ver.net/en/iapps/9efcd553-fcc9-41bf-8b3b-d3f37c0535b9/download",
->>>>>>> Stashed changes
                     "size": 95252643,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
