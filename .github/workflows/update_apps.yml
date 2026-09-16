@@ -1,12 +1,12 @@
 name: Auto Fetch and Upload IPAs
 
 on:
-  workflow_dispatch: # بۆ ئەوەی بتوانیت بە دەستی لە بەشی Actions ئیشی پێ بکەیت
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # هەموو شەوێک کاتژمێر ١٢ خۆی ئۆتۆماتیکی ئیش دەکات بۆ ئەپدەیت
+    - cron: '0 0 * * *'
 
 permissions:
-  contents: write # گرنگە بۆ ئەوەی بتوانێت فایلەکان بخاتە Releases و JSON بنێرێت
+  contents: write
 
 jobs:
   build-and-upload:
@@ -25,6 +25,7 @@ jobs:
 
       - name: Run Auto Scraper and Uploader
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scraper.py
 
@@ -33,5 +34,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add ashtemobile94.json
-          git commit -m "Auto-update apps JSON with GitHub Releases links" || exit 0
+          git commit -m "Auto-update apps JSON with GitHub Releases links" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
