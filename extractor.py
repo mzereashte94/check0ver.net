@@ -11,7 +11,7 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
-print("1. Fetching app list...")
+print("1. Fetching app list from check0ver...")
 raw_apps = []
 
 for page in range(1, 10):  # دەتوانیت ژمارەی پەڕەکان زیاد بکەیت
@@ -39,9 +39,9 @@ for page in range(1, 10):  # دەتوانیت ژمارەی پەڕەکان زیا
     except:
         pass
 
-print(f"Found {len(raw_apps)} apps. Extracting direct IPA links from detail pages...")
+print(f"Found {len(raw_apps)} apps. Extracting direct copy-link .ipa?ref= URLs...")
 
-def process_app_detail(app):
+def extract_copy_ipa_link(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -54,13 +54,18 @@ def process_app_detail(app):
     resolved_download_url = detail_page_url
 
     try:
-        # سەردانکردنی پەڕەی تایبەتی یارییەکە بۆ دۆزینەوەی لینکی 'Click to copy'
+        # سەردانکردنی پەڕەی تایبەتی یارییەکە بۆ دۆزینەوەی لینکی ڕاستەوخۆی .ipa?ref=
         res = requests.get(detail_page_url, headers=headers, timeout=10)
         if res.status_code == 200:
-            # گەڕان بەدوای لینکی .ipa یان داتای کۆپی لەناو HTMLـی پەڕەکەدا
-            ipa_match = re.search(r'https?://[^\s<>"]+?\.ipa[^\s<>"]*', res.text)
-            if ipa_match:
-                resolved_download_url = ipa_match.group(0)
+            # گەڕان بەدوای لینکی فەرمی .ipa کە refـی لەگەڵدایە
+            match_ipa = re.search(r'https?://[^\s<>"]+?/api/check0ver/[^\s<>"]+?\.ipa\?[^\s<>"]*', res.text)
+            if match_ipa:
+                resolved_download_url = match_ipa.group(0)
+            else:
+                # گەڕان بەدوای هەر لینکێکی تری .ipa لەناو پەڕەکەدا
+                match_any_ipa = re.search(r'https?://[^\s<>"]+?\.ipa[^\s<>"]*', res.text)
+                if match_any_ipa:
+                    resolved_download_url = match_any_ipa.group(0)
     except:
         pass
 
@@ -89,7 +94,7 @@ def process_app_detail(app):
         "marketplaceID": "",
         "developerName": "AshteMobile",
         "subtitle": "Direct IPA Source",
-        "localizedDescription": "Extracted from Copy Link.",
+        "localizedDescription": "Extracted from Click to Copy link.",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -116,7 +121,7 @@ def process_app_detail(app):
 
 apps_list = []
 with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-    results = executor.map(process_app_detail, raw_apps)
+    results = executor.map(extract_copy_ipa_link, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
@@ -124,7 +129,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "Direct IPA Source",
-    "description": "Source extracted using detail page copy links.",
+    "description": "Source extracted from check0ver detail copy links.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -151,4 +156,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Successfully generated {len(apps_list)} apps with direct extracted links.")
+print(f"Done! Extracted direct IPA links for {len(apps_list)} apps.")
