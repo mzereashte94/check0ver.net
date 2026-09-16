@@ -10,6 +10,120 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 866356748,
+            "name": "Super Stylist Fashion Makeover",
+            "version": "3.9.7",
+            "size": "1.29 GB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/111985/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
+            "download_url": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
+            "bundleIdentifier": "com.babyeducationtoys.fashionstyle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/111985/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "3.9.7",
+                    "date": "2026-09-16T06:15:23.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
+                    "size": 1385126952,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 730686893,
+            "name": "Honey Grove — Cozy Gardening",
+            "version": "0.2.75",
+            "size": "315.84 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/153982/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a233a839-d02d-4db2-a2bb-96a8a0911c87",
+            "download_url": "https://check0ver.net/en/iapps/a233a839-d02d-4db2-a2bb-96a8a0911c87",
+            "bundleIdentifier": "com.runawayplay.beegame",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/153982/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.2.75",
+                    "date": "2026-09-16T06:00:55.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a233a839-d02d-4db2-a2bb-96a8a0911c87",
+                    "size": 331182243,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 119356621,
+            "name": "Doctor Who: Lost In Time",
+            "version": "2.9.0",
+            "size": "154.46 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115988/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c8f4b08-0ef5-4ef7-b789-96772f762f26",
+            "download_url": "https://check0ver.net/en/iapps/9c8f4b08-0ef5-4ef7-b789-96772f762f26",
+            "bundleIdentifier": "com.eastsidegames.doctorwho",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115988/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.9.0",
+                    "date": "2026-09-16T05:58:04.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c8f4b08-0ef5-4ef7-b789-96772f762f26",
+                    "size": 161963048,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 671971997,
             "name": "SHIN MEGAMI TENSEI D×２",
             "version": "9.2.20",
@@ -21480,44 +21594,6 @@
             "patreon": []
         },
         {
-            "id": 866356748,
-            "name": "Super Stylist Fashion Makeover",
-            "version": "3.9.6",
-            "size": "1.29 GB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/111985/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
-            "download_url": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
-            "bundleIdentifier": "com.babyeducationtoys.fashionstyle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/111985/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "3.9.6",
-                    "date": "2026-09-04T12:02:32.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1245d70-2733-4801-8185-bd18b1ec67d6",
-                    "size": 1385126952,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 861423471,
             "name": "Meow kingdom:cute cat idle rpg",
             "version": "00.38.00",
@@ -33361,44 +33437,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1d376b7-d0de-4524-ace9-7518849c0637",
                     "size": 189918085,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 119356621,
-            "name": "Doctor Who: Lost In Time",
-            "version": "2.8.5",
-            "size": "148.56 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115988/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c8f4b08-0ef5-4ef7-b789-96772f762f26",
-            "download_url": "https://check0ver.net/en/iapps/9c8f4b08-0ef5-4ef7-b789-96772f762f26",
-            "bundleIdentifier": "com.eastsidegames.doctorwho",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115988/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.8.5",
-                    "date": "2026-08-25T18:20:00.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c8f4b08-0ef5-4ef7-b789-96772f762f26",
-                    "size": 155776450,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -45445,44 +45483,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e527979-c985-4586-b15c-ad868a1461fa",
                     "size": 342318120,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 730686893,
-            "name": "Honey Grove — Cozy Gardening",
-            "version": "0.2.73",
-            "size": "312.61 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/153982/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a233a839-d02d-4db2-a2bb-96a8a0911c87",
-            "download_url": "https://check0ver.net/en/iapps/a233a839-d02d-4db2-a2bb-96a8a0911c87",
-            "bundleIdentifier": "com.runawayplay.beegame",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/153982/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.2.73",
-                    "date": "2026-08-08T02:05:35.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a233a839-d02d-4db2-a2bb-96a8a0911c87",
-                    "size": 327795343,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
