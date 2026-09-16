@@ -31,10 +31,10 @@ jobs:
           git config --global user.email "actions@github.com"
           git add ashtemobile94.json
           
-          # تەنها ئەگەر گۆڕانکاری هەبێت فایلەکە خەزن دەکات و دەینێرێت
           if ! git diff-index --quiet HEAD; then
             git commit -m "Auto-update ashtemobile94.json"
-            git pull origin main --rebase
+            # چارەسەری کێشەی کۆنفلیكت: هەمیشە فایلی نوێ هەڵدەبژێرێت
+            git pull origin main --no-rebase -X ours
             git push
           else
             echo "No changes to commit."
