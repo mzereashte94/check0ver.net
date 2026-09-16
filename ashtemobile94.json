@@ -10,6 +10,196 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 648148866,
+            "name": "TETRIS® BLOCK PARTY",
+            "version": "1.10.0",
+            "size": "173.29 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117672/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e9723a4-c6d5-42fe-b764-68abbaab01fb",
+            "download_url": "https://check0ver.net/en/iapps/9e9723a4-c6d5-42fe-b764-68abbaab01fb",
+            "bundleIdentifier": "com.playstudios.tetrisblockparty",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117672/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.10.0",
+                    "date": "2026-09-16T16:46:06.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e9723a4-c6d5-42fe-b764-68abbaab01fb",
+                    "size": 181707735,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 994575006,
+            "name": "Jenny Solitaire - Card Games",
+            "version": "1.55.0",
+            "size": "138.94 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160730/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a285bbc4-d872-4356-9297-d977262eb683",
+            "download_url": "https://check0ver.net/en/iapps/a285bbc4-d872-4356-9297-d977262eb683",
+            "bundleIdentifier": "com.kidultlovin.royalsolitaire",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160730/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.55.0",
+                    "date": "2026-09-16T16:44:25.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a285bbc4-d872-4356-9297-d977262eb683",
+                    "size": 145689149,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 552970016,
+            "name": "Ash & Snow : Cat Pop'n Match",
+            "version": "1.6.25",
+            "size": "135.91 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/124694/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0d9c4b6-094d-4164-955a-0a6e5d26fe07",
+            "download_url": "https://check0ver.net/en/iapps/a0d9c4b6-094d-4164-955a-0a6e5d26fe07",
+            "bundleIdentifier": "com.ignm.catspuzzle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/124694/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.6.25",
+                    "date": "2026-09-16T16:42:47.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0d9c4b6-094d-4164-955a-0a6e5d26fe07",
+                    "size": 142511964,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 424507405,
+            "name": "Store Manager Simulator 3D",
+            "version": "1.2.32",
+            "size": "189.27 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116936/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9d0bf942-379c-48d8-8781-346798088cc4",
+            "download_url": "https://check0ver.net/en/iapps/9d0bf942-379c-48d8-8781-346798088cc4",
+            "bundleIdentifier": "com.dmg.supermarket.simulator",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116936/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.2.32",
+                    "date": "2026-09-16T16:40:55.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9d0bf942-379c-48d8-8781-346798088cc4",
+                    "size": 198463979,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 151790617,
+            "name": "Offline Games - No Wifi Games",
+            "version": "3.15.2",
+            "size": "110.71 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117479/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9d2bbea7-afed-4519-9752-a3dce2052f00",
+            "download_url": "https://check0ver.net/en/iapps/9d2bbea7-afed-4519-9752-a3dce2052f00",
+            "bundleIdentifier": "com.JindoBlu.OfflineGamesIOS",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117479/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "3.15.2",
+                    "date": "2026-09-16T16:40:02.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9d2bbea7-afed-4519-9752-a3dce2052f00",
+                    "size": 116087848,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 959870767,
             "name": "Heroes vs Hordes: Survival RPG",
             "version": "11.3.2",
@@ -16451,44 +16641,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9c689f7c-95b6-4b17-b729-26dee213bb5e",
                     "size": 457084764,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 151790617,
-            "name": "Offline Games - No Wifi Games",
-            "version": "3.15.1",
-            "size": "110.71 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117479/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d2bbea7-afed-4519-9752-a3dce2052f00",
-            "download_url": "https://check0ver.net/en/iapps/9d2bbea7-afed-4519-9752-a3dce2052f00",
-            "bundleIdentifier": "com.JindoBlu.OfflineGamesIOS",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117479/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "3.15.1",
-                    "date": "2026-09-09T11:08:11.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d2bbea7-afed-4519-9752-a3dce2052f00",
-                    "size": 116087848,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -34438,44 +34590,6 @@
             "patreon": []
         },
         {
-            "id": 994575006,
-            "name": "Jenny Solitaire - Card Games",
-            "version": "1.54.0",
-            "size": "133.32 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160730/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a285bbc4-d872-4356-9297-d977262eb683",
-            "download_url": "https://check0ver.net/en/iapps/a285bbc4-d872-4356-9297-d977262eb683",
-            "bundleIdentifier": "com.kidultlovin.royalsolitaire",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160730/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.54.0",
-                    "date": "2026-08-25T16:26:45.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a285bbc4-d872-4356-9297-d977262eb683",
-                    "size": 139796152,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 964362266,
             "name": "Royal Cooking",
             "version": "1.24.0",
@@ -35679,44 +35793,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9ed673ce-4c4d-49fe-a426-79674798d21c",
                     "size": 313031393,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 648148866,
-            "name": "TETRIS® BLOCK PARTY",
-            "version": "1.9.1",
-            "size": "180.97 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117672/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e9723a4-c6d5-42fe-b764-68abbaab01fb",
-            "download_url": "https://check0ver.net/en/iapps/9e9723a4-c6d5-42fe-b764-68abbaab01fb",
-            "bundleIdentifier": "com.playstudios.tetrisblockparty",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117672/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.9.1",
-                    "date": "2026-08-23T21:49:24.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e9723a4-c6d5-42fe-b764-68abbaab01fb",
-                    "size": 189760798,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -38909,44 +38985,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a05ebc9b-023f-4c24-a1cf-d408d315de8b",
                     "size": 165874237,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 552970016,
-            "name": "Ash & Snow : Cat Pop'n Match",
-            "version": "1.6.24",
-            "size": "135.71 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/124694/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0d9c4b6-094d-4164-955a-0a6e5d26fe07",
-            "download_url": "https://check0ver.net/en/iapps/a0d9c4b6-094d-4164-955a-0a6e5d26fe07",
-            "bundleIdentifier": "com.ignm.catspuzzle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/124694/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.6.24",
-                    "date": "2026-08-19T14:59:36.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0d9c4b6-094d-4164-955a-0a6e5d26fe07",
-                    "size": 142302248,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -66421,44 +66459,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a21ff960-ea96-4314-b2d8-98c773778e4c",
                     "size": 710148096,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 424507405,
-            "name": "Store Manager Simulator 3D",
-            "version": "1.2.26",
-            "size": "183.37 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116936/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d0bf942-379c-48d8-8781-346798088cc4",
-            "download_url": "https://check0ver.net/en/iapps/9d0bf942-379c-48d8-8781-346798088cc4",
-            "bundleIdentifier": "com.dmg.supermarket.simulator",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116936/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.2.26",
-                    "date": "2026-06-27T09:39:41.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d0bf942-379c-48d8-8781-346798088cc4",
-                    "size": 192277381,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
