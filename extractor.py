@@ -11,11 +11,11 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
-print("1. Deep scanning check0ver website structure...")
+print("1. Connecting directly to https://check0ver.net/ ...")
 raw_apps = []
 
-# پشکنینی پەڕەکان بۆ دەستكەوتنی وردەکارییەکان
-for page in range(1, 6): # لێرەدا دەتوانیت ژمارەی پەڕەکان زیاد بکەیت ئەگەر پێویست بکات
+# پشکنینی پەڕەکانی ماڵپەڕەکە بە شێوەیەکی گشتی
+for page in range(1, 10): # دەتوانیت ژمارەکە زیاد بکەیت
     url = f"{base_url}{page}"
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -38,11 +38,12 @@ for page in range(1, 6): # لێرەدا دەتوانیت ژمارەی پەڕەک
         else:
             break
     except Exception as e:
+        print(f"Error fetching page {page}: {e}")
         pass
 
-print(f"Found {len(raw_apps)} apps. Analyzing deep IPA structures...")
+print(f"Successfully connected! Found {len(raw_apps)} items from check0ver.net. Processing links...")
 
-def extract_deep_info(app):
+def process_app_data(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -51,21 +52,8 @@ def extract_deep_info(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    # تاقیكردنەوەی پەیوەندی بە بەشی داونلۆودی په‌ڕه‌كه‌وە
-    download_endpoint = f"https://check0ver.net/en/iapps/{uuid}/download"
-    api_endpoint = f"https://check0ver.net/api/iapps/{uuid}/download"
-    
-    resolved_url = download_endpoint
-    
-    try:
-        # پشکنینی هیدەری ڕیدایریکت
-        res = requests.get(download_endpoint, headers=headers, allow_redirects=False, timeout=5)
-        if res.status_code in [301, 302, 303, 307, 308]:
-            loc = res.headers.get("Location", "")
-            if loc:
-                resolved_url = loc if loc.startswith("http") else f"https://check0ver.net{loc}"
-    except:
-        pass
+    # بەستەری فەرمی پەڕەی یارییەکە لەناو ماڵپەڕەکەدا
+    web_page_link = f"https://check0ver.net/en/iapps/{uuid}"
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
     
@@ -86,13 +74,13 @@ def extract_deep_info(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": resolved_url,
-        "download_url": resolved_url,
+        "install_url": web_page_link,
+        "download_url": web_page_link,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "Analyzed App",
-        "localizedDescription": "Extracted via Deep Scanner.",
+        "subtitle": "CheckOver App",
+        "localizedDescription": "Extracted directly from check0ver.net",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -102,7 +90,7 @@ def extract_deep_info(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": resolved_url,
+                "downloadURL": web_page_link,
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -118,16 +106,16 @@ def extract_deep_info(app):
     }
 
 apps_list = []
-with concurrent.futures.ThreadPoolExecutor(max_workers=30) as executor:
-    results = executor.map(extract_deep_info, raw_apps)
+with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+    results = executor.map(process_app_data, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
 
 source_structure = {
     "name": "Ashtemobile",
-    "subtitle": "Deep Scanned Source",
-    "description": "Source generated with deep analysis.",
+    "subtitle": "Check0ver Direct Source",
+    "description": "Connected directly to check0ver.net",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -154,4 +142,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Deep scan completed for {len(apps_list)} apps.")
+print(f"Done! Successfully processed {len(apps_list)} apps from check0ver.net into {output_filename}.")
