@@ -10,6 +10,158 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 857250653,
+            "name": "Flight Simulator 2025",
+            "version": "3.19.4",
+            "size": "172.06 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116160/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9ea2ae91-b650-473f-a7f0-2b1a57abf9ba/download",
+            "download_url": "https://check0ver.net/en/iapps/9ea2ae91-b650-473f-a7f0-2b1a57abf9ba/download",
+            "bundleIdentifier": "com.appsoleut.game.flightsim",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116160/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "3.19.4",
+                    "date": "2026-09-16T13:40:02.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9ea2ae91-b650-473f-a7f0-2b1a57abf9ba/download",
+                    "size": 180417986,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 52232086,
+            "name": "Disney Solitaire",
+            "version": "1.25.2",
+            "size": "165.79 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114580/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e582a9e-3e35-4eef-9b27-181fb2d78604/download",
+            "download_url": "https://check0ver.net/en/iapps/9e582a9e-3e35-4eef-9b27-181fb2d78604/download",
+            "bundleIdentifier": "com.superplaystudios.disneysolitairedreams",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114580/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.25.2",
+                    "date": "2026-09-16T13:33:45.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e582a9e-3e35-4eef-9b27-181fb2d78604/download",
+                    "size": 173843415,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 51771103,
+            "name": "Archer Castle : AFK Idle RPG",
+            "version": "1.13.52",
+            "size": "341.08 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
+            "download_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
+            "bundleIdentifier": "com.springgames.archercastle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.13.52",
+                    "date": "2026-09-16T13:32:17.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
+                    "size": 357648302,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 180774207,
+            "name": "Auto-Battle Got Me Killed",
+            "version": "1.0.43",
+            "size": "121.68 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162033/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d/download",
+            "download_url": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d/download",
+            "bundleIdentifier": "com.kgameboys.abgmk",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162033/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.0.43",
+                    "date": "2026-09-16T13:30:07.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2945d41-53fa-4775-b7dd-41a48b09798d/download",
+                    "size": 127590727,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 60887394,
             "name": "DATE A LIVE: Love Limit Break",
             "version": "1.5.3",
@@ -3430,44 +3582,6 @@
             "patreon": []
         },
         {
-            "id": 51771103,
-            "name": "Archer Castle : AFK Idle RPG",
-            "version": "1.13.51",
-            "size": "336.95 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
-            "download_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
-            "bundleIdentifier": "com.springgames.archercastle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.13.51",
-                    "date": "2026-09-15T14:04:29.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
-                    "size": 353317683,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 944799886,
             "name": "World Conqueror 4",
             "version": "3.5.3",
@@ -5330,44 +5444,6 @@
             "patreon": []
         },
         {
-            "id": 919046724,
-            "name": "PreCats! -Idle Cat Raising",
-            "version": "2.1.32",
-            "size": "128.57 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165558/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2bc6f96-a983-4302-b0d8-819298e6adfc/download",
-            "download_url": "https://check0ver.net/en/iapps/a2bc6f96-a983-4302-b0d8-819298e6adfc/download",
-            "bundleIdentifier": "com.ignm.puri",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165558/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.1.32",
-                    "date": "2026-09-14T23:52:23.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2bc6f96-a983-4302-b0d8-819298e6adfc/download",
-                    "size": 134815416,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 223142444,
             "name": "Mystery Match",
             "version": "2.71.0",
@@ -6951,44 +7027,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9c71a0e1-926e-4818-a8e8-e02457c8851f/download",
                     "size": 358717849,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 52232086,
-            "name": "Disney Solitaire",
-            "version": "1.25.1",
-            "size": "165.79 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114580/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e582a9e-3e35-4eef-9b27-181fb2d78604/download",
-            "download_url": "https://check0ver.net/en/iapps/9e582a9e-3e35-4eef-9b27-181fb2d78604/download",
-            "bundleIdentifier": "com.superplaystudios.disneysolitairedreams",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114580/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.25.1",
-                    "date": "2026-09-14T12:18:29.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e582a9e-3e35-4eef-9b27-181fb2d78604/download",
-                    "size": 173843415,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -62735,44 +62773,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e6a203a-0e43-485a-8bdd-d99f82a516e2/download",
                     "size": 483854909,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 857250653,
-            "name": "Flight Simulator 2025",
-            "version": "3.19.3",
-            "size": "491.52 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116160/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9ea2ae91-b650-473f-a7f0-2b1a57abf9ba/download",
-            "download_url": "https://check0ver.net/en/iapps/9ea2ae91-b650-473f-a7f0-2b1a57abf9ba/download",
-            "bundleIdentifier": "com.appsoleut.game.flightsim",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116160/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "3.19.3",
-                    "date": "2026-07-04T00:24:10.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9ea2ae91-b650-473f-a7f0-2b1a57abf9ba/download",
-                    "size": 515396075,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
