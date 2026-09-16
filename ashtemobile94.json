@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 91502968,
+            "name": "Brawl Stars",
+            "version": "69.252",
+            "size": "1.16 GB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117634/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c7be9f5-68f6-44b8-beb8-c7dc06500060/download",
+            "download_url": "https://check0ver.net/en/iapps/9c7be9f5-68f6-44b8-beb8-c7dc06500060/download",
+            "bundleIdentifier": "com.supercell.laser",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117634/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "69.252",
+                    "date": "2026-09-16T13:51:45.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c7be9f5-68f6-44b8-beb8-c7dc06500060/download",
+                    "size": 1245540515,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 857250653,
             "name": "Flight Simulator 2025",
             "version": "3.19.4",
@@ -59201,44 +59239,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e455bc6-ee31-4bda-b086-776a47842819/download",
                     "size": 901387386,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 91502968,
-            "name": "Brawl Stars",
-            "version": "68.279",
-            "size": "1.06 GB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117634/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c7be9f5-68f6-44b8-beb8-c7dc06500060/download",
-            "download_url": "https://check0ver.net/en/iapps/9c7be9f5-68f6-44b8-beb8-c7dc06500060/download",
-            "bundleIdentifier": "com.supercell.laser",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117634/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "68.279",
-                    "date": "2026-07-15T02:35:14.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c7be9f5-68f6-44b8-beb8-c7dc06500060/download",
-                    "size": 1138166333,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
