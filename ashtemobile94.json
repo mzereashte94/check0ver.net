@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 87942714,
+            "name": "Train Station 3: Rail Tycoon",
+            "version": "2.4.1",
+            "size": "227.36 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/148949/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a20b0cb5-a987-46e4-ae28-aca5f73a9081/download",
+            "download_url": "https://check0ver.net/en/iapps/a20b0cb5-a987-46e4-ae28-aca5f73a9081/download",
+            "bundleIdentifier": "com.pixelfederation.ts3.train.station.evolution.building.manager.tycoon.simulator",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/148949/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.4.1",
+                    "date": "2026-09-16T22:46:13.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a20b0cb5-a987-46e4-ae28-aca5f73a9081/download",
+                    "size": 238404239,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 289164873,
             "name": "Timeline Up!",
             "version": "17.2.0",
@@ -1115,7 +1153,7 @@
             "id": 948842987,
             "name": "Lost Prison - Shelter Survival",
             "version": "1.20.0",
-            "size": "176.69 MB",
+            "size": "185.11 MB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125474/512x512bb.jpg",
             "badge": "",
             "type": "games",
@@ -1136,7 +1174,7 @@
                     "date": "2026-09-16T15:07:49.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a0a1db73-e558-4364-8a1f-4dc34efd81b7/download",
-                    "size": 185272893,
+                    "size": 194101903,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -32145,44 +32183,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1ea4e85-e8dc-4a7b-825b-d4eb5a74e19d/download",
                     "size": 159865896,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 87942714,
-            "name": "Train Station 3: Rail Tycoon",
-            "version": "2.3.4",
-            "size": "215.91 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/148949/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a20b0cb5-a987-46e4-ae28-aca5f73a9081/download",
-            "download_url": "https://check0ver.net/en/iapps/a20b0cb5-a987-46e4-ae28-aca5f73a9081/download",
-            "bundleIdentifier": "com.pixelfederation.ts3.train.station.evolution.building.manager.tycoon.simulator",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/148949/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.3.4",
-                    "date": "2026-08-28T13:59:57.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a20b0cb5-a987-46e4-ae28-aca5f73a9081/download",
-                    "size": 226398044,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
