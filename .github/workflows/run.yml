@@ -20,7 +20,8 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install requests
+        # لێرەدا cloudscraper مان زیاد کردووە بۆ تێپەڕاندنی پاراستنی ماڵپەڕەکە
+        run: pip install requests cloudscraper
 
       - name: Run script
         run: python extractor.py
@@ -33,7 +34,6 @@ jobs:
           
           if ! git diff-index --quiet HEAD; then
             git commit -m "Auto-update ashtemobile94.json"
-            # چارەسەری کێشەی کۆنفلیكت: هەمیشە فایلی نوێ هەڵدەبژێرێت
             git pull origin main --no-rebase -X ours
             git push
           else
