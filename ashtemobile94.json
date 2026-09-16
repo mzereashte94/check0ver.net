@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 75818414,
+            "name": "Merge City: Travel & Story",
+            "version": "1.7.0",
+            "size": "116.05 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151965/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a21d3042-0e1b-43f2-a08a-3e7f03e47a7c",
+            "download_url": "https://check0ver.net/en/iapps/a21d3042-0e1b-43f2-a08a-3e7f03e47a7c",
+            "bundleIdentifier": "com.bigcool.puzzle.merge.city",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151965/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.7.0",
+                    "date": "2026-09-16T15:49:41.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a21d3042-0e1b-43f2-a08a-3e7f03e47a7c",
+                    "size": 121687244,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 257696424,
+            "name": "Weaponia",
+            "version": "2.0.13",
+            "size": "133.55 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160433/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a280b866-0330-4e16-9127-58248b8edb7a",
+            "download_url": "https://check0ver.net/en/iapps/a280b866-0330-4e16-9127-58248b8edb7a",
+            "bundleIdentifier": "com.octopo.warofweapons",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160433/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.0.13",
+                    "date": "2026-09-16T15:46:04.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a280b866-0330-4e16-9127-58248b8edb7a",
+                    "size": 140037324,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 75371757,
             "name": "Let's Defense Kunk",
             "version": "2.3.1",
@@ -29916,44 +29992,6 @@
             "patreon": []
         },
         {
-            "id": 75818414,
-            "name": "Merge City: Travel & Story",
-            "version": "1.6.0",
-            "size": "114.17 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151965/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a21d3042-0e1b-43f2-a08a-3e7f03e47a7c",
-            "download_url": "https://check0ver.net/en/iapps/a21d3042-0e1b-43f2-a08a-3e7f03e47a7c",
-            "bundleIdentifier": "com.bigcool.puzzle.merge.city",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151965/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.6.0",
-                    "date": "2026-08-31T06:52:48.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a21d3042-0e1b-43f2-a08a-3e7f03e47a7c",
-                    "size": 119715921,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 475851401,
             "name": "Penguin Isle",
             "version": "1.99.0",
@@ -41721,44 +41759,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e6e6144-669b-480b-865b-bf962c4742e8",
                     "size": 267544166,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 257696424,
-            "name": "Weaponia",
-            "version": "2.0.11",
-            "size": "129.74 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160433/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a280b866-0330-4e16-9127-58248b8edb7a",
-            "download_url": "https://check0ver.net/en/iapps/a280b866-0330-4e16-9127-58248b8edb7a",
-            "bundleIdentifier": "com.octopo.warofweapons",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160433/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.0.11",
-                    "date": "2026-08-14T20:03:00.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a280b866-0330-4e16-9127-58248b8edb7a",
-                    "size": 136042250,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
