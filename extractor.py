@@ -12,13 +12,14 @@ headers = {
         "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) "
         "AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 "
         "Safari/604.1"
-    )
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "https://check0ver.net/"
 }
 
 print("1. Fetching all apps from pages...")
 raw_apps = []
 
-# هێنانی داتای هەموو پەڕەکان
 for page in range(1, 161):
     url = f"{base_url}{page}"
     try:
@@ -44,9 +45,8 @@ for page in range(1, 161):
     except Exception as e:
         print(f"Error on page {page}: {e}")
 
-print(f"Found {len(raw_apps)} apps. Now extracting real .ipa URLs extremely fast...")
+print(f"Found {len(raw_apps)} apps. Extracting REAL .ipa URLs...")
 
-# فەنکشنی تایبەت بۆ هێنانی لینکی ئەسڵی (.ipa?ref=...)
 def process_app(app):
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -56,20 +56,25 @@ def process_app(app):
     image_url = app.get("image")
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     
-    # ئامانجی ئێمە دۆزینەوەی لینکی .ipaـەیە کە تۆکتنی refـی پێوەیە
+    # لینکی پێشوەختە (ئەگەر شکستی هێنا ئەمە دادەنێت)
     real_ipa_url = f"https://check0ver.net/en/iapps/{uuid}/download"
     dl_api = api_dl_base.format(uuid)
     
     try:
-        # بەکارهێنانی head بۆ ئەوەی فایلەکە داونلۆود نەبێت، تەنها لینکەکە وەربگرین
-        r = requests.head(dl_api, headers=headers, allow_redirects=True, timeout=5)
-        if '.ipa' in str(r.url):
-            real_ipa_url = r.url
-        else:
-            # ئەگەر head کاری نەکرد، هەوڵدەدەین بە get و ڕێگریکردن لە ڕیدایریکت بیهێنین
-            r2 = requests.get(dl_api, headers=headers, allow_redirects=False, timeout=5)
-            if r2.status_code in [301, 302]:
-                real_ipa_url = r2.headers.get('Location', real_ipa_url)
+        r = requests.get(dl_api, headers=headers, allow_redirects=False, timeout=5)
+        # ئەگەر سێرڤەر ڕاستەوخۆ ڕیدایریکتی کرد بۆ فایلەکە
+        if r.status_code in [301, 302, 303, 307, 308]:
+            real_ipa_url = r.headers.get('Location', real_ipa_url)
+        # ئەگەر سێرڤەر داتای بە شێوەی جیسۆن داوەتەوە
+        elif r.status_code == 200:
+            try:
+                js_data = r.json()
+                for key in ['url', 'download_url', 'downloadURL', 'link', 'file']:
+                    if key in js_data and 'ref=' in str(js_data[key]):
+                        real_ipa_url = js_data[key]
+                        break
+            except:
+                pass
     except:
         pass
 
@@ -123,8 +128,8 @@ def process_app(app):
     }
 
 apps_list = []
-# بەکارهێنانی ThreadPoolExecutor بۆ ئەوەی بە خێرایی (50 بە 50) لینکەکان بپشکنێت و کات نەخایەنێت
-with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+# لێرەدا ژمارەی داواکارییەکانمان کەمکردەوە بۆ 10 بۆ ئەوەی سێرڤەرەکە گیتهاب بلۆک نەکات
+with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
     results = executor.map(process_app, raw_apps)
     for result in results:
         if result:
