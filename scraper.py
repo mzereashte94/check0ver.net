@@ -10,8 +10,8 @@ GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY")
 RELEASE_TAG = "ipa-files"
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
 }
 
 print("1. Creating Release section if not exists...")
@@ -82,6 +82,7 @@ def process_app(app):
     if local_filename in existing_files:
         final_download_url = github_direct_url
     else:
+        # لێرەدا کۆدە ڕەسەنەکەی خۆتم گەڕاندەوە بۆ دۆزینەوەی لینکەکە بە دروستی
         download_trigger_url = f"https://check0ver.net/en/iapps/{uuid}/download"
         final_ipa_url = download_trigger_url
         try:
@@ -90,21 +91,29 @@ def process_app(app):
                 location = res.headers.get("Location", "")
                 if ".ipa" in location:
                     final_ipa_url = location
+            elif res.status_code == 200:
+                # ئەم بەشە بوو کە من سڕیبوومەوە و هەڵە بوو! بەبێ ئەمە لینکەکان نادۆزرێنەوە
+                api_trigger = f"https://check0ver.net/api/iapps/{uuid}/download"
+                res_api = requests.get(api_trigger, headers=headers, allow_redirects=False, timeout=5)
+                if res_api.status_code in [301, 302, 303, 307, 308]:
+                    location = res_api.headers.get("Location", "")
+                    if ".ipa" in location:
+                        final_ipa_url = location
         except:
             pass
 
         final_download_url = final_ipa_url
 
         if ".ipa" in final_ipa_url:
-            print(f"Downloading {name} to GitHub Runner...")
+            print(f"-> Found real IPA link for {name}. Downloading to GitHub...")
             try:
-                with requests.get(final_ipa_url, stream=True, timeout=15) as r:
+                with requests.get(final_ipa_url, stream=True, timeout=20) as r:
                     r.raise_for_status()
                     with open(local_filename, 'wb') as f:
                         for chunk in r.iter_content(chunk_size=8192):
                             f.write(chunk)
                 
-                print(f"Uploading {name} to Releases...")
+                print(f"-> Uploading {name} to Releases...")
                 upload_result = subprocess.run(
                     ["gh", "release", "upload", RELEASE_TAG, local_filename, "--clobber"], 
                     env=os.environ, capture_output=True, text=True
@@ -112,16 +121,18 @@ def process_app(app):
                 
                 if upload_result.returncode == 0:
                     final_download_url = github_direct_url
-                    print(f"Successfully uploaded {name}")
+                    print(f"+++ Successfully uploaded {name}")
                 else:
-                    print(f"Failed to upload {name}: {upload_result.stderr}")
+                    print(f"--- Failed to upload {name}: {upload_result.stderr}")
                 
                 if os.path.exists(local_filename):
                     os.remove(local_filename)
             except Exception as e:
-                print(f"Error processing {name}: {e}")
+                print(f"--- Error downloading {name}: {e}")
                 if os.path.exists(local_filename):
                     os.remove(local_filename)
+        else:
+            print(f"--- Skipped {name}: Could not extract direct .ipa link.")
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
 
