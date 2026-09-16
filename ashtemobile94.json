@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 959870767,
+            "name": "Heroes vs Hordes: Survival RPG",
+            "version": "11.3.2",
+            "size": "782.16 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117362/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c7ec0f8-5fc5-4f93-a34d-0ad2129eea35",
+            "download_url": "https://check0ver.net/en/iapps/9c7ec0f8-5fc5-4f93-a34d-0ad2129eea35",
+            "bundleIdentifier": "com.swiftgames.roguelikesurvival",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117362/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "11.3.2",
+                    "date": "2026-09-16T15:58:17.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c7ec0f8-5fc5-4f93-a34d-0ad2129eea35",
+                    "size": 820154204,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 954653764,
+            "name": "Zooba: Zoo Battle Royale Games",
+            "version": "7.0.0",
+            "size": "190.56 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/138692/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c67c7ac-3cc0-4940-9e7f-ee3b288892f8",
+            "download_url": "https://check0ver.net/en/iapps/9c67c7ac-3cc0-4940-9e7f-ee3b288892f8",
+            "bundleIdentifier": "com.fungames.battleroyale",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "AshteMobile Source",
+            "localizedDescription": "Available on AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/138692/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "7.0.0",
+                    "date": "2026-09-16T15:55:07.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c67c7ac-3cc0-4940-9e7f-ee3b288892f8",
+                    "size": 199816642,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 75818414,
             "name": "Merge City: Travel & Story",
             "version": "1.7.0",
@@ -8737,44 +8813,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1e38d4c-e297-4196-a40c-1a369ac91f88",
                     "size": 182976512,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 954653764,
-            "name": "Zooba: Zoo Battle Royale Games",
-            "version": "6.29.1",
-            "size": "189.11 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/138692/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c67c7ac-3cc0-4940-9e7f-ee3b288892f8",
-            "download_url": "https://check0ver.net/en/iapps/9c67c7ac-3cc0-4940-9e7f-ee3b288892f8",
-            "bundleIdentifier": "com.fungames.battleroyale",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/138692/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "6.29.1",
-                    "date": "2026-09-13T12:53:44.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c67c7ac-3cc0-4940-9e7f-ee3b288892f8",
-                    "size": 198296207,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -36895,44 +36933,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a24a47c4-d2de-461f-93b8-4dfbeccd329b",
                     "size": 30010245,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 959870767,
-            "name": "Heroes vs Hordes: Survival RPG",
-            "version": "11.1.0",
-            "size": "767.05 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117362/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c7ec0f8-5fc5-4f93-a34d-0ad2129eea35",
-            "download_url": "https://check0ver.net/en/iapps/9c7ec0f8-5fc5-4f93-a34d-0ad2129eea35",
-            "bundleIdentifier": "com.swiftgames.roguelikesurvival",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "AshteMobile Source",
-            "localizedDescription": "Available on AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117362/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "11.1.0",
-                    "date": "2026-08-21T16:46:23.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c7ec0f8-5fc5-4f93-a34d-0ad2129eea35",
-                    "size": 804310220,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
