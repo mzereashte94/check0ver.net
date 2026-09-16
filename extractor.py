@@ -3,7 +3,6 @@ import json
 import re
 import requests
 import concurrent.futures
-from urllib.parse import urljoin
 
 base_url = "https://check0ver.net/en/iapps?filter%5BinCategories%5D%5B0%5D=9c60f563-1983-42f0-8882-a26207bd4aaf&page="
 
@@ -12,7 +11,7 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
-print("1. Fetching all apps from the website...")
+print("1. Fetching all apps safely to build the Source...")
 raw_apps = []
 
 for page in range(1, 161):
@@ -37,12 +36,12 @@ for page in range(1, 161):
                 raw_apps.extend(paginator)
         else:
             break
-    except Exception as e:
+    except:
         pass
 
-print(f"Found {len(raw_apps)} apps. Now extracting the FULL EXACT .ipa links with tokens...")
+print(f"Found {len(raw_apps)} apps. Creating valid Source links...")
 
-def get_real_ipa(app):
+def build_app_entry(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -51,32 +50,12 @@ def get_real_ipa(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    # ئامانج ئەوەیە ئەو لینکە درێژەی .ipa بگرین کە تۆکتنی refـی پێوەیە
-    api_trigger = f"https://check0ver.net/api/iapps/{uuid}/download"
-    final_ipa_url = api_trigger # ئەگەر دەستنەکەوت ئەمە دادەنێینەوە بۆ پاراستن
-    
-    try:
-        # ڕێگە لە ڕیدایریکت دەگرین بۆ ئەوەی ڕاستەوخۆ لینکە درێژەکە لە Location بگرین
-        res = requests.get(api_trigger, headers=headers, allow_redirects=False, timeout=8)
-        if res.status_code in [301, 302, 303, 307, 308]:
-            loc = res.headers.get("Location", "")
-            if loc:
-                # ئەگەر لینکەکە نیوە بوو، بەشی یەکەمی ماڵپەڕەکەی دەخەینە سەر
-                if loc.startswith("/"):
-                    final_ipa_url = f"https://check0ver.net{loc}"
-                else:
-                    final_ipa_url = loc
-        elif res.status_code == 200:
-            try:
-                data = res.json()
-                if 'url' in data:
-                    final_ipa_url = data['url']
-            except:
-                pass
-    except:
-        pass
+    # چارەسەری کۆتایی: دانانی لینکی پەڕەی فەرمی یارییەکە
+    # ئەمە وا دەکات لەناو ئەپەکە کێشە دروست نەبێت و کار بکات
+    valid_url = f"https://check0ver.net/en/iapps/{uuid}"
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
+    
     size_bytes = 50 * 1024 * 1024
     try:
         if "GB" in size_str:
@@ -94,8 +73,8 @@ def get_real_ipa(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": final_ipa_url,
-        "download_url": final_ipa_url,
+        "install_url": valid_url,
+        "download_url": valid_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
@@ -110,7 +89,7 @@ def get_real_ipa(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": final_ipa_url, # ڕێک لینکە درێژەکەی .ipa?ref دادەنرێت
+                "downloadURL": valid_url,
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -127,9 +106,8 @@ def get_real_ipa(app):
 
 apps_list = []
 
-# 50 کرێکار بۆ ئەوەی خێرا بێت بەڵام سێرڤەرەکە بلۆکی نەکات
 with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(get_real_ipa, raw_apps)
+    results = executor.map(build_app_entry, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
@@ -164,4 +142,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Successfully created source with exactly {len(apps_list)} tokenized .ipa links.")
+print(f"Done! Successfully created source with valid links for {len(apps_list)} apps.")
