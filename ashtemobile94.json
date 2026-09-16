@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 17226954,
+            "name": "Pizza Ready!",
+            "version": "59.2.0",
+            "size": "146.03 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117699/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c89d363-fb90-4d5e-a532-988bbe5c2009/download",
+            "download_url": "https://check0ver.net/en/iapps/9c89d363-fb90-4d5e-a532-988bbe5c2009/download",
+            "bundleIdentifier": "io.supercent.pizzaidle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117699/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "59.2.0",
+                    "date": "2026-09-16T22:25:15.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c89d363-fb90-4d5e-a532-988bbe5c2009/download",
+                    "size": 153123553,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 530716920,
             "name": "Magical Survivor",
             "version": "1.0.3",
@@ -39593,44 +39631,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9c67c06d-f3f6-4f05-9722-b0f1c257a766/download",
                     "size": 756872642,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 17226954,
-            "name": "Pizza Ready!",
-            "version": "59.1.0",
-            "size": "145.38 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117699/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c89d363-fb90-4d5e-a532-988bbe5c2009/download",
-            "download_url": "https://check0ver.net/en/iapps/9c89d363-fb90-4d5e-a532-988bbe5c2009/download",
-            "bundleIdentifier": "io.supercent.pizzaidle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117699/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "59.1.0",
-                    "date": "2026-08-19T06:34:54.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c89d363-fb90-4d5e-a532-988bbe5c2009/download",
-                    "size": 152441978,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
