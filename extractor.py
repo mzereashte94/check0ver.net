@@ -11,10 +11,11 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
-print("1. Fetching all apps from check0ver...")
+print("1. Deep scanning check0ver website structure...")
 raw_apps = []
 
-for page in range(1, 161):
+# پشکنینی پەڕەکان بۆ دەستكەوتنی وردەکارییەکان
+for page in range(1, 6): # لێرەدا دەتوانیت ژمارەی پەڕەکان زیاد بکەیت ئەگەر پێویست بکات
     url = f"{base_url}{page}"
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -39,9 +40,9 @@ for page in range(1, 161):
     except Exception as e:
         pass
 
-print(f"Found {len(raw_apps)} apps. Setting up API download links...")
+print(f"Found {len(raw_apps)} apps. Analyzing deep IPA structures...")
 
-def build_app(app):
+def extract_deep_info(app):
     uuid = app.get("uuid")
     name = app.get("name")
     version = app.get("version", "1.0")
@@ -50,9 +51,21 @@ def build_app(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    # لێرەدا دەست دەبەین بۆ APIـی داونلۆودی ماڵپەڕەکە ڕاستەوخۆ
-    # ئەمە یارمەتی AltStore دەدات کە فایلەکە وەک .ipa بناسێتەوە ئەگەر ڕێگری لەسەر نەبێت
-    api_download_url = f"https://check0ver.net/api/iapps/{uuid}/download"
+    # تاقیكردنەوەی پەیوەندی بە بەشی داونلۆودی په‌ڕه‌كه‌وە
+    download_endpoint = f"https://check0ver.net/en/iapps/{uuid}/download"
+    api_endpoint = f"https://check0ver.net/api/iapps/{uuid}/download"
+    
+    resolved_url = download_endpoint
+    
+    try:
+        # پشکنینی هیدەری ڕیدایریکت
+        res = requests.get(download_endpoint, headers=headers, allow_redirects=False, timeout=5)
+        if res.status_code in [301, 302, 303, 307, 308]:
+            loc = res.headers.get("Location", "")
+            if loc:
+                resolved_url = loc if loc.startswith("http") else f"https://check0ver.net{loc}"
+    except:
+        pass
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
     
@@ -73,13 +86,13 @@ def build_app(app):
         "icon": image_url if image_url else "https://ashtemobile.site/logo.png",
         "badge": "",
         "type": "games",
-        "install_url": api_download_url,
-        "download_url": api_download_url,
+        "install_url": resolved_url,
+        "download_url": resolved_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "Awesome App",
-        "localizedDescription": "Downloaded from AshteMobile Source.",
+        "subtitle": "Analyzed App",
+        "localizedDescription": "Extracted via Deep Scanner.",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -89,7 +102,7 @@ def build_app(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": api_download_url,
+                "downloadURL": resolved_url,
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -105,16 +118,16 @@ def build_app(app):
     }
 
 apps_list = []
-with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(build_app, raw_apps)
+with concurrent.futures.ThreadPoolExecutor(max_workers=30) as executor:
+    results = executor.map(extract_deep_info, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
 
 source_structure = {
     "name": "Ashtemobile",
-    "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "subtitle": "Deep Scanned Source",
+    "description": "Source generated with deep analysis.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -141,4 +154,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Generated {len(apps_list)} apps using API links.")
+print(f"Done! Deep scan completed for {len(apps_list)} apps.")
