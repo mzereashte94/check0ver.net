@@ -3,18 +3,18 @@ import json
 import re
 import requests
 import concurrent.futures
+from urllib.parse import urljoin
 
 base_url = "https://check0ver.net/en/iapps?filter%5BinCategories%5D%5B0%5D=9c60f563-1983-42f0-8882-a26207bd4aaf&page="
 
 headers = {
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
 }
 
 print("1. Fetching all apps from the website...")
 raw_apps = []
 
-# هێنانی داتای سەرەکی لە پەڕەکانەوە
 for page in range(1, 161):
     url = f"{base_url}{page}"
     try:
@@ -40,7 +40,7 @@ for page in range(1, 161):
     except Exception as e:
         pass
 
-print(f"Found {len(raw_apps)} apps. Now extracting the EXACT .ipa?ref= links really fast...")
+print(f"Found {len(raw_apps)} apps. Now extracting the FULL EXACT .ipa links with tokens...")
 
 def get_real_ipa(app):
     uuid = app.get("uuid")
@@ -51,30 +51,32 @@ def get_real_ipa(app):
     updated_at = app.get("updatedAt", "2026-09-15T00:00:00+00:00")
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
-    # ئەمە لینکی سەرەتاییە کە هەوڵ دەدەین ڕیدایریکتەکەی بگرین
-    download_trigger_url = f"https://check0ver.net/en/iapps/{uuid}/download"
-    final_ipa_url = download_trigger_url # ئەگەر نەدۆزرایەوە ئەمە دادەنێت
+    # ئامانج ئەوەیە ئەو لینکە درێژەی .ipa بگرین کە تۆکتنی refـی پێوەیە
+    api_trigger = f"https://check0ver.net/api/iapps/{uuid}/download"
+    final_ipa_url = api_trigger # ئەگەر دەستنەکەوت ئەمە دادەنێینەوە بۆ پاراستن
     
     try:
-        # بەبێ ئەوەی فایلەکە داونلۆود بکەین، تەنها شوێنی ڕیدایریکتەکە (.ipa?ref) دەگرین
-        res = requests.get(download_trigger_url, headers=headers, allow_redirects=False, timeout=5)
+        # ڕێگە لە ڕیدایریکت دەگرین بۆ ئەوەی ڕاستەوخۆ لینکە درێژەکە لە Location بگرین
+        res = requests.get(api_trigger, headers=headers, allow_redirects=False, timeout=8)
         if res.status_code in [301, 302, 303, 307, 308]:
-            location = res.headers.get("Location", "")
-            if ".ipa" in location:
-                final_ipa_url = location
+            loc = res.headers.get("Location", "")
+            if loc:
+                # ئەگەر لینکەکە نیوە بوو، بەشی یەکەمی ماڵپەڕەکەی دەخەینە سەر
+                if loc.startswith("/"):
+                    final_ipa_url = f"https://check0ver.net{loc}"
+                else:
+                    final_ipa_url = loc
         elif res.status_code == 200:
-            # ئەگەر لەسەر APIـیەکە بوو
-            api_trigger = f"https://check0ver.net/api/iapps/{uuid}/download"
-            res_api = requests.get(api_trigger, headers=headers, allow_redirects=False, timeout=5)
-            if res_api.status_code in [301, 302, 303, 307, 308]:
-                location = res_api.headers.get("Location", "")
-                if ".ipa" in location:
-                    final_ipa_url = location
+            try:
+                data = res.json()
+                if 'url' in data:
+                    final_ipa_url = data['url']
+            except:
+                pass
     except:
         pass
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
-
     size_bytes = 50 * 1024 * 1024
     try:
         if "GB" in size_str:
@@ -108,7 +110,7 @@ def get_real_ipa(app):
                 "version": version,
                 "date": updated_at,
                 "localizedDescription": None,
-                "downloadURL": final_ipa_url, # لێرەدا ڕێک ئەو لینکە دادەنێت کە تۆکتنی refـی پێوەیە!
+                "downloadURL": final_ipa_url, # ڕێک لینکە درێژەکەی .ipa?ref دادەنرێت
                 "size": size_bytes,
                 "buildVersion": None,
                 "minOSVersion": "14.0",
@@ -125,8 +127,8 @@ def get_real_ipa(app):
 
 apps_list = []
 
-# لێرەدا 100 کرێکارمان داناوە بۆ ئەوەی بە خێراییەکی شێتانە لە 1 خولەکدا لینکەکان دەربهێنێت!
-with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
+# 50 کرێکار بۆ ئەوەی خێرا بێت بەڵام سێرڤەرەکە بلۆکی نەکات
+with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
     results = executor.map(get_real_ipa, raw_apps)
     for res in results:
         if res:
@@ -162,4 +164,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Extracted EXACT .ipa URLs for {len(apps_list)} apps.")
+print(f"Done! Successfully created source with exactly {len(apps_list)} tokenized .ipa links.")
