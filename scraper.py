@@ -1,8 +1,8 @@
 import os
 import json
-import requests
 import subprocess
 import concurrent.futures
+import cloudscraper
 
 GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY")
 RELEASE_TAG = "tryipa-files"
@@ -20,20 +20,23 @@ try:
 except:
     pass
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55"
-}
+print("Fetching apps list from tryipa.com using Cloudscraper...")
 
-print("Fetching apps list from tryipa.com...")
-
-# هێنانی داتای سایتەکە لە ڕێگەی API
+# بەکارهێنانی Cloudscraper بۆ خۆدزینەوە لە بلۆکی سایتەکە
+scraper = cloudscraper.create_scraper(browser={'browser': 'safari', 'platform': 'ios', 'mobile': True})
 api_url = "https://tryipa.com/api/apps" 
+
 try:
-    response = requests.get(api_url, headers=headers, timeout=15)
-    response.raise_for_status()
-    all_apps = response.json()
+    response = scraper.get(api_url, timeout=15)
+    # تاقیکردنەوەی ئەوەی کە ئایا داتاکە بە دروستی هاتووە
+    try:
+        all_apps = response.json()
+    except Exception as e:
+        print("Failed to parse JSON. Website returned this instead (Blocked):")
+        print(response.text[:300]) # ئەمە پیشانمان دەدات کە سایتەکە چی ناردووە
+        all_apps = []
 except Exception as e:
-    print(f"Failed to fetch apps list: {e}")
+    print(f"Failed to connect to website: {e}")
     all_apps = []
 
 print(f"Found {len(all_apps)} apps.")
@@ -59,8 +62,8 @@ def process_app(app):
 
     print(f"-> Processing: {name}")
     try:
-        # هەوڵی داونلۆدکردن
-        with requests.get(download_url, headers=headers, stream=True, timeout=30) as r:
+        # هەوڵی داونلۆدکردن بە خۆدزینەوەوە
+        with scraper.get(download_url, stream=True, timeout=30) as r:
             r.raise_for_status()
             with open(local_filename, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=8192):
@@ -68,7 +71,7 @@ def process_app(app):
         
         downloaded_size = os.path.getsize(local_filename)
         
-        # پشکنین بزانین سایزەکەی زۆر بچووک نییە (کە نیشانەی بلۆکبوونە)
+        # پشکنین بزانین سایزەکەی زۆر بچووک نییە
         if downloaded_size < 1 * 1024 * 1024:
             print(f"--- FAKE/BLOCKED FILE DETECTED for {name} ({downloaded_size} bytes).")
             os.remove(local_filename)
@@ -93,7 +96,6 @@ def process_app(app):
             os.remove(local_filename)
         return None
 
-# کارپێکردن بە خێرایی
 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
     list(executor.map(process_app, apps_to_process))
 
