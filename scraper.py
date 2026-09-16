@@ -22,18 +22,17 @@ except:
 
 print("Fetching apps list from tryipa.com using Cloudscraper...")
 
-# بەکارهێنانی Cloudscraper بۆ خۆدزینەوە لە بلۆکی سایتەکە
-scraper = cloudscraper.create_scraper(browser={'browser': 'safari', 'platform': 'ios', 'mobile': True})
+# لێرەدا کێشەکە چارەسەر کرا، گۆڕدرا بۆ chrome
+scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'ios', 'mobile': True})
 api_url = "https://tryipa.com/api/apps" 
 
 try:
     response = scraper.get(api_url, timeout=15)
-    # تاقیکردنەوەی ئەوەی کە ئایا داتاکە بە دروستی هاتووە
     try:
         all_apps = response.json()
     except Exception as e:
         print("Failed to parse JSON. Website returned this instead (Blocked):")
-        print(response.text[:300]) # ئەمە پیشانمان دەدات کە سایتەکە چی ناردووە
+        print(response.text[:300]) 
         all_apps = []
 except Exception as e:
     print(f"Failed to connect to website: {e}")
