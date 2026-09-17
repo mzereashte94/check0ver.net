@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 543483280,
+            "name": "Car Crash Premium offline",
+            "version": "2.1",
+            "size": "442.8 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116935/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
+            "download_url": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
+            "bundleIdentifier": "com.psvios.realcarcrash",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116935/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.1",
+                    "date": "2026-09-17T14:56:24.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
+                    "size": 464309452,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 627451087,
+            "name": "Gardenscapes",
+            "version": "9.9.0",
+            "size": "195.97 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116845/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c716edb-f984-46f7-8b33-3b19642c4649/download",
+            "download_url": "https://check0ver.net/en/iapps/9c716edb-f984-46f7-8b33-3b19642c4649/download",
+            "bundleIdentifier": "com.playrix.gardenscapes-m3-ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116845/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "9.9.0",
+                    "date": "2026-09-17T14:49:06.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c716edb-f984-46f7-8b33-3b19642c4649/download",
+                    "size": 205489438,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 882144598,
             "name": "Rush Protocol",
             "version": "0.0.9",
@@ -35071,44 +35147,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a2682965-1f40-47fd-956a-77ca0edcbc31/download",
                     "size": 135905935,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 83444413,
-            "name": "DRAGON BALL LEGENDS",
-            "version": "6.27.0",
-            "size": "147.31 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/155291/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2437437-7c98-435b-a366-8f9cee3e55ac/download",
-            "download_url": "https://check0ver.net/en/iapps/a2437437-7c98-435b-a366-8f9cee3e55ac/download",
-            "bundleIdentifier": "jp.co.bandainamcoent.BNEI0333",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/155291/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "6.27.0",
-                    "date": "2026-08-26T10:25:21.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2437437-7c98-435b-a366-8f9cee3e55ac/download",
-                    "size": 154465730,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -81735,44 +81773,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a207ccbd-aa86-4fa1-91c7-40cfec86cc5c/download",
                     "size": 85721088,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 543483280,
-            "name": "Car Crash Premium offline",
-            "version": "2.0",
-            "size": "442.8 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116935/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
-            "download_url": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
-            "bundleIdentifier": "com.psvios.realcarcrash",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116935/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.0",
-                    "date": "2026-06-15T16:43:59.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
-                    "size": 464309452,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -169685,7 +169685,7 @@
             "title": "Instagram",
             "identifier": "news_instagram",
             "caption": "Ashtemobile",
-            "date": "2026-09-17T00:00:00+00:00",
+            "date": "2026-09-15T00:00:00+00:00",
             "tintColor": "#ff007f",
             "imageURL": "https://ashtemobile.site/logo.png",
             "notify": true,
