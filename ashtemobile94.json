@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 876846956,
+            "name": "Haunted Room: Sleep Survivor",
+            "version": "10000.0.53",
+            "size": "1.08 GB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134436/5350790e-ec15-46d8-9cb1-2bc1d49fcf5b.png",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
+            "download_url": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
+            "bundleIdentifier": "com.sea.ygjsz.ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134436/5350790e-ec15-46d8-9cb1-2bc1d49fcf5b.png",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "10000.0.53",
+                    "date": "2026-09-17T15:27:46.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
+                    "size": 1159641169,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 501241625,
             "name": "Bloons Blitz",
             "version": "0.9.6",
@@ -8715,7 +8753,7 @@
             "id": 965436238,
             "name": "Guidus One",
             "version": "1.1.3",
-            "size": "185.22 MB",
+            "size": "181.22 MB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162005/512x512bb.jpg",
             "badge": "",
             "type": "games",
@@ -8736,7 +8774,7 @@
                     "date": "2026-09-15T03:20:04.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a29421ee-f06f-4a75-894e-7448d1adf26c/download",
-                    "size": 194217246,
+                    "size": 190022942,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -51791,44 +51829,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e6853fb-0fcd-44bf-a14a-cbedd17893b0/download",
                     "size": 170834001,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 876846956,
-            "name": "Haunted Room: Sleep Survivor",
-            "version": "10000.0.51",
-            "size": "0 B",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134436/5350790e-ec15-46d8-9cb1-2bc1d49fcf5b.png",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
-            "download_url": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
-            "bundleIdentifier": "com.sea.ygjsz.ios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134436/5350790e-ec15-46d8-9cb1-2bc1d49fcf5b.png",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "10000.0.51",
-                    "date": "2026-07-24T09:04:20.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
-                    "size": 52428800,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
