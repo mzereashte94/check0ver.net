@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 823973297,
+            "name": "Reactor 2: Idle Nuclear Tycoon",
+            "version": "1.0.23",
+            "size": "93.61 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156163/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a24945d0-d154-4010-9047-4758baa3c25d/download",
+            "download_url": "https://check0ver.net/en/iapps/a24945d0-d154-4010-9047-4758baa3c25d/download",
+            "bundleIdentifier": "com.rsgapps.reactor.two",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156163/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.0.23",
+                    "date": "2026-09-17T13:49:25.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a24945d0-d154-4010-9047-4758baa3c25d/download",
+                    "size": 98157199,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 454142775,
+            "name": "Taimanin Squad",
+            "version": "1.1.9",
+            "size": "115.19 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121982/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a13a127e-ca7d-4982-8aaa-777dac424115/download",
+            "download_url": "https://check0ver.net/en/iapps/a13a127e-ca7d-4982-8aaa-777dac424115/download",
+            "bundleIdentifier": "com.GREMORYGames.TaimaninSquad",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121982/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.1.9",
+                    "date": "2026-09-17T13:47:34.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a13a127e-ca7d-4982-8aaa-777dac424115/download",
+                    "size": 120785469,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 44449123,
             "name": "Bullet Force",
             "version": "1.118",
@@ -32424,44 +32500,6 @@
             "patreon": []
         },
         {
-            "id": 823973297,
-            "name": "Reactor 2: Idle Nuclear Tycoon",
-            "version": "1.0.20",
-            "size": "93.05 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156163/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a24945d0-d154-4010-9047-4758baa3c25d/download",
-            "download_url": "https://check0ver.net/en/iapps/a24945d0-d154-4010-9047-4758baa3c25d/download",
-            "bundleIdentifier": "com.rsgapps.reactor.two",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156163/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.0.20",
-                    "date": "2026-08-29T05:53:43.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a24945d0-d154-4010-9047-4758baa3c25d/download",
-                    "size": 97569996,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 235726873,
             "name": "Club Legend - Football Game",
             "version": "1.92.09",
@@ -46623,44 +46661,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a26e8dde-e8be-47af-a0ef-9dc8660a746c/download",
                     "size": 1320702443,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 454142775,
-            "name": "Taimanin Squad",
-            "version": "1.1.7",
-            "size": "114.51 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121982/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a13a127e-ca7d-4982-8aaa-777dac424115/download",
-            "download_url": "https://check0ver.net/en/iapps/a13a127e-ca7d-4982-8aaa-777dac424115/download",
-            "bundleIdentifier": "com.GREMORYGames.TaimaninSquad",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121982/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.1.7",
-                    "date": "2026-08-07T19:43:00.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a13a127e-ca7d-4982-8aaa-777dac424115/download",
-                    "size": 120072437,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -169685,7 +169685,7 @@
             "title": "Instagram",
             "identifier": "news_instagram",
             "caption": "Ashtemobile",
-            "date": "2026-09-17T13:52:19+00:00",
+            "date": "2026-09-15T00:00:00+00:00",
             "tintColor": "#ff007f",
             "imageURL": "https://ashtemobile.site/logo.png",
             "notify": true,
