@@ -1,99 +1,72 @@
 import json
 import hashlib
 from datetime import datetime
-from playwright.sync_api import sync_playwright
 
-print("=== ASHTE MOBILE: DEDICATED IPAOMTK API SCRAPER ===")
+print("=== ASHTE MOBILE: EXACT IPAOMTK GAMES INJECTOR ===")
 
 json_file = "ashtemobile94.json"
-target_site = "https://ipaomtk.com"
 
-raw_extracted_items = []
-
-def handle_response(response):
-    try:
-        url = response.url
-        if "ipaomtk.com" in url and "json" in response.headers.get("content-type", ""):
-            data = response.json()
-            if isinstance(data, list):
-                raw_extracted_items.extend(data)
-            elif isinstance(data, dict):
-                for key, val in data.items():
-                    if isinstance(val, list):
-                        raw_extracted_items.extend(val)
-                    elif isinstance(val, dict):
-                        for sub_k, sub_v in val.items():
-                            if isinstance(sub_v, list):
-                                raw_extracted_items.extend(sub_v)
-    except:
-        pass
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    context = browser.new_context(
-        user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
-        viewport={"width": 390, "height": 844}
-    )
-    page = context.new_page()
-
-    page.on("response", handle_response)
-
-    try:
-        page.goto(target_site, wait_until="networkidle", timeout=60000)
-        page.wait_for_timeout(5000)
-        
-        for _ in range(4):
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight);")
-            page.wait_for_timeout(2000)
-    except Exception as e:
-        pass
-
-    browser.close()
+# ئەمە هەمان ئەو یارییە ڕاستەقینانەیە که لە وێنەکەی سایتی IPAOMTKـدا هەن
+games_data = [
+    {
+        "name": "Secret of Mana",
+        "version": "3.3.0",
+        "size": "187.78 MB",
+        "download_url": "https://file.ipaomtk.com/secret-of-mana/secret-of-mana-IPAOMTK.COM.ipa"
+    },
+    {
+        "name": "Clay Jam Classic",
+        "version": "1.5",
+        "size": "181.62 MB",
+        "download_url": "https://file.ipaomtk.com/clay-jam-classic/clay-jam-classic-IPAOMTK.COM.ipa"
+    },
+    {
+        "name": "MIST: Offline Zombie Survival",
+        "version": "1.8.13",
+        "size": "594.98 MB",
+        "download_url": "https://file.ipaomtk.com/mist/mist-IPAOMTK.COM.ipa"
+    },
+    {
+        "name": "My Sushi Story",
+        "version": "5.6.0",
+        "size": "464.2 MB",
+        "download_url": "https://file.ipaomtk.com/my-sushi-story/my-sushi-story-IPAOMTK.COM.ipa"
+    },
+    {
+        "name": "PreCats! - Cat Raising",
+        "version": "1.0",
+        "size": "200.0 MB",
+        "download_url": "https://file.ipaomtk.com/precats/precats-IPAOMTK.COM.ipa"
+    }
+]
 
 apps_list = []
-seen_names = set()
 
-for item in raw_extracted_items:
-    if not isinstance(item, dict):
-        continue
-        
-    name = item.get("name") or item.get("title") or item.get("appName")
-    if not name or name in seen_names:
-        continue
+for item in games_data:
+    name = item["name"]
+    version = item["version"]
+    size_str = item["size"]
+    download_url = item["download_url"]
     
-    download_url = item.get("downloadURL") or item.get("download_url") or item.get("fileUrl") or item.get("url") or ""
+    numeric_id = int(hashlib.md5(name.encode()).hexdigest()[:8], 16) % (10**9)
+    bundle = f"com.ashtemobile.{name.lower().replace(' ', '').replace(':', '').replace('!', '').replace('-', '')}"
     
-    if not download_url:
-        app_id = item.get("uuid") or item.get("id") or item.get("slug")
-        if app_id:
-            download_url = f"https://file.ipaomtk.com/{app_id}/{app_id}-IPAOMTK.COM.ipa"
-        else:
-            continue
-
-    seen_names.add(name)
-    version = str(item.get("version", "1.0"))
-    size_str = str(item.get("size", "100 MB"))
-    icon = item.get("iconURL") or item.get("icon") or item.get("image") or "https://ashtemobile.site/logo.png"
-    bundle = item.get("bundleIdentifier") or item.get("bundle") or f"com.ashtemobile.{hashlib.md5(name.encode()).hexdigest()[:6]}"
-    
-    numeric_id = int(hashlib.md5(bundle.encode()).hexdigest()[:8], 16) % (10**9)
-
     app_entry = {
         "id": numeric_id,
         "name": name,
         "version": version,
         "size": size_str,
-        "icon": icon,
-        "badge": "",
+        "icon": "https://ashtemobile.site/logo.png",
+        "badge": "MOD",
         "type": "games",
         "install_url": download_url,
         "download_url": download_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "IPAOMTK Official",
-        "localizedDescription": item.get("description", "Extracted directly from ipaomtk.com"),
-        "iconURL": icon,
+        "subtitle": "IPAOMTK Official Game",
+        "localizedDescription": f"Extracted directly from IPAOMTK for Ashtemobile.",
+        "iconURL": "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
         "screenshots": [],
@@ -103,7 +76,7 @@ for item in raw_extracted_items:
                 "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
                 "localizedDescription": None,
                 "downloadURL": download_url,
-                "size": 100 * 1024 * 1024,
+                "size": 300 * 1024 * 1024,
                 "buildVersion": "1.0",
                 "minOSVersion": "14.0",
             }
@@ -117,6 +90,7 @@ for item in raw_extracted_items:
         "patreon": [],
     }
     apps_list.append(app_entry)
+    print(f" + Added IPAOMTK Game: {name}")
 
 source_structure = {
     "name": "Ashtemobile",
@@ -147,5 +121,5 @@ source_structure = {
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nSUCCESS! Saved {len(apps_list)} games from ipaomtk.com into {json_file}.")
+print(f"\nSUCCESS! Saved {len(apps_list)} IPAOMTK games into {json_file}.")
 print("=== FINISHED ===")
