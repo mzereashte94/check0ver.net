@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 646206867,
+            "name": "Crossy Road",
+            "version": "7.13.1",
+            "size": "132.94 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117266/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9eef6744-cde5-4e06-bd71-4c8752dd5dd9/download",
+            "download_url": "https://check0ver.net/en/iapps/9eef6744-cde5-4e06-bd71-4c8752dd5dd9/download",
+            "bundleIdentifier": "com.hipsterwhale.crossy",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117266/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "7.13.1",
+                    "date": "2026-09-17T09:36:40.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9eef6744-cde5-4e06-bd71-4c8752dd5dd9/download",
+                    "size": 139397693,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 996447125,
             "name": "Switching Heroes",
             "version": "5.40",
@@ -48181,44 +48219,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9c94acd2-5998-487e-9223-e22cbd81a616/download",
                     "size": 100558438,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 646206867,
-            "name": "Crossy Road",
-            "version": "7.13.0",
-            "size": "132.99 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117266/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9eef6744-cde5-4e06-bd71-4c8752dd5dd9/download",
-            "download_url": "https://check0ver.net/en/iapps/9eef6744-cde5-4e06-bd71-4c8752dd5dd9/download",
-            "bundleIdentifier": "com.hipsterwhale.crossy",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117266/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "7.13.0",
-                    "date": "2026-08-03T07:48:03.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9eef6744-cde5-4e06-bd71-4c8752dd5dd9/download",
-                    "size": 139450122,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
