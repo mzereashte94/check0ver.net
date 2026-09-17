@@ -1,60 +1,95 @@
-import json
-import requests
 import hashlib
+import json
+import re
+import requests
 from datetime import datetime
 
-print("=== ASHTE MOBILE: EXTRACTING IPAOMTK STYLE APPS ===")
+print("=== ASHTE MOBILE: IPAOMTK DIRECT FILE EXTRACTOR ===")
 
-# هێنانی داتا لە سەرچاوە فەرمی و کاراکانەوە کە هەمان ناوەڕۆکی IPAOMTK تێدایە
-source_url = "https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json"
+# پێگەی سەرەکی سایتەکە بۆ هێنانی یاری و ئەپەکان
+target_site = "https://ipaomtk.com"
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+}
+
+print("1. Fetching main page from ipaomtk.com...")
 apps_list = []
+seen_urls = set()
 
 try:
-    print(f"Fetching apps...")
-    res = requests.get(source_url, timeout=15)
-    if res.status_code == 200:
-        data = res.json()
-        for app in data.get("apps", []):
-            name = app.get("name", "Unknown App")
-            download_url = app.get("downloadURL", "")
-            
-            if not download_url.lower().endswith(".ipa"):
-                continue
-                
-            version = app.get("version", "1.0")
-            size_bytes = app.get("size", 50 * 1024 * 1024)
-            size_mb = f"{round(size_bytes / (1024 * 1024), 2)} MB"
-            icon = app.get("iconURL", "https://ashtemobile.site/logo.png")
-            bundle = app.get("bundleIdentifier", f"com.ashtemobile.{hashlib.md5(name.encode()).hexdigest()[:6]}")
-            
-            numeric_id = int(hashlib.md5(bundle.encode()).hexdigest()[:8], 16) % (10**9)
+    response = requests.get(target_site, headers=headers, timeout=15)
+    if response.status_code == 200:
+        html_content = response.text
+        
+        # گەڕان بەدوای هەموو لینکەکان کە لە file.ipaomtk.com دەست پێدەکەن و بە .ipa کۆتایی دێن
+        ipa_links = list(set(re.findall(r'(https?://file\.ipaomtk\.com/[^\s\'"<>]+?\.ipa)', html_content, re.IGNORECASE)))
+        
+        # ئەگەر لەناو جاڤاسکریپت یان سکرپتەکاندا شاردبێتیانەوە، ئەوانیش دەگەڕێین
+        js_files = re.findall(r'src=["\']([^"\']+\.js)["\']', html_content)
+        for js in js_files:
+            js_url = js if js.startswith('http') else f"{target_site}{js if js.startswith('/') else '/' + js}"
+            try:
+                js_res = requests.get(js_url, headers=headers, timeout=10)
+                more_links = re.findall(r'(https?://file\.ipaomtk\.com/[^\s\'"<>]+?\.ipa)', js_res.text, re.IGNORECASE)
+                ipa_links.extend(more_links)
+            except:
+                pass
 
-            new_app = {
+        ipa_links = list(set(ipa_links))
+        print(f"Found {len(ipa_links)} direct file links! Formatting into JSON...")
+
+        for link in ipa_links:
+            if link in seen_urls:
+                continue
+            seen_urls.add(link)
+
+            # دروستکردنی ناوی یارییەکە لەسەر بنەمای لینکەکەی
+            parts = link.split('/')
+            raw_name = parts[-2] if len(parts) >= 2 else "App"
+            name = raw_name.replace('-', ' ').replace('_', ' ').title()
+            
+            numeric_id = int(hashlib.md5(link.encode()).hexdigest()[:8], 16) % (10**9)
+            bundle = f"com.ashtemobile.app{numeric_id}"
+            updated_at = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00")
+            
+            # بەدەستهێنانی قەبارەی فایلەکە بە شێوەیەک کە سێرڤەرەکە قورس نەبێت
+            size_bytes = 100 * 1024 * 1024
+            size_str = "100.0 MB"
+            try:
+                head_res = requests.head(link, headers=headers, timeout=5)
+                if 'Content-Length' in head_res.headers:
+                    size_bytes = int(head_res.headers['Content-Length'])
+                    size_str = f"{round(size_bytes / (1024 * 1024), 2)} MB"
+            except:
+                pass
+
+            app_entry = {
                 "id": numeric_id,
                 "name": name,
-                "version": version,
-                "size": size_mb,
-                "icon": icon,
+                "version": "1.0",
+                "size": size_str,
+                "icon": "https://ashtemobile.site/logo.png",
                 "badge": "",
                 "type": "games",
-                "install_url": download_url,
-                "download_url": download_url,
+                "install_url": link,
+                "download_url": link,
                 "bundleIdentifier": bundle,
                 "marketplaceID": "",
                 "developerName": "AshteMobile",
-                "subtitle": "IPAOMTK Alternative",
-                "localizedDescription": "High quality IPA extracted for Ashtemobile.",
-                "iconURL": icon,
+                "subtitle": "IPAOMTK Direct",
+                "localizedDescription": "Direct download link extracted from IPAOMTK.",
+                "iconURL": "https://ashtemobile.site/logo.png",
                 "tintColor": "#04ecfc",
                 "category": "games",
                 "screenshots": [],
                 "versions": [
                     {
-                        "version": version,
-                        "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+                        "version": "1.0",
+                        "date": updated_at,
                         "localizedDescription": None,
-                        "downloadURL": download_url,
+                        "downloadURL": link,
                         "size": size_bytes,
                         "buildVersion": "1.0",
                         "minOSVersion": "14.0",
@@ -69,12 +104,13 @@ try:
                 "patreon": [],
             }
             
-            apps_list.append(new_app)
+            apps_list.append(app_entry)
             print(f" + Added: {name}")
-            
-except Exception as e:
-    print(f"Error: {e}")
 
+except Exception as e:
+    print(f"Error fetching site: {e}")
+
+# فۆرماتی کۆتایی فایلی JSON
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
@@ -101,7 +137,9 @@ source_structure = {
     ]
 }
 
-with open("ashtemobile94.json", "w", encoding="utf-8") as f:
+output_filename = "ashtemobile94.json"
+with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nSUCCESS! Saved {len(apps_list)} working apps to ashtemobile94.json")
+print(f"\nDone! Successfully saved {len(apps_list)} direct files into {output_filename}.")
+print("=== FINISHED ===")
