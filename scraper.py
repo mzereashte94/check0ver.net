@@ -1,8 +1,7 @@
 import requests
 import re
-import json
 
-print("=== HUNTING FOR OTHER TABLES IN SUPABASE ===")
+print("=== DEEP SEARCH FOR IPAS IN CATEGORIES & PRODUCTS ===")
 js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
 
 try:
@@ -17,23 +16,36 @@ try:
             "Content-Type": "application/json"
         }
         
-        # لێرەدا هەوڵ دەدین سەیری ناو ڕووی سێرڤەرەکە بکەین یان خشتە بەناوبانگەکانی تر تاقی بکەینەوە
-        other_tables = ["ipas", "apps", "library", "ipa_files", "app_library", "downloads", "categories", "items", "files"]
         base_url = "https://supapi.trystore.net/rest/v1"
         
-        for t in other_tables:
-            url = f"{base_url}/{t}?select=*&limit=1"
-            r = requests.get(url, headers=headers, timeout=10)
-            print(f"Table '{t}': Status {r.status_code}")
-            if r.status_code == 200:
-                data = r.json()
-                print(f" >>> BINGO! Found table '{t}' with data!")
-                if len(data) > 0:
-                    print(json.dumps(data[0], indent=2, ensure_ascii=False))
-                break
-    else:
-        print("API Key not found.")
+        # 1. هێنانی هەموو پۆلێنەکان (Categories)
+        cat_res = requests.get(f"{base_url}/categories?select=*", headers=headers)
+        if cat_res.status_code == 200:
+            categories = cat_res.json()
+            print(f"\nFound {len(categories)} categories:")
+            for c in categories:
+                print(f" -> [{c.get('slug')}] {c.get('name')}")
+        
+        # 2. هێنانی هەموو بەرهەمەکان و گەڕان بەدوای فایلی IPA یان App
+        prod_res = requests.get(f"{base_url}/products?select=*", headers=headers)
+        if prod_res.status_code == 200:
+            products = prod_res.json()
+            print(f"\nScanning {len(products)} products for apps/games...")
+            
+            app_count = 0
+            for p in products:
+                name = p.get("name", "")
+                desc = str(p.get("description", ""))
+                slug = p.get("slug", "")
+                
+                # گەڕان بەدوای ئەپ یان یاری یان لینکی داونلۆد
+                if "ipa" in slug.lower() or "app" in slug.lower() or "game" in slug.lower() or "ios" in desc.lower() or "download" in desc.lower():
+                    app_count += 1
+                    print(f"[{app_count}] {name} (Slug: {slug})")
+            
+            print(f"\nTotal potential apps found: {app_count}")
+            
 except Exception as e:
     print(f"Error: {e}")
 
-print("\n=== HUNT FINISHED ===")
+print("\n=== SEARCH FINISHED ===")
