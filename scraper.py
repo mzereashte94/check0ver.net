@@ -3,10 +3,10 @@ import json
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
-print("=== ASHTE MOBILE: AUTOMATED 253 PAGES IPAOMTK EXTRACTOR ===")
+print("=== ASHTE MOBILE: FULL ALL GAMES 253 PAGES SCRAPER ===")
 
 json_file = "ashtemobile94.json"
-target_base = "https://ipaomtk.com/games/page/"
+base_url = "https://ipaomtk.com/page/"
 
 raw_games = []
 seen_slugs = set()
@@ -19,14 +19,14 @@ with sync_playwright() as p:
     )
     page = context.new_page()
 
-    print("Bypassing Cloudflare and scraping all 253 pages...")
+    print("Bypassing Cloudflare and scraping ALL pages (1 to 253)...")
     
-    # گەڕان بەناو هەموو پەڕەکانی سایتەکەدا (تا پەڕەی 253)
+    # گەڕان بەناو هەموو پەڕەکانی بەشی All (لە 1 تا 253)
     for page_num in range(1, 254):
-        url = f"{target_base}{page_num}/" if page_num > 1 else "https://ipaomtk.com/games/"
+        url = f"{base_url}{page_num}/" if page_num > 1 else "https://ipaomtk.com/"
         try:
-            page.goto(url, wait_until="networkidle", timeout=25000)
-            page.wait_for_timeout(1500)
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            page.wait_for_timeout(1000)
             
             cards = page.query_selector_all('a.ipaomtk-app-card')
             if not cards:
@@ -42,7 +42,7 @@ with sync_playwright() as p:
                     continue
                     
                 slug = href.strip('/').split('/')[-1] if href else name.lower().replace(' ', '-')
-                if not slug or slug in seen_slugs or slug in ['games', 'page', 'ipaomtk.com']:
+                if not slug or slug in seen_slugs or slug in ['page', 'ipaomtk.com']:
                     slug = name.lower().replace(' ', '-').replace(':', '').replace('!', '').replace('(', '').replace(')', '')
                 
                 if slug in seen_slugs:
@@ -75,14 +75,15 @@ with sync_playwright() as p:
             if page_num % 10 == 0:
                 print(f"Scraped page {page_num}... Total games found so far: {len(raw_games)}")
                 
-            if found_in_page == 0 and page_num > 10:
+            if found_in_page == 0 and page_num > 15:
                 break
         except Exception as e:
-            break
+            # ئەگەر پەڕەیەک هەڵەی تێکەوت بەردەوام دەبێت لەسەر پەڕەکانی تر
+            continue
 
     browser.close()
 
-print(f"Total unique games collected: {len(raw_games)}. Generating final JSON...")
+print(f"Total unique games collected from ALL pages: {len(raw_games)}. Generating final JSON...")
 
 apps_list = []
 for item in raw_games:
@@ -118,7 +119,7 @@ for item in raw_games:
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "IPAOMTK Direct File Source",
+        "subtitle": "IPAOMTK All Games Source",
         "localizedDescription": f"Official {name} IPA hosted on file.ipaomtk.com.",
         "iconURL": icon_url,
         "tintColor": "#04ecfc",
@@ -174,4 +175,4 @@ source_structure = {
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nSUCCESS! Extracted {len(apps_list)} games with file.ipaomtk.com links into {json_file}.")
+print(f"\nSUCCESS! Extracted {len(apps_list)} total games and apps into {json_file}.")
