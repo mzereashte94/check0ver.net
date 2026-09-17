@@ -5,7 +5,7 @@ import requests
 import concurrent.futures
 from datetime import datetime
 
-print("=== ASHTE MOBILE: RELIABLE GITHUB LINKS EXTRACTOR ===")
+print("=== ASHTE MOBILE: CHECK0VER EXTRACTOR (FILTERING BROKEN LINKS) ===")
 
 base_url = "https://check0ver.net/en/iapps?filter%5BinCategories%5D%5B0%5D=9c60f563-1983-42f0-8882-a26207bd4aaf&page="
 
@@ -14,11 +14,11 @@ headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
 }
 
-print("1. Fetching apps from source...")
+print("1. Fetching apps from Check0ver...")
 raw_apps = []
 
-# هێنانی داتای پەڕەکان
-for page in range(1, 10):
+# هێنانی داتای 10 پەڕە (بۆ ئەوەی یاری زۆرت بۆ بهێنێت)
+for page in range(1, 11):
     url = f"{base_url}{page}"
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -39,9 +39,9 @@ for page in range(1, 10):
                 
                 raw_apps.extend(paginator)
     except Exception as e:
-        print(f"Error on page {page}: {e}")
+        pass
 
-print(f"Found {len(raw_apps)} apps! Filtering for PERMANENT GitHub links only...")
+print(f"Found {len(raw_apps)} apps! Filtering out broken 500 Error links...")
 
 def get_real_ipa(app):
     uuid = app.get("uuid")
@@ -53,7 +53,7 @@ def get_real_ipa(app):
     bundle = app.get("bundle", f"com.ashtemobile.{uuid}")
     
     download_trigger_url = f"https://check0ver.net/en/iapps/{uuid}/download"
-    final_ipa_url = ""
+    final_ipa_url = download_trigger_url 
     
     try:
         res = requests.get(download_trigger_url, headers=headers, allow_redirects=False, timeout=5)
@@ -71,9 +71,10 @@ def get_real_ipa(app):
     except:
         pass
 
-    # *** بەشی گرنگ: تەنها ئەو لینکانە قبوڵ دەکات کە هی گیت هابن و هەمیشەیین ***
-    if not final_ipa_url or "github.com" not in final_ipa_url.lower():
-        return None
+    # *** بەشی فلتەرکردنی لینکە تێکچووەکان (500 Error) ***
+    bad_domains = ["unlimitedipa.com", "ipaomtk.com"]
+    if any(bad in final_ipa_url.lower() for bad in bad_domains):
+        return None # ئەگەر لەو سێرڤەرانە بوو، فەرامۆشی بکە
 
     numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
 
@@ -99,8 +100,8 @@ def get_real_ipa(app):
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "Safe & Permanent",
-        "localizedDescription": "Downloaded from reliable GitHub sources.",
+        "subtitle": "Awesome App",
+        "localizedDescription": "Downloaded from AshteMobile Source.",
         "iconURL": image_url if image_url else "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -130,7 +131,7 @@ apps_list = []
 with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
     results = executor.map(get_real_ipa, raw_apps)
     for res in results:
-        # تەنها ئەوانە زیاد دەکات کە لینکی گیت هابیان هەبووە و فلتەرەکەیان بڕیوە
+        # تەنها ئەوانە زیاد دەکات کە لە فلتەرەکە دەرچوون (واتە ئیرۆری 500 نادەن)
         if res is not None:
             apps_list.append(res)
             print(f"+ Added Safe App: {res['name']}")
@@ -165,5 +166,5 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nDone! Extracted {len(apps_list)} PERMANENT .ipa URLs.")
+print(f"\nDone! Extracted {len(apps_list)} WORKING .ipa URLs.")
 print("=== FINISHED ===")
