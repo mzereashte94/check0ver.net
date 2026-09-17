@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 143945649,
+            "name": "Family Tree! - Logic Puzzles",
+            "version": "2.1.2",
+            "size": "268.09 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150150/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a20ff51d-b40a-4ae6-b390-7232ad0465ed/download",
+            "download_url": "https://check0ver.net/en/iapps/a20ff51d-b40a-4ae6-b390-7232ad0465ed/download",
+            "bundleIdentifier": "com.regulusstudio.familytree",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/150150/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.1.2",
+                    "date": "2026-09-17T00:29:54.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a20ff51d-b40a-4ae6-b390-7232ad0465ed/download",
+                    "size": 281112739,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 357669947,
             "name": "RELLION: NPC Survival",
             "version": "1.48.5",
@@ -13791,44 +13829,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9cb53bce-7656-4ed0-87a6-443b88ffe7c6/download",
                     "size": 356306124,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 896987951,
-            "name": "AdVenture Communist",
-            "version": "6.58.2",
-            "size": "144.45 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/129038/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d46bda7-7e27-4560-8ed9-9e3ef6d2e4aa/download",
-            "download_url": "https://check0ver.net/en/iapps/9d46bda7-7e27-4560-8ed9-9e3ef6d2e4aa/download",
-            "bundleIdentifier": "com.kongregate.mobile.adventurecommunist",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/129038/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "6.58.2",
-                    "date": "2026-09-11T13:30:00.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d46bda7-7e27-4560-8ed9-9e3ef6d2e4aa/download",
-                    "size": 151466803,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
