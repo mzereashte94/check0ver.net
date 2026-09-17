@@ -1,7 +1,7 @@
 {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all of my games from file.ipaomtk.com.",
+    "description": "Welcome to my source! Here you'll find all of my apps.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -10,10 +10,124 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 882144598,
+            "name": "Rush Protocol",
+            "version": "0.0.9",
+            "size": "150.89 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165996/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2c0d337-8fa8-4f26-a1fc-48eb3b3afb17/download",
+            "download_url": "https://check0ver.net/en/iapps/a2c0d337-8fa8-4f26-a1fc-48eb3b3afb17/download",
+            "bundleIdentifier": "com.cgdealers.rushprotocol",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165996/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.0.9",
+                    "date": "2026-09-17T14:47:06.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2c0d337-8fa8-4f26-a1fc-48eb3b3afb17/download",
+                    "size": 158219632,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 62036648,
+            "name": "Avalar: Raid of Shadow",
+            "version": "02.92.00",
+            "size": "835.42 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114853/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
+            "download_url": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
+            "bundleIdentifier": "com.vtwo.atwo.epl.as",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114853/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "02.92.00",
+                    "date": "2026-09-17T14:43:42.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
+                    "size": 876001361,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 59565576,
+            "name": "The Lone Necromancer: Idle RPG",
+            "version": "1.1.20",
+            "size": "226.81 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
+            "download_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
+            "bundleIdentifier": "com.lunosoft.nhnios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.1.20",
+                    "date": "2026-09-17T14:40:34.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
+                    "size": 237827522,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 247397898,
             "name": "Garden Getaway: Merge & Design",
             "version": "1.3.58",
-            "size": "178.95 MB",
+            "size": "185.39 MB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160574/512x512bb.jpg",
             "badge": "",
             "type": "games",
@@ -34,7 +148,7 @@
                     "date": "2026-09-17T14:38:33.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a282da38-42a1-4a2b-936a-42d3d4d44786/download",
-                    "size": 187642675,
+                    "size": 194395504,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -6267,44 +6381,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1df0e9f-c5b5-4106-afb9-0f4d0b456f56/download",
                     "size": 174839562,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 882144598,
-            "name": "Rush Protocol",
-            "version": "0.0.8",
-            "size": "148.24 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165996/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2c0d337-8fa8-4f26-a1fc-48eb3b3afb17/download",
-            "download_url": "https://check0ver.net/en/iapps/a2c0d337-8fa8-4f26-a1fc-48eb3b3afb17/download",
-            "bundleIdentifier": "com.cgdealers.rushprotocol",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/165996/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.0.8",
-                    "date": "2026-09-15T16:46:06.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2c0d337-8fa8-4f26-a1fc-48eb3b3afb17/download",
-                    "size": 155440906,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -35046,6 +35122,44 @@
             "patreon": []
         },
         {
+            "id": 83444413,
+            "name": "DRAGON BALL LEGENDS",
+            "version": "6.27.0",
+            "size": "147.31 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/155291/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2437437-7c98-435b-a366-8f9cee3e55ac/download",
+            "download_url": "https://check0ver.net/en/iapps/a2437437-7c98-435b-a366-8f9cee3e55ac/download",
+            "bundleIdentifier": "jp.co.bandainamcoent.BNEI0333",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/155291/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "6.27.0",
+                    "date": "2026-08-26T10:25:21.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2437437-7c98-435b-a366-8f9cee3e55ac/download",
+                    "size": 154465730,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 294483565,
             "name": "Dragon City: Battle Adventure!",
             "version": "26.11.0",
@@ -43127,44 +43241,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a12e0631-04b1-41f1-bf2b-45bd96df7419/download",
                     "size": 216793088,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 627451087,
-            "name": "Gardenscapes",
-            "version": "9.8.5",
-            "size": "194.52 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116845/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c716edb-f984-46f7-8b33-3b19642c4649/download",
-            "download_url": "https://check0ver.net/en/iapps/9c716edb-f984-46f7-8b33-3b19642c4649/download",
-            "bundleIdentifier": "com.playrix.gardenscapes-m3-ios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116845/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "9.8.5",
-                    "date": "2026-08-14T14:59:26.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c716edb-f984-46f7-8b33-3b19642c4649/download",
-                    "size": 203969003,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -67903,44 +67979,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a21abea6-f4ee-47a4-b881-2ee2874e2898/download",
                     "size": 252769730,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 59565576,
-            "name": "The Lone Necromancer: Idle RPG",
-            "version": "1.1.18",
-            "size": "193.68 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
-            "download_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
-            "bundleIdentifier": "com.lunosoft.nhnios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.1.18",
-                    "date": "2026-06-25T03:17:32.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
-                    "size": 203088199,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -112477,44 +112515,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1567380-1f23-4d29-b9ce-ad9a02d74f66/download",
                     "size": 323275980,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 62036648,
-            "name": "Avalar: Raid of Shadow",
-            "version": "02.89.00",
-            "size": "832.96 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114853/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
-            "download_url": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
-            "bundleIdentifier": "com.vtwo.atwo.epl.as",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114853/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "02.89.00",
-                    "date": "2026-04-08T15:33:28.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
-                    "size": 873421864,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
