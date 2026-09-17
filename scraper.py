@@ -1,140 +1,71 @@
-import hashlib
 import json
-import re
-import cloudscraper
-import concurrent.futures
-from datetime import datetime
+import os
+from playwright.sync_api import sync_playwright
 
-print("=== ASHTE MOBILE: POWERFUL TRYIPA EXTRACTOR ===")
+print("=== ASHTE MOBILE: PLAYWRIGHT NETWORK INTERCEPTOR ===")
 
-# ١. تێکشکاندنی سکویریتی سایتەکە و هێنانی داتاکان
-scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'ios', 'mobile': True})
-url = "https://tryipa.com/ipa-library"
-
-print("1. Fetching data from TryIPA and bypassing security...")
-try:
-    res = scraper.get(url, timeout=15)
-    all_content = res.text
-    
-    # گەڕان بەدوای فایلە جاڤاسکریپتەکان نەوەک لینکیان تێدا شاردبێتەوە
-    js_files = re.findall(r'src=["\']([^"\']+\.js)["\']', res.text)
-    for js in js_files:
-        js_url = js if js.startswith('http') else f"https://tryipa.com{js if js.startswith('/') else '/' + js}"
-        try:
-            js_res = scraper.get(js_url, timeout=10)
-            all_content += " " + js_res.text
-        except:
-            pass
-            
-except Exception as e:
-    print(f"Failed to fetch site: {e}")
-    all_content = ""
-
-# دەرهێنانی تەنها لینکە ڕاستەقینەکانی .ipa
-raw_ipa_links = list(set(re.findall(r'(https?://[^\s\'"<>]+?\.ipa)', all_content)))
-print(f"Found {len(raw_ipa_links)} raw .ipa links. Now extracting details really fast...")
-
-# فەنکشنی سەرەکی بۆ ڕێکخستنی یارییەکان ڕێک وەکو کۆدەکەی خۆت
-def process_ipa(link):
-    # دروستکردنی ناو لە لینکەکەوە
-    raw_name = link.split('/')[-1].split('.ipa')[0]
-    name = raw_name.replace('-', ' ').replace('_', ' ').replace('%20', ' ').title()
-    if not name:
-        name = "Unknown App"
-        
-    numeric_id = int(hashlib.md5(link.encode()).hexdigest()[:8], 16) % (10**9)
-    bundle = f"com.ashtemobile.{numeric_id}"
-    updated_at = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00")
-    
-    # خاڵی بەهێزی سکرێپتەکە: پشکنینی قەبارەی فایلەکە بە خێرایی (HEAD request)
-    size_bytes = 50 * 1024 * 1024 # دانانی 50MB وەکو یەدەگ
-    size_str = "50.0 MB"
-    try:
-        head_res = scraper.head(link, timeout=5)
-        if 'Content-Length' in head_res.headers:
-            size_bytes = int(head_res.headers['Content-Length'])
-            size_str = f"{round(size_bytes / (1024 * 1024), 1)} MB"
-    except:
-        pass
-
-    return {
-        "id": numeric_id,
-        "name": name,
-        "version": "1.0",
-        "size": size_str,
-        "icon": "https://ashtemobile.site/logo.png",
-        "badge": "",
-        "type": "games",
-        "install_url": link,
-        "download_url": link,
-        "bundleIdentifier": bundle,
-        "marketplaceID": "",
-        "developerName": "AshteMobile",
-        "subtitle": "TryIPA Library",
-        "localizedDescription": "Downloaded and processed automatically by AshteMobile Extractor.",
-        "iconURL": "https://ashtemobile.site/logo.png",
-        "tintColor": "#04ecfc",
-        "category": "games",
-        "screenshots": [],
-        "versions": [
-            {
-                "version": "1.0",
-                "date": updated_at,
-                "localizedDescription": None,
-                "downloadURL": link,
-                "size": size_bytes,
-                "buildVersion": "1.0",
-                "minOSVersion": "14.0",
-            }
-        ],
-        "appPermissions": {
-            "entitlements": [],
-            "privacy": {
-                "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-            }
-        },
-        "patreon": [],
-    }
-
-apps_list = []
-
-# بەکارهێنانی ThreadPoolExecutor ڕێک وەکو ئەوەی داوات کردووە بۆ خێرایی شێتانە!
-with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(process_ipa, raw_ipa_links)
-    for res in results:
-        if res:
-            apps_list.append(res)
-
-# فۆرماتی کۆتایی فایلەکە بە ستانداردی سۆرسەکەت
-source_structure = {
-    "name": "Ashtemobile",
-    "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all of my apps.",
-    "iconURL": "https://ashtemobile.site/logo.png",
-    "website": "https://ashtemobile.site/",
-    "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
-    "tintColor": "#ff007f",
-    "featuredApps": [],
-    "headerURL": "https://ashtemobile.site/logo.png",
-    "apps": apps_list,
-    "news": [
-        {
-            "title": "Instagram",
-            "identifier": "news_instagram",
-            "caption": "Ashtemobile",
-            "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
-            "tintColor": "#ff007f",
-            "imageURL": "https://ashtemobile.site/logo.png",
-            "notify": True,
-            "url": "https://www.instagram.com/ashtemobile",
-            "appID": None,
-        }
-    ]
+json_file = "ashtemobile94.json"
+data = {
+    "name": "Ashte Mobile Library",
+    "identifier": "com.ashtemobile94.store",
+    "apps": []
 }
 
-output_filename = "ashtemobile94.json"
-with open(output_filename, "w", encoding="utf-8") as f:
-    json.dump(source_structure, f, ensure_ascii=False, indent=4)
+found_apps = []
 
-print(f"\nDone! Extracted and formatted {len(apps_list)} apps with the powerful structure.")
-print("=== FINISHED ===")
+# ئەم فەنکشنە گوێ لە هەموو داتایەک دەگرێت کە سایتەکە دەیهێنێت
+def handle_response(response):
+    if "json" in response.headers.get("content-type", ""):
+        try:
+            resp_json = response.json()
+            if isinstance(resp_json, dict) and "apps" in resp_json:
+                apps = resp_json["apps"]
+                if isinstance(apps, list) and len(apps) > 0:
+                    print(f" -> Intercepted {len(apps)} apps from hidden API: {response.url}")
+                    found_apps.extend(apps)
+        except:
+            pass
+
+with sync_playwright() as p:
+    print("Launching headless browser...")
+    browser = p.chromium.launch(headless=True)
+    context = browser.new_context(
+        user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1"
+    )
+    page = context.new_page()
+
+    # خستنەگەڕی سیخوڕەکە لەسەر هێڵی نێتۆڕک
+    page.on("response", handle_response)
+
+    print("Navigating to tryipa.com/ipa-library and waiting for JS to execute...")
+    page.goto("https://tryipa.com/ipa-library", wait_until="networkidle", timeout=60000)
+
+    # چاوەڕێکردن بۆ ماوەی 10 چرکە بۆ ئەوەی دڵنیا بین هەموو یارییەکان لە سەرچاوەکانەوە لۆد بوون
+    page.wait_for_timeout(10000)
+    browser.close()
+
+if len(found_apps) > 0:
+    print(f"\nProcessing {len(found_apps)} extracted apps into Ashtemobile format...")
+    
+    existing_urls = []
+    
+    for app in found_apps:
+        download_url = app.get("downloadURL")
+        if download_url and str(download_url).endswith(".ipa"):
+            if download_url not in existing_urls:
+                new_app = {
+                    "name": app.get("name", "Unknown App"),
+                    "version": app.get("version", "1.0"),
+                    "size": str(app.get("size", "Unknown")),
+                    "downloadURL": download_url,
+                    "iconURL": app.get("iconURL", "https://ashtemobile.site/logo.png"),
+                    "description": str(app.get("localizedDescription", "Extracted from TryIPA"))[:200]
+                }
+                data["apps"].append(new_app)
+                existing_urls.append(download_url)
+                print(f" + Added: {new_app['name']}")
+
+with open(json_file, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+
+print(f"\n=== FINISHED! Successfully extracted and saved {len(data['apps'])} real IPA links. ===")
