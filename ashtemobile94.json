@@ -1074,6 +1074,44 @@
             "patreon": []
         },
         {
+            "id": 51771103,
+            "name": "Archer Castle : AFK Idle RPG",
+            "version": "1.13.54",
+            "size": "336.92 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
+            "download_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
+            "bundleIdentifier": "com.springgames.archercastle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.13.54",
+                    "date": "2026-09-17T10:18:31.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
+                    "size": 353286225,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 743006100,
             "name": "Screw Sort 3D: Nuts & Bolts",
             "version": "1.0.26",
@@ -30435,44 +30473,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e6019ce-1263-460a-a0e8-4f630ff94dde/download",
                     "size": 407287889,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 553493624,
-            "name": "Retro Wings: Sky Combat",
-            "version": "0.1.11",
-            "size": "73.65 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134983/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a104069c-c67c-4ce6-b3d0-4ef5ae547277/download",
-            "download_url": "https://check0ver.net/en/iapps/a104069c-c67c-4ce6-b3d0-4ef5ae547277/download",
-            "bundleIdentifier": "com.OnecoinClear.RetroWings",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134983/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.1.11",
-                    "date": "2026-09-01T07:18:41.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a104069c-c67c-4ce6-b3d0-4ef5ae547277/download",
-                    "size": 77227622,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
