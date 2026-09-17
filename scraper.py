@@ -1,67 +1,50 @@
-import os
 import json
-import re
 import urllib.request
 
-print("=== ASHTE MOBILE: CHECK0VER STYLE SCRAPER ===")
+print("=== FETCHING REAL APPS FOR ASHTE MOBILE ===")
 
 json_file = "ashtemobile94.json"
 
-# ئامادەکردنی فایلی سەرەکی ڕێک وەکو ئەوەی داوات کردووە
+# بەکارهێنانی سەرچاوەیەکی کراوە و فەرمی کە پڕە لە فایلی .ipa
+source_url = "https://apps.altstore.io"
+
+# ئامادەکردنی قاڵبی فایلی JSONـەکەت
 data = {
     "name": "Ashte Mobile Library",
     "identifier": "com.ashtemobile94.store",
     "apps": []
 }
 
-# خۆگۆڕین بۆ وێبگەڕی ئاسایی بۆ ئەوەی سایتەکە نەزانێت ئێمە ڕۆبۆتین
-headers = {
-    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-}
-
-req = urllib.request.Request('https://tryipa.com/ipa-library', headers=headers)
-
 try:
-    print("Fetching tryipa.com/ipa-library directly...")
-    html = urllib.request.urlopen(req, timeout=20).read().decode('utf-8')
+    print(f"Downloading apps from open source library: {source_url} ...")
+    req = urllib.request.Request(source_url, headers={'User-Agent': 'Mozilla/5.0'})
+    response = urllib.request.urlopen(req, timeout=15).read().decode('utf-8')
+    source_data = json.loads(response)
     
-    # ڕاکێشانی فایلە جاڤاسکریپتەکانیش نەوەک لینکەکانیان تێدا شاردبێتەوە
-    js_links = re.findall(r'src=["\']([^"\']+\.js)["\']', html)
-    for js in js_links:
-        js_url = js if js.startswith('http') else "https://tryipa.com" + (js if js.startswith('/') else '/' + js)
-        try:
-            js_req = urllib.request.Request(js_url, headers=headers)
-            js_content = urllib.request.urlopen(js_req, timeout=10).read().decode('utf-8')
-            html += " " + js_content
-        except:
-            pass
-
-    # ڕاوکردنی هەر لینکێک کە کۆتاییەکەی .ipa بێت
-    ipa_links = re.findall(r'(https?://[^\s\'"<>]+?\.ipa)', html)
-    unique_ipas = list(set(ipa_links))
+    fetched_apps = source_data.get("apps", [])
+    print(f"Found {len(fetched_apps)} apps! Converting to your format...\n")
     
-    print(f"Found {len(unique_ipas)} direct IPA links.")
-    
-    # خستنە ناو فایلی JSONـەکەوە
-    for link in unique_ipas:
-        raw_name = link.split('/')[-1].split('.ipa')[0]
-        app_name = raw_name.replace('-', ' ').replace('_', ' ').replace('%20', ' ').title()
-        
-        data["apps"].append({
-            "name": app_name,
-            "version": "1.0",
-            "size": "Unknown",
-            "downloadURL": link
-        })
-        print(f" + Added: {app_name}")
-        
+    for app in fetched_apps:
+        download_url = app.get("downloadURL")
+        # تەنها ئەو ئەپانە دەهێنین کە لینکی ڕاستەوخۆی .ipa یان هەیە
+        if download_url and download_url.endswith(".ipa"):
+            new_app = {
+                "name": app.get("name", "Unknown App"),
+                "version": app.get("version", "1.0"),
+                "size": str(app.get("size", "Unknown")),
+                "downloadURL": download_url,
+                "iconURL": app.get("iconURL", ""),
+                "description": app.get("localizedDescription", "No description available.")[:150] + "..."
+            }
+            data["apps"].append(new_app)
+            print(f" + Added to JSON: {new_app['name']}")
+            
 except Exception as e:
-    print(f"Error while fetching: {e}")
-
-# لێرەدا فەرمانی پێ دەکەین کە لە هەموو بارودۆخێکدا فایلەکە دروست بکات!
+    print(f"Error: {e}")
+    
+# سەیڤکردنی هەموو ئەپەکان لەناو فایلی ashtemobile94.json
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
     
-print(f"\nSUCCESS! File '{json_file}' has been created/updated with {len(data['apps'])} apps.")
+print(f"\nSUCCESS! {len(data['apps'])} real apps have been saved to {json_file}.")
 print("=== FINISHED ===")
