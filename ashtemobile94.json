@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 786494920,
+            "name": "Evergrove Idle: Grow Magic",
+            "version": "1.14.2",
+            "size": "148.15 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/91843/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a068c8a2-8314-4efe-a3c7-bc500e9cae55/download",
+            "download_url": "https://check0ver.net/en/iapps/a068c8a2-8314-4efe-a3c7-bc500e9cae55/download",
+            "bundleIdentifier": "ai.series.evergrove",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/91843/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.14.2",
+                    "date": "2026-09-17T18:33:30.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a068c8a2-8314-4efe-a3c7-bc500e9cae55/download",
+                    "size": 155346534,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 324202886,
             "name": "Eterspire MMO",
             "version": "82.1",
@@ -41417,44 +41455,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1ed1f4c-e6e2-430c-bd0e-bbb104dd242e/download",
                     "size": 140362383,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 786494920,
-            "name": "Evergrove Idle: Grow Magic",
-            "version": "1.14.0",
-            "size": "147.74 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/91843/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a068c8a2-8314-4efe-a3c7-bc500e9cae55/download",
-            "download_url": "https://check0ver.net/en/iapps/a068c8a2-8314-4efe-a3c7-bc500e9cae55/download",
-            "bundleIdentifier": "ai.series.evergrove",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/91843/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.14.0",
-                    "date": "2026-08-17T22:29:02.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a068c8a2-8314-4efe-a3c7-bc500e9cae55/download",
-                    "size": 154916618,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
