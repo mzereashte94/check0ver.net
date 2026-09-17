@@ -1,43 +1,47 @@
 import requests
 import re
 
-print("=== HUNTING FOR EXACT TABLE NAME IN JS ===")
+print("=== SCANNING ALL PRODUCTS FOR IPA FILES ==js")
 js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
 
 try:
     res = requests.get(js_url, timeout=15)
-    text = res.text
+    match = re.search(r'["\'](eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)["\']', res.text)
     
-    print("\n--- LOOKING FOR SUPABASE .from() CALLS ---")
-    # گەڕان بەدوای کۆدی ستانداردی سوپابەیس بۆ هێنانی داتا
-    from_matches = re.findall(r'\.from\(\s*["\']([^"\']+)["\']\s*\)', text)
-    if from_matches:
-        unique_tables = list(set(from_matches))
-        print(f"Found {len(unique_tables)} table names used in the code:")
-        for t in unique_tables:
-            print(f" -> {t}")
-    else:
-        print("No .from() calls found.")
+    if match:
+        api_key = match.group(1)
+        headers = {
+            "apikey": api_key,
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
         
-    print("\n--- LOOKING FOR DIRECT ENDPOINTS ---")
-    # گەڕان بەدوای لینکی ڕاستەوخۆی API
-    endpoint_matches = re.findall(r'/(?:rest|functions)/v1/([^"\'\?]+)', text)
-    if endpoint_matches:
-        unique_endpoints = list(set(endpoint_matches))
-        for e in unique_endpoints:
-            print(f" -> {e}")
-    else:
-        print("No direct endpoints found.")
+        url = "https://supapi.trystore.net/rest/v1/products?select=*"
+        r = requests.get(url, headers=headers, timeout=15)
         
-    print("\n--- LOOKING FOR FETCH CALLS ---")
-    # گەڕان بەدوای فەنکشنی fetch
-    fetch_matches = re.findall(r'fetch\(\s*["\']([^"\']+)["\']', text)
-    if fetch_matches:
-        for f in list(set(fetch_matches)):
-            if 'http' in f or 'api' in f:
-                print(f" -> {f}")
-
+        if r.status_code == 200:
+            products = r.json()
+            print(f"Total items in store: {len(products)}\n")
+            
+            ipa_count = 0
+            for p in products:
+                name = p.get("name", "Unknown")
+                # پشکنینی ناو یان دیسکڕپشن بۆ دۆزینەوەی لینکی ipa یان فایل
+                text_blob = str(p)
+                if ".ipa" in text_blob or "download" in text_blob.lower() or "install" in text_blob.lower():
+                    ipa_count += 1
+                    print(f"[{ipa_count}] Found potential app: {name}")
+                    print(f"    Slug: {p.get('slug')}")
+            
+            if ipa_count == 0:
+                print("No direct .ipa strings found in product details. Let's check custom_fields or other tables.")
+                # پیشاندانی ناوەکانی یەک دوو دانەی تر
+                for i in range(min(5, len(products))):
+                    print(lambda: None)
+                    print(f" - {products[i].get('name')}")
+        else:
+            print(f"Error: {r.text}")
 except Exception as e:
     print(f"Error: {e}")
 
-print("\n=== HUNT FINISHED ===")
+print("\n=== SCAN FINISHED ===")
