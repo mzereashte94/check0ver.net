@@ -4,84 +4,106 @@ import re
 import requests
 import concurrent.futures
 
-# بەکارهێنانی هەمان بنەما بۆ سایتی ipaomtk.com
-base_url = "https://ipaomtk.com/games/"
+base_url = "https://ipaomtk.com/games?page="
 
 headers = {
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
 }
 
-print("1. Fetching games catalog from ipaomtk.com...")
+print("1. Fetching all games automatically from ipaomtk.com...")
 raw_apps = []
 
-try:
-    response = requests.get(base_url, headers=headers, timeout=15)
-    if response.status_code == 200:
-        # گەڕان بەدوای داتای نێو سایتەکە یان لینکەکان
-        links = re.findall(r'href=["\'](/games/[^"\']+|/app/[^"\']+)["\']', response.text)
-        raw_apps = list(set(links))
-except Exception as e:
-    print(f"Error fetching base: {e}")
-
-print(f"Found {len(raw_apps)} items. Extracting direct .ipa files...")
-
-def get_real_ipa(path):
-    app_url = f"https://ipaomtk.com{path}" if path.startswith('/') else path
-    
-    # دروستکردنی ناوی یارییەکە لەسەر بنەمای پدسەکە
-    parts = path.split('/')
-    raw_name = parts[-2] if len(parts) >= 2 and parts[-2] else "Game"
-    name = raw_name.replace('-', ' ').replace('_', ' ').title()
-    
-    final_ipa_url = f"https://file.ipaomtk.com/{raw_name}/{raw_name}-IPAOMTK.COM.ipa"
-    image_url = "https://ashtemobile.site/logo.png"
-    
+# گەڕان بەدوای پەڕەکان بە هەمان سیستەمی data-page
+for page in range(1, 51):
+    url = f"{base_url}{page}"
     try:
-        res = requests.get(app_url, headers=headers, timeout=5)
-        if res.status_code == 200:
-            # گەڕان بەدوای لینکی ڕەسەنی .ipa لەناو پەڕەکەدا
-            found_ipa = re.search(r'(https?://file\.ipaomtk\.com/[^\s\'"<>]+?\.ipa)', res.text)
-            if found_ipa:
-                final_ipa_url = found_ipa.group(1)
-            
-            # گەڕان بەدوای لۆگۆ یان وێنەی یارییەکە
-            found_img = re.search(r'src=["\']([^"\']+\.(png|jpg|webp))["\']', res.text)
-            if found_img and "logo" not in found_img.group(1):
-                img_path = found_img.group(1)
-                image_url = img_path if img_path.startswith('http') else f"https://ipaomtk.com{img_path}"
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code == 200:
+            match = re.search(r'data-page="([^"]+)"', response.text)
+            if match:
+                html_escape_decoded = (
+                    match.group(1)
+                    .replace("&quot;", '"')
+                    .replace("&amp;", "&")
+                    .replace("&#039;", "'")
+                )
+                page_data = json.loads(html_escape_decoded)
+                props = page_data.get("props", {})
+                
+                # دۆزینەوەی یارییەکان لەناو گشت مەرجەکانی پراپسدا
+                paginator = (
+                    props.get("games", {}) or 
+                    props.get("apps", {}) or 
+                    props.get("paginator", {}).get("data", [])
+                )
+                
+                if isinstance(paginator, dict):
+                    paginator = paginator.get("data", [])
+                
+                if not paginator:
+                    break
+                
+                raw_apps.extend(paginator)
+            else:
+                break
+        else:
+            break
+    except Exception as e:
+        print(f"Error on page {page}: {e}")
+        break
+
+print(f"Found {len(raw_apps)} games. Now extracting direct .ipa links and icons...")
+
+def process_game(app):
+    name = app.get("name") or app.get("title", "Unknown Game")
+    uuid = app.get("uuid") or app.get("id", "")
+    slug = app.get("slug") or name.lower().replace(' ', '-').replace(':', '')
+    version = app.get("version", "1.0")
+    size_str = str(app.get("size", "250 MB"))
+    image_url = app.get("image") or app.get("icon") or "https://ashtemobile.site/logo.png"
+    
+    # دروستکردنی لینکی ڕەسەنی file.ipaomtk.com
+    download_url = f"https://file.ipaomtk.com/{slug}/{slug}-IPAOMTK.COM.ipa"
+    
+    numeric_id = int(hashlib.md5(str(uuid or name).encode()).hexdigest()[:8], 16) % (10**9)
+    bundle = app.get("bundle") or f"com.ashtemobile.{slug.replace('-', '')}"
+
+    size_bytes = 500 * 1024 * 1024
+    try:
+        if "GB" in size_str:
+            size_bytes = int(float(size_str.replace("GB", "").strip()) * 1024 * 1024 * 1024)
+        elif "MB" in size_str:
+            size_bytes = int(float(size_str.replace("MB", "").strip()) * 1024 * 1024)
     except:
         pass
-
-    numeric_id = int(hashlib.md5(app_url.encode()).hexdigest()[:8], 16) % (10**9)
-    bundle = f"com.ashtemobile.app{numeric_id}"
 
     return {
         "id": numeric_id,
         "name": name,
-        "version": "1.0",
-        "size": "250.0 MB",
+        "version": version,
+        "size": size_str,
         "icon": image_url,
         "badge": "MOD",
         "type": "games",
-        "install_url": final_ipa_url,
-        "download_url": final_ipa_url,
+        "install_url": download_url,
+        "download_url": download_url,
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "IPAOMTK Game",
-        "localizedDescription": "Extracted from ipaomtk.com via AshteMobile Scraper.",
+        "subtitle": "IPAOMTK Official Game",
+        "localizedDescription": f"Extracted automatically from ipaomtk.com",
         "iconURL": image_url,
         "tintColor": "#04ecfc",
         "category": "games",
         "screenshots": [],
         "versions": [
             {
-                "version": "1.0",
+                "version": version,
                 "date": "2026-09-17T00:00:00+00:00",
                 "localizedDescription": None,
-                "downloadURL": final_ipa_url,
-                "size": 250 * 1024 * 1024,
+                "downloadURL": download_url,
+                "size": size_bytes,
                 "buildVersion": "1.0",
                 "minOSVersion": "14.0",
             }
@@ -97,9 +119,9 @@ def get_real_ipa(path):
 
 apps_list = []
 
-# بەکارهێنانی خێراییە شێتانەکەی ThreadPoolExecutor بۆ دەرهێنانی لینکەکان
+# بەکارهێنانی خێراییە شێتانەکەی ThreadPoolExecutor
 with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(get_real_ipa, raw_apps)
+    results = executor.map(process_game, raw_apps)
     for res in results:
         if res:
             apps_list.append(res)
@@ -107,7 +129,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "description": "Welcome to my source! Here you'll find all of my games from ipaomtk.com.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -134,4 +156,4 @@ output_filename = "ashtemobile94.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Extracted {len(apps_list)} games into {output_filename}.")
+print(f"Done! Automatically extracted {len(apps_list)} games from ipaomtk.com into {output_filename}.")
