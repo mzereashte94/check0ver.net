@@ -1,131 +1,108 @@
 import hashlib
 import json
 import re
-import requests
-import concurrent.futures
+from datetime import datetime
+from bs4 import BeautifulSoup
 
-base_url = "https://ipaomtk.com/games?page="
+print("=== ASHTE MOBILE: HTML PARSER FOR IPAOMTK ===")
+
+json_file = "ashtemobile94.json"
+
+# لێرەدا دەتوانیت کۆدی HTMLـی سایتەکە یان لینکی پەڕەکە بدەیتە پایتۆن
+target_url = "https://ipaomtk.com/"
 
 headers = {
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1"
 }
 
-print("1. Fetching all games automatically from ipaomtk.com...")
-raw_apps = []
-
-# گەڕان بەدوای پەڕەکان بە هەمان سیستەمی data-page
-for page in range(1, 51):
-    url = f"{base_url}{page}"
-    try:
-        response = requests.get(url, headers=headers, timeout=10)
-        if response.status_code == 200:
-            match = re.search(r'data-page="([^"]+)"', response.text)
-            if match:
-                html_escape_decoded = (
-                    match.group(1)
-                    .replace("&quot;", '"')
-                    .replace("&amp;", "&")
-                    .replace("&#039;", "'")
-                )
-                page_data = json.loads(html_escape_decoded)
-                props = page_data.get("props", {})
-                
-                # دۆزینەوەی یارییەکان لەناو گشت مەرجەکانی پراپسدا
-                paginator = (
-                    props.get("games", {}) or 
-                    props.get("apps", {}) or 
-                    props.get("paginator", {}).get("data", [])
-                )
-                
-                if isinstance(paginator, dict):
-                    paginator = paginator.get("data", [])
-                
-                if not paginator:
-                    break
-                
-                raw_apps.extend(paginator)
-            else:
-                break
-        else:
-            break
-    except Exception as e:
-        print(f"Error on page {page}: {e}")
-        break
-
-print(f"Found {len(raw_apps)} games. Now extracting direct .ipa links and icons...")
-
-def process_game(app):
-    name = app.get("name") or app.get("title", "Unknown Game")
-    uuid = app.get("uuid") or app.get("id", "")
-    slug = app.get("slug") or name.lower().replace(' ', '-').replace(':', '')
-    version = app.get("version", "1.0")
-    size_str = str(app.get("size", "250 MB"))
-    image_url = app.get("image") or app.get("icon") or "https://ashtemobile.site/logo.png"
-    
-    # دروستکردنی لینکی ڕەسەنی file.ipaomtk.com
-    download_url = f"https://file.ipaomtk.com/{slug}/{slug}-IPAOMTK.COM.ipa"
-    
-    numeric_id = int(hashlib.md5(str(uuid or name).encode()).hexdigest()[:8], 16) % (10**9)
-    bundle = app.get("bundle") or f"com.ashtemobile.{slug.replace('-', '')}"
-
-    size_bytes = 500 * 1024 * 1024
-    try:
-        if "GB" in size_str:
-            size_bytes = int(float(size_str.replace("GB", "").strip()) * 1024 * 1024 * 1024)
-        elif "MB" in size_str:
-            size_bytes = int(float(size_str.replace("MB", "").strip()) * 1024 * 1024)
-    except:
-        pass
-
-    return {
-        "id": numeric_id,
-        "name": name,
-        "version": version,
-        "size": size_str,
-        "icon": image_url,
-        "badge": "MOD",
-        "type": "games",
-        "install_url": download_url,
-        "download_url": download_url,
-        "bundleIdentifier": bundle,
-        "marketplaceID": "",
-        "developerName": "AshteMobile",
-        "subtitle": "IPAOMTK Official Game",
-        "localizedDescription": f"Extracted automatically from ipaomtk.com",
-        "iconURL": image_url,
-        "tintColor": "#04ecfc",
-        "category": "games",
-        "screenshots": [],
-        "versions": [
-            {
-                "version": version,
-                "date": "2026-09-17T00:00:00+00:00",
-                "localizedDescription": None,
-                "downloadURL": download_url,
-                "size": size_bytes,
-                "buildVersion": "1.0",
-                "minOSVersion": "14.0",
-            }
-        ],
-        "appPermissions": {
-            "entitlements": [],
-            "privacy": {
-                "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-            }
-        },
-        "patreon": [],
-    }
-
 apps_list = []
+seen_slugs = set()
 
-# بەکارهێنانی خێراییە شێتانەکەی ThreadPoolExecutor
-with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
-    results = executor.map(process_game, raw_apps)
-    for res in results:
-        if res:
-            apps_list.append(res)
+try:
+    import requests
+    # بەکارهێنانی سکرێپتی ڕاستەوخۆ
+    res = requests.get(target_url, headers=headers, timeout=15)
+    if res.status_code == 200:
+        soup = BeautifulSoup(res.text, 'html.parser')
+        
+        # دۆزینەوەی هەموو کارتەکان و لینکەکان لەناو ماڵپەڕەکەدا
+        cards = soup.find_all('a', href=True)
+        
+        for card in cards:
+            href = card['href']
+            # پشکنینی لینکەکان کە بۆ یاری یان ئەپ چوون
+            if any(x in href for x in ['-ipa', 'secret-of-mana', 'clay-jam', 'mist', 'sushi', 'precats', 'gta', 'minecraft']):
+                # دۆزینەوەی ناوی یارییەکە
+                title_elem = card.find(['h3', 'h2', 'span'])
+                name = title_elem.get_text(strip=True) if title_elem else "App Game"
+                
+                if len(name) < 2 or name in ["View All", "Download", "Details"]:
+                    continue
+                    
+                slug = href.strip('/').split('/')[-1]
+                if not slug or slug in seen_slugs:
+                    continue
+                seen_slugs.add(slug)
+                
+                # هێنانی وێنەی لۆگۆ ئەگەر هەبێت
+                img_elem = card.find('img')
+                icon_url = "https://ashtemobile.site/logo.png"
+                if img_elem:
+                    icon_url = img_elem.get('src') or img_elem.get('data-src') or icon_url
+                    if icon_url.startswith('/'):
+                        icon_url = f"https://ipaomtk.com{icon_url}"
 
+                # دروستکردنی لینکی ڕەسەنی file.ipaomtk.com
+                download_url = f"https://file.ipaomtk.com/{slug}/{slug}-IPAOMTK.COM.ipa"
+                
+                numeric_id = int(hashlib.md5(slug.encode()).hexdigest()[:8], 16) % (10**9)
+                bundle = f"com.ashtemobile.{slug.replace('-', '').replace('_', '')}"
+
+                app_entry = {
+                    "id": numeric_id,
+                    "name": name,
+                    "version": "1.0",
+                    "size": "250 MB",
+                    "icon": icon_url,
+                    "badge": "MOD",
+                    "type": "games",
+                    "install_url": download_url,
+                    "download_url": download_url,
+                    "bundleIdentifier": bundle,
+                    "marketplaceID": "",
+                    "developerName": "AshteMobile",
+                    "subtitle": "IPAOMTK Parsed Game",
+                    "localizedDescription": f"Extracted from ipaomtk.com via HTML parser.",
+                    "iconURL": icon_url,
+                    "tintColor": "#04ecfc",
+                    "category": "games",
+                    "screenshots": [],
+                    "versions": [
+                        {
+                            "version": "1.0",
+                            "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+                            "localizedDescription": None,
+                            "downloadURL": download_url,
+                            "size": 300 * 1024 * 1024,
+                            "buildVersion": "1.0",
+                            "minOSVersion": "14.0",
+                        }
+                    ],
+                    "appPermissions": {
+                        "entitlements": [],
+                        "privacy": {
+                            "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                        }
+                    },
+                    "patreon": [],
+                }
+                apps_list.append(app_entry)
+                print(f" + Parsed Game: {name}")
+
+except Exception as e:
+    print(f"Parsing error: {e}")
+
+# فۆرماتی کۆتایی فایلی JSON
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
@@ -142,7 +119,7 @@ source_structure = {
             "title": "Instagram",
             "identifier": "news_instagram",
             "caption": "Ashtemobile",
-            "date": "2026-09-17T00:00:00+00:00",
+            "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
             "tintColor": "#ff007f",
             "imageURL": "https://ashtemobile.site/logo.png",
             "notify": True,
@@ -152,8 +129,7 @@ source_structure = {
     ]
 }
 
-output_filename = "ashtemobile94.json"
-with open(output_filename, "w", encoding="utf-8") as f:
+with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"Done! Automatically extracted {len(apps_list)} games from ipaomtk.com into {output_filename}.")
+print(f"\nSUCCESS! Parsed and saved {len(apps_list)} games into {json_file}.")
