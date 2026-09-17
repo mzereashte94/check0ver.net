@@ -1,5 +1,25 @@
 {
-    "name": "Ashtemobile TryIPA",
-    "identifier": "com.ashtemobile.tryipa",
-    "apps": []
+    "name": "Ashtemobile",
+    "subtitle": "A source for all of my apps & games",
+    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "iconURL": "https://ashtemobile.site/logo.png",
+    "website": "https://ashtemobile.site/",
+    "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
+    "tintColor": "#ff007f",
+    "featuredApps": [],
+    "headerURL": "https://ashtemobile.site/logo.png",
+    "apps": [],
+    "news": [
+        {
+            "title": "Instagram",
+            "identifier": "news_instagram",
+            "caption": "Ashtemobile",
+            "date": "2026-09-17T13:20:28+00:00",
+            "tintColor": "#ff007f",
+            "imageURL": "https://ashtemobile.site/logo.png",
+            "notify": true,
+            "url": "https://www.instagram.com/ashtemobile",
+            "appID": null
+        }
+    ]
 }
