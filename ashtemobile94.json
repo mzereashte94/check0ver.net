@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 44449123,
+            "name": "Bullet Force",
+            "version": "1.118",
+            "size": "726.5 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116293/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e54be75-b9be-4342-a1f6-746907940cd0/download",
+            "download_url": "https://check0ver.net/en/iapps/9e54be75-b9be-4342-a1f6-746907940cd0/download",
+            "bundleIdentifier": "com.blayzegames.iosfps",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116293/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.118",
+                    "date": "2026-09-17T13:40:15.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e54be75-b9be-4342-a1f6-746907940cd0/download",
+                    "size": 761790464,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 590373704,
             "name": "Chariot Rivals",
             "version": "1.06",
@@ -11739,44 +11777,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a0bd8722-4cd9-415b-b11f-801c1bc0ea07/download",
                     "size": 49912217,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 44449123,
-            "name": "Bullet Force",
-            "version": "1.115",
-            "size": "703.75 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116293/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e54be75-b9be-4342-a1f6-746907940cd0/download",
-            "download_url": "https://check0ver.net/en/iapps/9e54be75-b9be-4342-a1f6-746907940cd0/download",
-            "bundleIdentifier": "com.blayzegames.iosfps",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116293/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.115",
-                    "date": "2026-09-12T20:44:54.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e54be75-b9be-4342-a1f6-746907940cd0/download",
-                    "size": 737935360,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
