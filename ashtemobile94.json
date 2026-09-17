@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 503570930,
+            "name": "Chapters: Interactive Stories",
+            "version": "1253",
+            "size": "138.55 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151884/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a21c02df-0fde-4392-a9de-72a0e4966467/download",
+            "download_url": "https://check0ver.net/en/iapps/a21c02df-0fde-4392-a9de-72a0e4966467/download",
+            "bundleIdentifier": "com.mars.avgchapters",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151884/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1253",
+                    "date": "2026-09-17T01:20:02.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a21c02df-0fde-4392-a9de-72a0e4966467/download",
+                    "size": 145280204,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 281175674,
             "name": "League of Dreamers - My Story",
             "version": "33.0.3",
@@ -23823,44 +23861,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
                     "size": 163546398,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 503570930,
-            "name": "Chapters: Interactive Stories",
-            "version": "1252",
-            "size": "140.52 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151884/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a21c02df-0fde-4392-a9de-72a0e4966467/download",
-            "download_url": "https://check0ver.net/en/iapps/a21c02df-0fde-4392-a9de-72a0e4966467/download",
-            "bundleIdentifier": "com.mars.avgchapters",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151884/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1252",
-                    "date": "2026-09-04T11:05:20.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a21c02df-0fde-4392-a9de-72a0e4966467/download",
-                    "size": 147345899,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -100026,6 +100026,44 @@
             "patreon": []
         },
         {
+            "id": 154316706,
+            "name": "Gecko climbing wall - Lizard Reptiles for rango",
+            "version": "1.0",
+            "size": "7.4 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139403/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1ca8e15-86d8-45f1-a713-a57479d96186/download",
+            "download_url": "https://check0ver.net/en/iapps/a1ca8e15-86d8-45f1-a713-a57479d96186/download",
+            "bundleIdentifier": "com.coolgames.geckoclimb",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139403/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.0",
+                    "date": "2026-05-16T14:52:39.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1ca8e15-86d8-45f1-a713-a57479d96186/download",
+                    "size": 7759462,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 637941550,
             "name": "Mouse Path : Brain Memory Game",
             "version": "1.1",
@@ -103129,6 +103167,44 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a0315388-41fe-4866-9556-cd7a5fb18f74/download",
                     "size": 222245683,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 634891804,
+            "name": "Sniper Destiny: Lone Wolf",
+            "version": "3.0.39",
+            "size": "367.16 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/123512/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a09607e6-22fc-4e88-82f6-e42f7027441c/download",
+            "download_url": "https://check0ver.net/en/iapps/a09607e6-22fc-4e88-82f6-e42f7027441c/download",
+            "bundleIdentifier": "com.sniper.destiny.shooting",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/123512/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "3.0.39",
+                    "date": "2026-04-21T12:34:52.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a09607e6-22fc-4e88-82f6-e42f7027441c/download",
+                    "size": 384995164,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
