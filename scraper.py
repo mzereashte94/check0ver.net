@@ -3,11 +3,10 @@ import requests
 import hashlib
 from datetime import datetime
 
-print("=== ASHTE MOBILE: SECURE STABLE FETCHER ===")
+print("=== ASHTE MOBILE: SECURE STABLE FETCHER (FIXED) ===")
 
 json_file = "ashtemobile94.json"
 
-# سەرچاوە جێگیر و کراوەکان کە لینکەکانیان کارا و بێ کێشەن
 sources = [
     "https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json",
     "https://raw.githubusercontent.com/qnblackcat/AltStore/main/apps.json"
@@ -24,9 +23,14 @@ for url in sources:
             data = res.json()
             for app in data.get("apps", []):
                 name = app.get("name", "Unknown App")
-                download_url = app.get("downloadURL", "")
                 
-                if not download_url.lower().endswith(".ipa"):
+                # پشکنینی لینک لەسەر ئاپەکە خۆی یان لەناو versions دا
+                download_url = app.get("downloadURL", "")
+                versions = app.get("versions", [])
+                if not download_url and versions:
+                    download_url = versions[0].get("downloadURL", "")
+
+                if not download_url or not download_url.lower().endswith(".ipa"):
                     continue
                     
                 bundle = app.get("bundleIdentifier", f"com.ashtemobile.{hashlib.md5(name.encode()).hexdigest()[:6]}")
@@ -34,8 +38,8 @@ for url in sources:
                     continue
                 seen_bundles.add(bundle)
 
-                version = app.get("version", "1.0")
-                size_bytes = app.get("size", 50 * 1024 * 1024)
+                version = app.get("version", (versions[0].get("version", "1.0") if versions else "1.0"))
+                size_bytes = app.get("size", (versions[0].get("size", 50 * 1024 * 1024) if versions else 50 * 1024 * 1024))
                 size_mb = f"{round(size_bytes / (1024 * 1024), 2)} MB"
                 icon = app.get("iconURL", "https://ashtemobile.site/logo.png")
                 desc = app.get("localizedDescription", "Working app for Ashtemobile.")
