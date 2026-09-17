@@ -10,6 +10,120 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 909235166,
+            "name": "Candy Crush Jelly Saga",
+            "version": "4.16.1",
+            "size": "128.49 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116209/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9d78dc58-cca0-4941-8865-4d57f0be5c14/download",
+            "download_url": "https://check0ver.net/en/iapps/9d78dc58-cca0-4941-8865-4d57f0be5c14/download",
+            "bundleIdentifier": "com.midasplayer.apps.candycrushjellysaga1",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116209/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "4.16.1",
+                    "date": "2026-09-17T04:29:12.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9d78dc58-cca0-4941-8865-4d57f0be5c14/download",
+                    "size": 134731530,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 329188201,
+            "name": "Swamp Attack 2",
+            "version": "1.3.9",
+            "size": "195.54 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117315/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e1d482f-c7a0-41f0-80ca-9ed3feb27298/download",
+            "download_url": "https://check0ver.net/en/iapps/9e1d482f-c7a0-41f0-80ca-9ed3feb27298/download",
+            "bundleIdentifier": "com.hyperdotstudios.swampattack2",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117315/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.3.9",
+                    "date": "2026-09-17T04:27:54.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e1d482f-c7a0-41f0-80ca-9ed3feb27298/download",
+                    "size": 205038551,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 775555424,
+            "name": "Township",
+            "version": "39.0.0",
+            "size": "201.04 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116283/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e156e9f-af72-4dcd-819a-9dfd7b19a756/download",
+            "download_url": "https://check0ver.net/en/iapps/9e156e9f-af72-4dcd-819a-9dfd7b19a756/download",
+            "bundleIdentifier": "com.playrix.township-ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116283/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "39.0.0",
+                    "date": "2026-09-17T04:25:52.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e156e9f-af72-4dcd-819a-9dfd7b19a756/download",
+                    "size": 210805719,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 41135902,
             "name": "Punko.io: Roguelike TD",
             "version": "1.2.0",
@@ -18706,44 +18820,6 @@
             "patreon": []
         },
         {
-            "id": 329188201,
-            "name": "Swamp Attack 2",
-            "version": "1.3.8",
-            "size": "195.97 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117315/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e1d482f-c7a0-41f0-80ca-9ed3feb27298/download",
-            "download_url": "https://check0ver.net/en/iapps/9e1d482f-c7a0-41f0-80ca-9ed3feb27298/download",
-            "bundleIdentifier": "com.hyperdotstudios.swampattack2",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117315/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.3.8",
-                    "date": "2026-09-08T17:41:36.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e1d482f-c7a0-41f0-80ca-9ed3feb27298/download",
-                    "size": 205489438,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 369631352,
             "name": "Go Ape Ship!",
             "version": "1.6",
@@ -29295,44 +29371,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e6ea319-efd6-407a-9aac-d36b81d8310d/download",
                     "size": 179358924,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 775555424,
-            "name": "Township",
-            "version": "38.1.1",
-            "size": "201.24 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116283/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e156e9f-af72-4dcd-819a-9dfd7b19a756/download",
-            "download_url": "https://check0ver.net/en/iapps/9e156e9f-af72-4dcd-819a-9dfd7b19a756/download",
-            "bundleIdentifier": "com.playrix.township-ios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116283/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "38.1.1",
-                    "date": "2026-09-01T09:57:56.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e156e9f-af72-4dcd-819a-9dfd7b19a756/download",
-                    "size": 211015434,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -43241,44 +43279,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9cc720fb-8301-4bb3-9143-9380d5cca7c6/download",
                     "size": 149159936,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 909235166,
-            "name": "Candy Crush Jelly Saga",
-            "version": "4.14.1",
-            "size": "126.89 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116209/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d78dc58-cca0-4941-8865-4d57f0be5c14/download",
-            "download_url": "https://check0ver.net/en/iapps/9d78dc58-cca0-4941-8865-4d57f0be5c14/download",
-            "bundleIdentifier": "com.midasplayer.apps.candycrushjellysaga1",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116209/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "4.14.1",
-                    "date": "2026-08-14T14:35:23.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d78dc58-cca0-4941-8865-4d57f0be5c14/download",
-                    "size": 133053808,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
