@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 483759939,
+            "name": "Wizardry Variants Daphne",
+            "version": "1.37.0",
+            "size": "1.44 GB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114697/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e5e2d68-e5ce-45d8-9bc9-0450931af7f0/download",
+            "download_url": "https://check0ver.net/en/iapps/9e5e2d68-e5ce-45d8-9bc9-0450931af7f0/download",
+            "bundleIdentifier": "jp.co.drecom.wizardry.daphne",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114697/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.37.0",
+                    "date": "2026-09-17T07:06:32.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e5e2d68-e5ce-45d8-9bc9-0450931af7f0/download",
+                    "size": 1546188226,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 92260428,
+            "name": "Pixel Flow!",
+            "version": "0.34.1",
+            "size": "215.29 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142397/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1e34421-118e-4ee3-89b7-15805e2621c9/download",
+            "download_url": "https://check0ver.net/en/iapps/a1e34421-118e-4ee3-89b7-15805e2621c9/download",
+            "bundleIdentifier": "com.loomgames.pixelflow",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142397/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.34.1",
+                    "date": "2026-09-17T06:58:54.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1e34421-118e-4ee3-89b7-15805e2621c9/download",
+                    "size": 225747927,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 685642973,
             "name": "Lost Sword",
             "version": "1.585.1",
@@ -8547,44 +8623,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a19eca6f-aba3-46f1-b44d-9f272428c5f6/download",
                     "size": 133703925,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 92260428,
-            "name": "Pixel Flow!",
-            "version": "0.34.0",
-            "size": "214.96 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142397/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1e34421-118e-4ee3-89b7-15805e2621c9/download",
-            "download_url": "https://check0ver.net/en/iapps/a1e34421-118e-4ee3-89b7-15805e2621c9/download",
-            "bundleIdentifier": "com.loomgames.pixelflow",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/142397/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.34.0",
-                    "date": "2026-09-14T17:28:54.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1e34421-118e-4ee3-89b7-15805e2621c9/download",
-                    "size": 225401896,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -47117,44 +47155,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1cafe7a-0946-435c-b4fb-c6e41d2653fd/download",
                     "size": 153794641,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 483759939,
-            "name": "Wizardry Variants Daphne",
-            "version": "1.34.0",
-            "size": "1.42 GB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114697/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e5e2d68-e5ce-45d8-9bc9-0450931af7f0/download",
-            "download_url": "https://check0ver.net/en/iapps/9e5e2d68-e5ce-45d8-9bc9-0450931af7f0/download",
-            "bundleIdentifier": "jp.co.drecom.wizardry.daphne",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114697/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.34.0",
-                    "date": "2026-08-06T12:44:44.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e5e2d68-e5ce-45d8-9bc9-0450931af7f0/download",
-                    "size": 1524713390,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
