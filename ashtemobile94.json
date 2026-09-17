@@ -10,6 +10,196 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 471611529,
+            "name": "Cult of Medjed - Idle Game",
+            "version": "1.20.0",
+            "size": "342.61 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115028/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9ff7f1a3-46fe-4c64-8f5b-fd6fe4bbca6c/download",
+            "download_url": "https://check0ver.net/en/iapps/9ff7f1a3-46fe-4c64-8f5b-fd6fe4bbca6c/download",
+            "bundleIdentifier": "com.fundoshiparade.cult",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115028/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.20.0",
+                    "date": "2026-09-17T19:31:29.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9ff7f1a3-46fe-4c64-8f5b-fd6fe4bbca6c/download",
+                    "size": 359252623,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 935629532,
+            "name": "Happy Spa: Beauty Salon Game",
+            "version": "2.0.0",
+            "size": "152.52 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139882/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1cf1ce5-b7b6-4445-bf6d-dd40a9d3612b/download",
+            "download_url": "https://check0ver.net/en/iapps/a1cf1ce5-b7b6-4445-bf6d-dd40a9d3612b/download",
+            "bundleIdentifier": "com.wefun.happy.spa.beauty.salon",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139882/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.0.0",
+                    "date": "2026-09-17T19:31:06.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1cf1ce5-b7b6-4445-bf6d-dd40a9d3612b/download",
+                    "size": 159928811,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 8089730,
+            "name": "Football Superstar 2",
+            "version": "1.0.55",
+            "size": "75.15 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121371/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9d06f4dc-2a1f-4ef7-a74c-1caed41a912a/download",
+            "download_url": "https://check0ver.net/en/iapps/9d06f4dc-2a1f-4ef7-a74c-1caed41a912a/download",
+            "bundleIdentifier": "com.lazyboydevelopments.footballsuperstar2",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121371/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.0.55",
+                    "date": "2026-09-17T19:29:28.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9d06f4dc-2a1f-4ef7-a74c-1caed41a912a/download",
+                    "size": 78800486,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 287229380,
+            "name": "Basketball Master: Slam Hero",
+            "version": "3.0.0",
+            "size": "337.23 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115052/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0ba319d-2456-4d29-b377-9e41ef928e2a/download",
+            "download_url": "https://check0ver.net/en/iapps/a0ba319d-2456-4d29-b377-9e41ef928e2a/download",
+            "bundleIdentifier": "com.udogames.dunkmasters",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115052/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "3.0.0",
+                    "date": "2026-09-17T19:28:18.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0ba319d-2456-4d29-b377-9e41ef928e2a/download",
+                    "size": 353611284,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 536632831,
+            "name": "Highway Drift - Car Racing",
+            "version": "0.9.7",
+            "size": "394.01 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115025/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a036c527-a2e0-4571-81b8-dc394eedb192/download",
+            "download_url": "https://check0ver.net/en/iapps/a036c527-a2e0-4571-81b8-dc394eedb192/download",
+            "bundleIdentifier": "com.hypermonkgames.AutoDrift",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115025/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.9.7",
+                    "date": "2026-09-17T19:25:46.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a036c527-a2e0-4571-81b8-dc394eedb192/download",
+                    "size": 413149429,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 161039359,
             "name": "Resident Evil Survival-Unit",
             "version": "1.10.1",
@@ -33868,31 +34058,31 @@
             "patreon": []
         },
         {
-            "id": 287229380,
-            "name": "Basketball Master: Slam Hero",
-            "version": "2.1.8",
-            "size": "288.96 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115052/512x512bb.jpg",
+            "id": 894451934,
+            "name": "Arcane Hunter: Soul Survivor",
+            "version": "1.4.13",
+            "size": "368.28 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115573/512x512bb.jpg",
             "badge": "",
             "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0ba319d-2456-4d29-b377-9e41ef928e2a/download",
-            "download_url": "https://check0ver.net/en/iapps/a0ba319d-2456-4d29-b377-9e41ef928e2a/download",
-            "bundleIdentifier": "com.udogames.dunkmasters",
+            "install_url": "https://check0ver.net/en/iapps/9fcdf776-8417-4d05-be60-5da0a3a45f34/download",
+            "download_url": "https://check0ver.net/en/iapps/9fcdf776-8417-4d05-be60-5da0a3a45f34/download",
+            "bundleIdentifier": "com.itcgamestudio.arcane.hunter.soul.survivor.monster.action.shooter.rpg",
             "marketplaceID": "",
             "developerName": "AshteMobile",
             "subtitle": "Awesome App",
             "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115052/512x512bb.jpg",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115573/512x512bb.jpg",
             "tintColor": "#04ecfc",
             "category": "games",
             "screenshots": [],
             "versions": [
                 {
-                    "version": "2.1.8",
-                    "date": "2026-08-28T04:57:31.000000Z",
+                    "version": "1.4.13",
+                    "date": "2026-08-28T05:30:02.000000Z",
                     "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0ba319d-2456-4d29-b377-9e41ef928e2a/download",
-                    "size": 302996520,
+                    "downloadURL": "https://check0ver.net/en/iapps/9fcdf776-8417-4d05-be60-5da0a3a45f34/download",
+                    "size": 386169569,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -38390,82 +38580,6 @@
             "patreon": []
         },
         {
-            "id": 8089730,
-            "name": "Football Superstar 2",
-            "version": "1.0.54",
-            "size": "75.15 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121371/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d06f4dc-2a1f-4ef7-a74c-1caed41a912a/download",
-            "download_url": "https://check0ver.net/en/iapps/9d06f4dc-2a1f-4ef7-a74c-1caed41a912a/download",
-            "bundleIdentifier": "com.lazyboydevelopments.footballsuperstar2",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/121371/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.0.54",
-                    "date": "2026-08-21T15:38:02.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d06f4dc-2a1f-4ef7-a74c-1caed41a912a/download",
-                    "size": 78800486,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 471611529,
-            "name": "Cult of Medjed - Idle Game",
-            "version": "1.19.0",
-            "size": "342.61 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115028/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9ff7f1a3-46fe-4c64-8f5b-fd6fe4bbca6c/download",
-            "download_url": "https://check0ver.net/en/iapps/9ff7f1a3-46fe-4c64-8f5b-fd6fe4bbca6c/download",
-            "bundleIdentifier": "com.fundoshiparade.cult",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115028/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.19.0",
-                    "date": "2026-08-21T15:15:39.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9ff7f1a3-46fe-4c64-8f5b-fd6fe4bbca6c/download",
-                    "size": 359252623,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 726197322,
             "name": "Track Star - Team Manager Idle",
             "version": "1.2.0",
@@ -39289,44 +39403,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e82e9ed-4929-4f99-a153-8076f6ba8a6a/download",
                     "size": 167048642,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 935629532,
-            "name": "Happy Spa: Beauty Salon Game",
-            "version": "1.9.0",
-            "size": "139.43 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139882/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1cf1ce5-b7b6-4445-bf6d-dd40a9d3612b/download",
-            "download_url": "https://check0ver.net/en/iapps/a1cf1ce5-b7b6-4445-bf6d-dd40a9d3612b/download",
-            "bundleIdentifier": "com.wefun.happy.spa.beauty.salon",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139882/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.9.0",
-                    "date": "2026-08-21T08:02:29.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1cf1ce5-b7b6-4445-bf6d-dd40a9d3612b/download",
-                    "size": 146202951,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -64040,44 +64116,6 @@
             "patreon": []
         },
         {
-            "id": 443122958,
-            "name": "Taichi Panda",
-            "version": "7.1.0",
-            "size": "569.25 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/119563/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e925d14-c806-4b2e-a4b0-5467b5e00a00/download",
-            "download_url": "https://check0ver.net/en/iapps/9e925d14-c806-4b2e-a4b0-5467b5e00a00/download",
-            "bundleIdentifier": "com.snailgamesusa.taiji",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/119563/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "7.1.0",
-                    "date": "2026-07-02T16:06:19.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e925d14-c806-4b2e-a4b0-5467b5e00a00/download",
-                    "size": 596901888,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 271139579,
             "name": "Mech Assemble",
             "version": "2.3.13",
@@ -73907,44 +73945,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a215ac49-948d-44b0-966b-36b6f1747905/download",
                     "size": 242346885,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 536632831,
-            "name": "Highway Drift - Car Racing",
-            "version": "0.9.3",
-            "size": "386.32 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115025/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a036c527-a2e0-4571-81b8-dc394eedb192/download",
-            "download_url": "https://check0ver.net/en/iapps/a036c527-a2e0-4571-81b8-dc394eedb192/download",
-            "bundleIdentifier": "com.hypermonkgames.AutoDrift",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115025/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.9.3",
-                    "date": "2026-06-22T16:39:35.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a036c527-a2e0-4571-81b8-dc394eedb192/download",
-                    "size": 405085880,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
