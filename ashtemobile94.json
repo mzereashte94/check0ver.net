@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 689402970,
+            "name": "Block Blast！",
+            "version": "7.4.5",
+            "size": "84.73 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156613/01c7206e-59cc-4ccb-a8db-c39c2fc41b32.png",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a24e1cb9-c19d-4bd5-a5fd-18228d250824/download",
+            "download_url": "https://check0ver.net/en/iapps/a24e1cb9-c19d-4bd5-a5fd-18228d250824/download",
+            "bundleIdentifier": "com.blockpuzzle.us.ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156613/01c7206e-59cc-4ccb-a8db-c39c2fc41b32.png",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "7.4.5",
+                    "date": "2026-09-17T04:41:42.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a24e1cb9-c19d-4bd5-a5fd-18228d250824/download",
+                    "size": 88845844,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 462305308,
+            "name": "Idle Pet Shelter",
+            "version": "1.41.0",
+            "size": "171.96 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122573/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0d41464-cfa0-4e90-9608-22e568297b71/download",
+            "download_url": "https://check0ver.net/en/iapps/a0d41464-cfa0-4e90-9608-22e568297b71/download",
+            "bundleIdentifier": "com.outloud.petshelter",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122573/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.41.0",
+                    "date": "2026-09-17T04:41:03.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0d41464-cfa0-4e90-9608-22e568297b71/download",
+                    "size": 180313128,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 909235166,
             "name": "Candy Crush Jelly Saga",
             "version": "4.16.1",
@@ -735,7 +811,7 @@
             "id": 408351582,
             "name": "Dragon Fever TD",
             "version": "3.12.0",
-            "size": "320.9 MB",
+            "size": "314.15 MB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/129311/512x512bb.jpg",
             "badge": "",
             "type": "games",
@@ -756,7 +832,7 @@
                     "date": "2026-09-17T00:15:41.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a160a44f-96ae-457d-9181-e6f146868996/download",
-                    "size": 336488038,
+                    "size": 329410150,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -9497,44 +9573,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a20e017e-3cc9-457f-a765-9fdbee545151/download",
                     "size": 213070643,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 689402970,
-            "name": "Block Blast！",
-            "version": "7.4.4",
-            "size": "84.61 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156613/01c7206e-59cc-4ccb-a8db-c39c2fc41b32.png",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a24e1cb9-c19d-4bd5-a5fd-18228d250824/download",
-            "download_url": "https://check0ver.net/en/iapps/a24e1cb9-c19d-4bd5-a5fd-18228d250824/download",
-            "bundleIdentifier": "com.blockpuzzle.us.ios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156613/01c7206e-59cc-4ccb-a8db-c39c2fc41b32.png",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "7.4.4",
-                    "date": "2026-09-14T08:58:02.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a24e1cb9-c19d-4bd5-a5fd-18228d250824/download",
-                    "size": 88720015,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -37427,44 +37465,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9cad6f1f-94d4-489d-a0ac-c901e99a3805/download",
                     "size": 1492501135,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 462305308,
-            "name": "Idle Pet Shelter",
-            "version": "1.39.0",
-            "size": "169.22 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122573/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0d41464-cfa0-4e90-9608-22e568297b71/download",
-            "download_url": "https://check0ver.net/en/iapps/a0d41464-cfa0-4e90-9608-22e568297b71/download",
-            "bundleIdentifier": "com.outloud.petshelter",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/122573/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.39.0",
-                    "date": "2026-08-21T19:11:46.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0d41464-cfa0-4e90-9608-22e568297b71/download",
-                    "size": 177440030,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
