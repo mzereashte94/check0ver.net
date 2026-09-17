@@ -1,54 +1,25 @@
 {
-    "name": "Ashte Mobile Library",
-    "identifier": "com.ashtemobile94.store",
-    "apps": [
+    "name": "Ashtemobile",
+    "subtitle": "A source for all of my apps & games",
+    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "iconURL": "https://ashtemobile.site/logo.png",
+    "website": "https://ashtemobile.site/",
+    "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
+    "tintColor": "#ff007f",
+    "featuredApps": [],
+    "headerURL": "https://ashtemobile.site/logo.png",
+    "apps": [],
+    "news": [
         {
-            "name": "AltStore",
-            "version": "1.6.3",
-            "size": "5625134",
-            "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/1_6_3.ipa",
-            "iconURL": "https://user-images.githubusercontent.com/705880/65270980-1eb96f80-dad1-11e9-9367-78ccd25ceb02.png",
-            "description": "AltStore is an alternative app store for non-jailbroken devices. \n\nThis version of AltStore allows you to install Delta, an all-in-one emulator for iO..."
-        },
-        {
-            "name": "AltStore",
-            "version": "1.6.2b",
-            "size": "5624104",
-            "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/1_6_2_b.ipa",
-            "iconURL": "https://user-images.githubusercontent.com/705880/65270980-1eb96f80-dad1-11e9-9367-78ccd25ceb02.png",
-            "description": "AltStore is an alternative app store for non-jailbroken devices. \n\nThis beta release of AltStore adds support for 3rd party sources, allowing you to d..."
-        },
-        {
-            "name": "Delta",
-            "version": "1.4.2",
-            "size": "46319655",
-            "downloadURL": "https://cdn.altstore.io/file/altstore/apps/delta/1_4_2.ipa",
-            "iconURL": "https://cdn.altstore.io/file/altstore/images/delta/Delta4.png",
-            "description": "Delta is an all-in-one emulator for iOS. Delta builds upon the strengths of its predecessor, GBA4iOS, while expanding to include support for more game..."
-        },
-        {
-            "name": "Delta",
-            "version": "1.4rc",
-            "size": "46299284",
-            "downloadURL": "https://cdn.altstore.io/file/altstore/apps/delta/1_4_rc.ipa",
-            "iconURL": "https://cdn.altstore.io/file/altstore/images/delta/Delta4.png",
-            "description": "The next consoles for Delta are coming: this beta version of Delta brings support for playing Nintendo DS and Sega Genesis games!\n\nPlease report any i..."
-        },
-        {
-            "name": "Clip",
-            "version": "1.0",
-            "size": "445056",
-            "downloadURL": "https://f000.backblazeb2.com/file/altstore/apps/clip/1_0.ipa",
-            "iconURL": "https://user-images.githubusercontent.com/705880/63391981-5326f800-c37a-11e9-99d8-760fd06bb601.png",
-            "description": "Clip is a simple clipboard manager for iOS. \n\nUnlike other clipboard managers, Clip can continue monitoring your clipboard while in the background. No..."
-        },
-        {
-            "name": "Clip",
-            "version": "1.1b1",
-            "size": "462771",
-            "downloadURL": "https://f000.backblazeb2.com/file/altstore/apps/clip/1_1_b1.ipa",
-            "iconURL": "https://user-images.githubusercontent.com/705880/63391981-5326f800-c37a-11e9-99d8-760fd06bb601.png",
-            "description": "Clip is a simple clipboard manager for iOS. \n\nUnlike other clipboard managers, Clip can continue monitoring your clipboard while in the background. No..."
+            "title": "Instagram",
+            "identifier": "news_instagram",
+            "caption": "Ashtemobile",
+            "date": "2026-09-17T12:29:21+00:00",
+            "tintColor": "#ff007f",
+            "imageURL": "https://ashtemobile.site/logo.png",
+            "notify": true,
+            "url": "https://www.instagram.com/ashtemobile",
+            "appID": null
         }
     ]
 }
