@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 996447125,
+            "name": "Switching Heroes",
+            "version": "5.40",
+            "size": "226.82 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/140122/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e45650a-6bf0-4c0b-a3c9-294d2bda9913/download",
+            "download_url": "https://check0ver.net/en/iapps/9e45650a-6bf0-4c0b-a3c9-294d2bda9913/download",
+            "bundleIdentifier": "com.zilliongames.collectionidle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/140122/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "5.40",
+                    "date": "2026-09-17T09:19:12.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e45650a-6bf0-4c0b-a3c9-294d2bda9913/download",
+                    "size": 237838008,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 211412344,
             "name": "Hunter Raid: Idle RPG Games",
             "version": "2.8.8",
@@ -25419,44 +25457,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a15caa7e-45b6-4093-83b4-391920270469/download",
                     "size": 300605767,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 996447125,
-            "name": "Switching Heroes",
-            "version": "5.30",
-            "size": "211.42 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/140122/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e45650a-6bf0-4c0b-a3c9-294d2bda9913/download",
-            "download_url": "https://check0ver.net/en/iapps/9e45650a-6bf0-4c0b-a3c9-294d2bda9913/download",
-            "bundleIdentifier": "com.zilliongames.collectionidle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/140122/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "5.30",
-                    "date": "2026-09-03T15:37:41.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e45650a-6bf0-4c0b-a3c9-294d2bda9913/download",
-                    "size": 221689937,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
