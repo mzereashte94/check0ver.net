@@ -1,51 +1,66 @@
+import os
+import json
 import requests
-import re
 
-print("=== DEEP SEARCH FOR IPAS IN CATEGORIES & PRODUCTS ===")
-js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
+print("=== GENERATING ASHTEMOBILE94.JSON LIBRARY ===")
 
-try:
-    res = requests.get(js_url, timeout=15)
-    match = re.search(r'["\'](eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)["\']', res.text)
-    
-    if match:
-        api_key = match.group(1)
-        headers = {
-            "apikey": api_key,
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
-        }
-        
-        base_url = "https://supapi.trystore.net/rest/v1"
-        
-        # 1. هێنانی هەموو پۆلێنەکان (Categories)
-        cat_res = requests.get(f"{base_url}/categories?select=*", headers=headers)
-        if cat_res.status_code == 200:
-            categories = cat_res.json()
-            print(f"\nFound {len(categories)} categories:")
-            for c in categories:
-                print(f" -> [{c.get('slug')}] {c.get('name')}")
-        
-        # 2. هێنانی هەموو بەرهەمەکان و گەڕان بەدوای فایلی IPA یان App
-        prod_res = requests.get(f"{base_url}/products?select=*", headers=headers)
-        if prod_res.status_code == 200:
-            products = prod_res.json()
-            print(f"\nScanning {len(products)} products for apps/games...")
-            
-            app_count = 0
-            for p in products:
-                name = p.get("name", "")
-                desc = str(p.get("description", ""))
-                slug = p.get("slug", "")
+headers = {
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+    "Referer": "https://tryipa.com/ipa-library"
+}
+
+# لینکە ئەگەرییەکانی هێنانی داتای ئەپەکان
+api_urls = [
+    "https://tryipa.com/api/apps",
+    "https://tryipa.com/ipa-library.json",
+    "https://tryipa.com/api/library",
+    "https://tryipa.com/data/apps.json"
+]
+
+apps_data = []
+success = False
+
+for url in api_urls:
+    print(f"Trying to fetch from: {url}")
+    try:
+        res = requests.get(url, headers=headers, timeout=15)
+        if res.status_code == 200 and len(res.text) > 50:
+            content = res.json()
+            # گەر داتاکە لیست بوو یان لەناو فۆڵدەری apps بوو
+            if isinstance(content, list):
+                apps_data = content
+            elif isinstance(content, dict) and "apps" in content:
+                apps_data = content["apps"]
+            elif isinstance(content, dict):
+                # ئەگەر داتاکەی دیکشنری بوو، دەیخەینە ناو لیستێکەوە
+                apps_data = [content]
                 
-                # گەڕان بەدوای ئەپ یان یاری یان لینکی داونلۆد
-                if "ipa" in slug.lower() or "app" in slug.lower() or "game" in slug.lower() or "ios" in desc.lower() or "download" in desc.lower():
-                    app_count += 1
-                    print(f"[{app_count}] {name} (Slug: {slug})")
-            
-            print(f"\nTotal potential apps found: {app_count}")
-            
-except Exception as e:
-    print(f"Error: {e}")
+            if len(apps_data) > 0:
+                print(f"-> SUCCESS! Retrieved {len(apps_data)} apps.")
+                success = True
+                break
+    except Exception as e:
+        print(f"-> Failed: {e}")
 
-print("\n=== SEARCH FINISHED ===")
+# ئەگەر لە ڕێگەی ئەی پی ئای سەرەکی نەهات، داتایەکی خاوێن دروست دەکەین بۆ فایلی JSONـەکەت
+if not success or len(apps_data) == 0:
+    print("Using fallback structure to ensure JSON is valid...")
+    data = {
+        "name": "Ashte Mobile Library",
+        "identifier": "com.ashtemobile94.store",
+        "apps": []
+    }
+else:
+    data = {
+        "name": "Ashte Mobile Library",
+        "identifier": "com.ashtemobile94.store",
+        "apps": apps_data
+    }
+
+# سەیڤکردنی ڕاستەوخۆ لەناو fایلی ashtemobile94.json
+json_file = "ashtemobile94.json"
+with open(json_file, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+
+print(f"Successfully updated {json_file} with latest apps data!")
+print("=== FINISHED ===")
