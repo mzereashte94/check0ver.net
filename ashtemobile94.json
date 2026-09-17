@@ -1,7 +1,7 @@
 {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all games from ipaomtk.com.",
+    "description": "Welcome to my source! Here you'll find all of my apps.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -13,7 +13,7 @@
             "id": 543483280,
             "name": "Car Crash Premium offline",
             "version": "2.1",
-            "size": "442.8 MB",
+            "size": "442.14 MB",
             "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116935/512x512bb.jpg",
             "badge": "",
             "type": "games",
@@ -34,7 +34,7 @@
                     "date": "2026-09-17T14:56:24.000000Z",
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9d0f96c8-f804-46e5-bbfc-20b937461625/download",
-                    "size": 464309452,
+                    "size": 463617392,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -84015,6 +84015,44 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1ca5a36-6ddc-4ec2-9051-3104e9fb4098/download",
                     "size": 71250739,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 45780044,
+            "name": "SuperMart – My Market Game",
+            "version": "1.0.5",
+            "size": "163.19 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139377/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1ca5309-9740-4153-a4db-40ad7ae7944f/download",
+            "download_url": "https://check0ver.net/en/iapps/a1ca5309-9740-4153-a4db-40ad7ae7944f/download",
+            "bundleIdentifier": "com.maglickcoretech.supermartmyshopmarket",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/139377/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.0.5",
+                    "date": "2026-06-12T19:01:06.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1ca5309-9740-4153-a4db-40ad7ae7944f/download",
+                    "size": 171117117,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
