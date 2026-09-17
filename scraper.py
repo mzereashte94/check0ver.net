@@ -1,9 +1,9 @@
 import hashlib
 import json
-import re
 import requests
 import concurrent.futures
-from datetime import BeautifulSoup if 'BeautifulSoup' in globals() else object
+from datetime import datetime
+from bs4 import BeautifulSoup
 
 print("=== ASHTE MOBILE: FULL 253 PAGES IPAOMTK SCRAPER ===")
 
@@ -20,17 +20,12 @@ seen_slugs = set()
 
 print("Fetching all games from pagination (1 to 253)...")
 
-# گەڕان بەناو هەموو پەڕەکانی سایتەکەدا لە 1 تا 253
 for page in range(1, 254):
     url = f"{base_url}{page}/" if page > 1 else "https://ipaomtk.com/games/"
     try:
         response = requests.get(url, headers=headers, timeout=10)
         if response.status_code == 200:
-            # دۆزینەوەی هەموو لینکەکان و ناوی یارییەکان لە کودی HTMLـدا
-            from bs4 import BeautifulSoup
             soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # گەڕان بەدوای کارتەکانی یاری یان لینکەکان
             cards = soup.find_all('a', href=True)
             found_in_page = 0
             
@@ -125,7 +120,6 @@ def process_game(item):
         "patreon": [],
     }
 
-# بەکارهێنانی خێراییە شێتانەکەی ThreadPoolExecutor بۆ پڕکردنەوەی خێرای فایلەکە
 with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
     results = executor.map(process_game, raw_games)
     for res in results:
