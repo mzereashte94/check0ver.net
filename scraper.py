@@ -13,12 +13,8 @@ raw_extracted_items = []
 def handle_response(response):
     try:
         url = response.url
-        # چاودێریکردنی هەموو ئەو فایل و APIـیانەی کە داتای یارییەکان دەهێنن
         if "ipaomtk.com" in url and "json" in response.headers.get("content-type", ""):
             data = response.json()
-            print(f"[API Intercepted]: {url}")
-            
-            # گەڕان بەدوای داتای ئەپەکان لەناو وەڵامی APIـکەدا
             if isinstance(data, list):
                 raw_extracted_items.extend(data)
             elif isinstance(data, dict):
@@ -33,7 +29,6 @@ def handle_response(response):
         pass
 
 with sync_playwright() as p:
-    print("Launching browser to connect to ipaomtk.com...")
     browser = p.chromium.launch(headless=True)
     context = browser.new_context(
         user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
@@ -41,25 +36,19 @@ with sync_playwright() as p:
     )
     page = context.new_page()
 
-    # خستنەگەڕی سیخوڕەکە لەسەر نێتۆڕکی سایتەکە
     page.on("response", handle_response)
 
     try:
-        print("Navigating to ipaomtk.com...")
         page.goto(target_site, wait_until="networkidle", timeout=60000)
         page.wait_for_timeout(5000)
         
-        # سکرۆڵکردن بۆ خوارەوە بۆ ئەوەی هەموو یارییەکانی ناو سایتەکە لۆد ببن و API کار بکات
         for _ in range(4):
             page.evaluate("window.scrollTo(0, document.body.scrollHeight);")
             page.wait_for_timeout(2000)
-            
     except Exception as e:
-        print(f"Navigation warning: {e}")
+        pass
 
     browser.close()
-
-print(f"Captured {len(raw_extracted_items)} raw items from ipaomtk.com API.")
 
 apps_list = []
 seen_names = set()
@@ -72,10 +61,8 @@ for item in raw_extracted_items:
     if not name or name in seen_names:
         continue
     
-    # دۆزینەوەی لینکی داونلۆد لە ناو داتای سایتەکەدا
     download_url = item.get("downloadURL") or item.get("download_url") or item.get("fileUrl") or item.get("url") or ""
     
-    # ئەگەر لینکی ڕاستەوخۆ نەبوو، بەڵام شناسی (uuid یا slug) هەبوو، لینک بۆ دروست دەکەین
     if not download_url:
         app_id = item.get("uuid") or item.get("id") or item.get("slug")
         if app_id:
@@ -130,9 +117,7 @@ for item in raw_extracted_items:
         "patreon": [],
     }
     apps_list.append(app_entry)
-    print(f" + Extracted from IPAOMTK: {name}")
 
-# پیکهاتەی کۆتایی فایلی JSON
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
