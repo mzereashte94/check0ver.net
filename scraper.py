@@ -1,7 +1,8 @@
 import requests
 import re
+import json
 
-print("=== SCANNING ALL PRODUCTS FOR IPA FILES ==js")
+print("=== HUNTING FOR OTHER TABLES IN SUPABASE ===")
 js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
 
 try:
@@ -16,32 +17,23 @@ try:
             "Content-Type": "application/json"
         }
         
-        url = "https://supapi.trystore.net/rest/v1/products?select=*"
-        r = requests.get(url, headers=headers, timeout=15)
+        # لێرەدا هەوڵ دەدین سەیری ناو ڕووی سێرڤەرەکە بکەین یان خشتە بەناوبانگەکانی تر تاقی بکەینەوە
+        other_tables = ["ipas", "apps", "library", "ipa_files", "app_library", "downloads", "categories", "items", "files"]
+        base_url = "https://supapi.trystore.net/rest/v1"
         
-        if r.status_code == 200:
-            products = r.json()
-            print(f"Total items in store: {len(products)}\n")
-            
-            ipa_count = 0
-            for p in products:
-                name = p.get("name", "Unknown")
-                # پشکنینی ناو یان دیسکڕپشن بۆ دۆزینەوەی لینکی ipa یان فایل
-                text_blob = str(p)
-                if ".ipa" in text_blob or "download" in text_blob.lower() or "install" in text_blob.lower():
-                    ipa_count += 1
-                    print(f"[{ipa_count}] Found potential app: {name}")
-                    print(f"    Slug: {p.get('slug')}")
-            
-            if ipa_count == 0:
-                print("No direct .ipa strings found in product details. Let's check custom_fields or other tables.")
-                # پیشاندانی ناوەکانی یەک دوو دانەی تر
-                for i in range(min(5, len(products))):
-                    print(lambda: None)
-                    print(f" - {products[i].get('name')}")
-        else:
-            print(f"Error: {r.text}")
+        for t in other_tables:
+            url = f"{base_url}/{t}?select=*&limit=1"
+            r = requests.get(url, headers=headers, timeout=10)
+            print(f"Table '{t}': Status {r.status_code}")
+            if r.status_code == 200:
+                data = r.json()
+                print(f" >>> BINGO! Found table '{t}' with data!")
+                if len(data) > 0:
+                    print(json.dumps(data[0], indent=2, ensure_ascii=False))
+                break
+    else:
+        print("API Key not found.")
 except Exception as e:
     print(f"Error: {e}")
 
-print("\n=== SCAN FINISHED ===")
+print("\n=== HUNT FINISHED ===")
