@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 669668168,
+            "name": "Romance Club - Stories I Play",
+            "version": "1.0.57850",
+            "size": "85.79 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/152222/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a21fd4b6-cb53-49c7-b9ea-a6cd60faf3c9/download",
+            "download_url": "https://check0ver.net/en/iapps/a21fd4b6-cb53-49c7-b9ea-a6cd60faf3c9/download",
+            "bundleIdentifier": "com.yourstoryinteractive.sails.pirate.adventure",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/152222/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.0.57850",
+                    "date": "2026-09-17T17:35:02.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a21fd4b6-cb53-49c7-b9ea-a6cd60faf3c9/download",
+                    "size": 89957335,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 553493624,
+            "name": "Retro Wings: Sky Combat",
+            "version": "0.1.13",
+            "size": "73.85 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134983/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a104069c-c67c-4ce6-b3d0-4ef5ae547277/download",
+            "download_url": "https://check0ver.net/en/iapps/a104069c-c67c-4ce6-b3d0-4ef5ae547277/download",
+            "bundleIdentifier": "com.OnecoinClear.RetroWings",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134983/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.1.13",
+                    "date": "2026-09-17T17:29:16.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a104069c-c67c-4ce6-b3d0-4ef5ae547277/download",
+                    "size": 77437337,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 899286120,
             "name": "Brilliant Sort™ Diamond Puzzle",
             "version": "1.4.1",
@@ -1023,44 +1099,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1e8f434-67d4-48e0-bc22-9f849cb55e86/download",
                     "size": 459622318,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 51771103,
-            "name": "Archer Castle : AFK Idle RPG",
-            "version": "1.13.54",
-            "size": "336.92 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
-            "download_url": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
-            "bundleIdentifier": "com.springgames.archercastle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/162067/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.13.54",
-                    "date": "2026-09-17T10:18:31.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a294b20e-350b-4a03-8add-52cd35706c28/download",
-                    "size": 353286225,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -37212,6 +37250,44 @@
             "patreon": []
         },
         {
+            "id": 223381797,
+            "name": "ZED - Zombie Enemy Destruction",
+            "version": "1.1.50",
+            "size": "115.9 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/161739/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a291ffd1-88f0-486d-a140-7b510a8662c1/download",
+            "download_url": "https://check0ver.net/en/iapps/a291ffd1-88f0-486d-a140-7b510a8662c1/download",
+            "bundleIdentifier": "com.appidea.monster.shooting.drive.game",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/161739/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.1.50",
+                    "date": "2026-08-23T17:30:39.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a291ffd1-88f0-486d-a140-7b510a8662c1/download",
+                    "size": 121529958,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 84639318,
             "name": "Flicky Chicky: Chicken Run",
             "version": "14.10",
@@ -42329,44 +42405,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9ca289b6-155d-404c-906d-d20d64c86c31/download",
                     "size": 130159738,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 669668168,
-            "name": "Romance Club - Stories I Play",
-            "version": "1.0.57500",
-            "size": "83.46 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/152222/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a21fd4b6-cb53-49c7-b9ea-a6cd60faf3c9/download",
-            "download_url": "https://check0ver.net/en/iapps/a21fd4b6-cb53-49c7-b9ea-a6cd60faf3c9/download",
-            "bundleIdentifier": "com.yourstoryinteractive.sails.pirate.adventure",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/152222/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.0.57500",
-                    "date": "2026-08-15T16:59:36.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a21fd4b6-cb53-49c7-b9ea-a6cd60faf3c9/download",
-                    "size": 87514152,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -61899,44 +61937,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a2363b93-3405-4083-a76d-6626b0f3f5c0/download",
                     "size": 181225390,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 245947942,
-            "name": "Blades of Brim",
-            "version": "2.22.43",
-            "size": "171.59 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114964/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c80ec2a-6cf7-47eb-bd58-8ed6c1b3cf8e/download",
-            "download_url": "https://check0ver.net/en/iapps/9c80ec2a-6cf7-47eb-bd58-8ed6c1b3cf8e/download",
-            "bundleIdentifier": "com.sybogames.brim",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114964/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.22.43",
-                    "date": "2026-07-09T08:48:43.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c80ec2a-6cf7-47eb-bd58-8ed6c1b3cf8e/download",
-                    "size": 179925155,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
