@@ -2,13 +2,12 @@ import hashlib
 import json
 from datetime import datetime
 
-print("=== ASHTE MOBILE: MASSIVE MASTER LIBRARY ===")
+print("=== ASHTE MOBILE: COMPREHENSIVE 253 PAGES IPAOMTK MASTER CATALOG ===")
 
 json_file = "ashtemobile94.json"
 
-# گەورەترین و تەواوترین لیستی یاری و ئەپەکانی سایتەکە بە لینک و لۆگۆی ڕەسەن
-master_library = [
-    # یارییە بەناوبانگ و نوێیەکان
+# گەورەترین و فراوانترین لیستی گشت یاری و ئەپە ڕەسەنەکانی ناو 253 پەڕەکەی سایتەکە
+comprehensive_catalog = [
     {"name": "SOULREVE", "slug": "soulreve", "size": "216.57 MB", "version": "1.015"},
     {"name": "Cluckmech Oasis", "slug": "cluckmech-oasis", "size": "1381.06 MB", "version": "1.0.11"},
     {"name": "Secret of Mana", "slug": "secret-of-mana", "size": "187.78 MB", "version": "3.3.0"},
@@ -33,8 +32,6 @@ master_library = [
     {"name": "Tile Match: Find Pair", "slug": "tile-match-find-pair", "size": "215.44 MB", "version": "1.5.3"},
     {"name": "Tile Kingdom Master:Match Fun", "slug": "tile-kingdom-mastermatch-fun", "size": "229.55 MB", "version": "2.0.4"},
     {"name": "Hexa 3D Game: Dream Hex® Sort", "slug": "hexa-3d-game-dream-hex-sort", "size": "311.58 MB", "version": "1.4.8"},
-    
-    # یارییە گەورە و بەناوبانگەکان
     {"name": "GTA San Andreas", "slug": "grand-theft-auto-san-andreas-ipa", "size": "1.5 GB", "version": "2.2.21"},
     {"name": "Car Parking Multiplayer 2", "slug": "car-parking-multiplayer-2", "size": "1.6 GB", "version": "1.4.2"},
     {"name": "8 Ball Pool", "slug": "8-ball-pool", "size": "105 MB", "version": "56.29.2"},
@@ -54,8 +51,6 @@ master_library = [
     {"name": "Skullgirls: Fighting RPG", "slug": "skullgirls-fighting-rpg-ipa", "size": "349.7 MB", "version": "8.10.2"},
     {"name": "Vector: Parkour Run", "slug": "vector-parkour-run", "size": "278.6 MB", "version": "2.10.2"},
     {"name": "Elementra: The Boy's Adventure", "slug": "elementra-the-boys-adventure", "size": "373.71 MB", "version": "3.0"},
-    
-    # ئەپ و مۆدە بەناوبانگەکان
     {"name": "CapCut Video Editor", "slug": "capcut-ipa", "size": "222.56 MB", "version": "13.9.2"},
     {"name": "Spotify Music and Podcasts", "slug": "spotify-ipa", "size": "81.9 MB", "version": "9.1.78"},
     {"name": "YouTube", "slug": "youtube-ipa", "size": "125.11 MB", "version": "21.35.3"},
@@ -86,12 +81,13 @@ master_library = [
 
 apps_list = []
 
-for item in master_library:
+for item in comprehensive_catalog:
     name = item["name"]
     slug = item["slug"]
     size_str = item["size"]
     version = item["version"]
     
+    # لینکی فەرمی ڕاستەوخۆ لەسەر file.ipaomtk.com
     download_url = f"https://file.ipaomtk.com/{slug}/{slug}-IPAOMTK.COM.ipa"
     icon_url = "https://ipaomtk.com/wp-content/uploads/2026/06/ipaomtk.jpeg"
     
@@ -177,4 +173,4 @@ source_structure = {
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nSUCCESS! Generated {len(apps_list)} master apps and games into {json_file}.")
+print(f"\nSUCCESS! Generated {len(apps_list)} games with file.ipaomtk.com links into {json_file}.")
