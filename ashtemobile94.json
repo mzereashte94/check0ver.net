@@ -10,6 +10,120 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 638712958,
+            "name": "Drill & Collect: idle mine dig",
+            "version": "1.28.54",
+            "size": "280.76 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132871/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e4de08b-3ea0-4bff-8b92-3923a6e8222a/download",
+            "download_url": "https://check0ver.net/en/iapps/9e4de08b-3ea0-4bff-8b92-3923a6e8222a/download",
+            "bundleIdentifier": "tr.com.apps.drill.and.collect",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132871/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.28.54",
+                    "date": "2026-09-17T17:43:45.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e4de08b-3ea0-4bff-8b92-3923a6e8222a/download",
+                    "size": 294398197,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 387268136,
+            "name": "Tiki Solitaire TriPeaks",
+            "version": "16.9.0",
+            "size": "144.61 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120351/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9ea0b4aa-67f3-4631-8030-74854e2d6ebb/download",
+            "download_url": "https://check0ver.net/en/iapps/9ea0b4aa-67f3-4631-8030-74854e2d6ebb/download",
+            "bundleIdentifier": "com.gsn.ios.tripeaks2",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120351/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "16.9.0",
+                    "date": "2026-09-17T17:42:16.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9ea0b4aa-67f3-4631-8030-74854e2d6ebb/download",
+                    "size": 151634575,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 245947942,
+            "name": "Blades of Brim",
+            "version": "2.22.45",
+            "size": "177.47 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114964/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c80ec2a-6cf7-47eb-bd58-8ed6c1b3cf8e/download",
+            "download_url": "https://check0ver.net/en/iapps/9c80ec2a-6cf7-47eb-bd58-8ed6c1b3cf8e/download",
+            "bundleIdentifier": "com.sybogames.brim",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114964/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.22.45",
+                    "date": "2026-09-17T17:39:49.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c80ec2a-6cf7-47eb-bd58-8ed6c1b3cf8e/download",
+                    "size": 186090782,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 669668168,
             "name": "Romance Club - Stories I Play",
             "version": "1.0.57850",
@@ -34286,44 +34400,6 @@
             "patreon": []
         },
         {
-            "id": 387268136,
-            "name": "Tiki Solitaire TriPeaks",
-            "version": "16.8.0",
-            "size": "144.54 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120351/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9ea0b4aa-67f3-4631-8030-74854e2d6ebb/download",
-            "download_url": "https://check0ver.net/en/iapps/9ea0b4aa-67f3-4631-8030-74854e2d6ebb/download",
-            "bundleIdentifier": "com.gsn.ios.tripeaks2",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120351/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "16.8.0",
-                    "date": "2026-08-27T16:53:28.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9ea0b4aa-67f3-4631-8030-74854e2d6ebb/download",
-                    "size": 151561175,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 715353275,
             "name": "Fight Star - Team Manager Idle",
             "version": "1.3.0",
@@ -37199,44 +37275,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a2920ebe-473a-4639-ae39-c99bb65360ab/download",
                     "size": 151236116,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 223381797,
-            "name": "ZED - Zombie Enemy Destruction",
-            "version": "1.1.50",
-            "size": "115.9 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/161739/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a291ffd1-88f0-486d-a140-7b510a8662c1/download",
-            "download_url": "https://check0ver.net/en/iapps/a291ffd1-88f0-486d-a140-7b510a8662c1/download",
-            "bundleIdentifier": "com.appidea.monster.shooting.drive.game",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/161739/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.1.50",
-                    "date": "2026-08-23T17:30:39.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a291ffd1-88f0-486d-a140-7b510a8662c1/download",
-                    "size": 121529958,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -49245,44 +49283,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9ca7a102-3323-4354-9862-8b1e73b8e2ba/download",
                     "size": 670312693,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 638712958,
-            "name": "Drill & Collect: idle mine dig",
-            "version": "1.28.07",
-            "size": "281.95 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132871/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e4de08b-3ea0-4bff-8b92-3923a6e8222a/download",
-            "download_url": "https://check0ver.net/en/iapps/9e4de08b-3ea0-4bff-8b92-3923a6e8222a/download",
-            "bundleIdentifier": "tr.com.apps.drill.and.collect",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/132871/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.28.07",
-                    "date": "2026-07-31T16:14:01.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e4de08b-3ea0-4bff-8b92-3923a6e8222a/download",
-                    "size": 295646003,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
