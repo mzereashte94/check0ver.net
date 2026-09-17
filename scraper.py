@@ -2,63 +2,99 @@ import json
 import hashlib
 from datetime import datetime
 
-print("=== ASHTE MOBILE: PURE IPAOMTK GAMES INJECTOR ===")
+print("=== ASHTE MOBILE: COMPLETE IPAOMTK GAMES CATALOG ===")
 
 json_file = "ashtemobile94.json"
 
-# تەنها و تەنها یارییەکانی سایتی ipaomtk.com با لینکە ڕەسەنەکانی خۆیان (file.ipaomtk.com)
-ipaomtk_games = [
+# هەموو یارییە فەرمییەکانی ناو سایتی ipaomtk.com لەگەڵ لینکە ڕەسەنەکانیان
+all_ipaomtk_games = [
     {
         "name": "Castle Busters",
         "version": "1.18.1",
         "size": "396.62 MB",
-        "download_url": "https://file.ipaomtk.com/castle-busters/castle-busters-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/castle-busters/castle-busters-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/castle-busters.png"
     },
     {
         "name": "Secret of Mana",
         "version": "3.3.0",
         "size": "187.78 MB",
-        "download_url": "https://file.ipaomtk.com/secret-of-mana/secret-of-mana-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/secret-of-mana/secret-of-mana-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/secret-of-mana.png"
     },
     {
         "name": "Clay Jam Classic",
         "version": "1.5",
         "size": "181.62 MB",
-        "download_url": "https://file.ipaomtk.com/clay-jam-classic/clay-jam-classic-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/clay-jam-classic/clay-jam-classic-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/clay-jam.png"
     },
     {
         "name": "MIST: Offline Zombie Survival",
         "version": "1.8.13",
         "size": "594.98 MB",
-        "download_url": "https://file.ipaomtk.com/mist/mist-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/mist/mist-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/mist.png"
     },
     {
         "name": "My Sushi Story",
         "version": "5.6.0",
         "size": "464.2 MB",
-        "download_url": "https://file.ipaomtk.com/my-sushi-story/my-sushi-story-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/my-sushi-story/my-sushi-story-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/sushi-story.png"
     },
     {
         "name": "PreCats! - Cat Raising",
         "version": "1.0",
         "size": "200.0 MB",
-        "download_url": "https://file.ipaomtk.com/precats/precats-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/precats/precats-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/precats.png"
     },
     {
         "name": "BitLife - Life Simulator",
         "version": "3.14",
         "size": "350.0 MB",
-        "download_url": "https://file.ipaomtk.com/bitlife/bitlife-IPAOMTK.COM.ipa"
+        "download_url": "https://file.ipaomtk.com/bitlife/bitlife-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/bitlife.png"
+    },
+    {
+        "name": "Grand Theft Auto: San Andreas",
+        "version": "2.10",
+        "size": "1.5 GB",
+        "download_url": "https://file.ipaomtk.com/gta-sa/gta-sa-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/gta-sa.png"
+    },
+    {
+        "name": "Minecraft",
+        "version": "1.20.0",
+        "size": "850.0 MB",
+        "download_url": "https://file.ipaomtk.com/minecraft/minecraft-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/minecraft.png"
+    },
+    {
+        "name": "Car Parking Multiplayer",
+        "version": "4.8.4",
+        "size": "950.0 MB",
+        "download_url": "https://file.ipaomtk.com/car-parking/car-parking-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/car-parking.png"
+    },
+    {
+        "name": "Stumble Guys",
+        "version": "0.55",
+        "size": "180.0 MB",
+        "download_url": "https://file.ipaomtk.com/stumble-guys/stumble-guys-IPAOMTK.COM.ipa",
+        "icon": "https://ipaomtk.com/uploads/icons/stumble-guys.png"
     }
 ]
 
 apps_list = []
 
-for item in ipaomtk_games:
+for item in all_ipaomtk_games:
     name = item["name"]
     version = item["version"]
     size_str = item["size"]
     download_url = item["download_url"]
+    icon_url = item["icon"]
     
     numeric_id = int(hashlib.md5(name.encode()).hexdigest()[:8], 16) % (10**9)
     bundle = f"com.ashtemobile.{name.lower().replace(' ', '').replace(':', '').replace('!', '').replace('-', '')}"
@@ -68,7 +104,7 @@ for item in ipaomtk_games:
         "name": name,
         "version": version,
         "size": size_str,
-        "icon": "https://ashtemobile.site/logo.png",
+        "icon": icon_url,
         "badge": "MOD",
         "type": "games",
         "install_url": download_url,
@@ -76,9 +112,9 @@ for item in ipaomtk_games:
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "IPAOMTK Official",
-        "localizedDescription": "Extracted directly from ipaomtk.com games library.",
-        "iconURL": "https://ashtemobile.site/logo.png",
+        "subtitle": "IPAOMTK Official Game",
+        "localizedDescription": f"Official {name} IPA extracted from ipaomtk.com games library.",
+        "iconURL": icon_url,
         "tintColor": "#04ecfc",
         "category": "games",
         "screenshots": [],
@@ -88,7 +124,7 @@ for item in ipaomtk_games:
                 "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
                 "localizedDescription": None,
                 "downloadURL": download_url,
-                "size": 400 * 1024 * 1024,
+                "size": 500 * 1024 * 1024,
                 "buildVersion": "1.0",
                 "minOSVersion": "14.0",
             }
@@ -102,12 +138,12 @@ for item in ipaomtk_games:
         "patreon": [],
     }
     apps_list.append(app_entry)
-    print(f" + Added IPAOMTK Game: {name}")
+    print(f" + Added Game with Icon: {name}")
 
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Here you'll find all of my apps.",
+    "description": "Welcome to my source! Here you'll find all of my games from IPAOMTK.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -133,5 +169,5 @@ source_structure = {
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nSUCCESS! Saved {len(apps_list)} pure IPAOMTK games into {json_file}.")
+print(f"\nSUCCESS! Saved {len(apps_list)} pure IPAOMTK games with icons into {json_file}.")
 print("=== FINISHED ===")
