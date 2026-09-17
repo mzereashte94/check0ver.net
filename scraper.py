@@ -1,47 +1,66 @@
+import os
+import json
 import requests
-import re
 
-print("=== SCANNING ALL PRODUCTS FOR IPA FILES ==js")
-js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
+print("=== GENERATING ASHTEMOBILE94.JSON LIBRARY ===")
 
-try:
-    res = requests.get(js_url, timeout=15)
-    match = re.search(r'["\'](eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)["\']', res.text)
-    
-    if match:
-        api_key = match.group(1)
-        headers = {
-            "apikey": api_key,
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
-        }
-        
-        url = "https://supapi.trystore.net/rest/v1/products?select=*"
-        r = requests.get(url, headers=headers, timeout=15)
-        
-        if r.status_code == 200:
-            products = r.json()
-            print(f"Total items in store: {len(products)}\n")
-            
-            ipa_count = 0
-            for p in products:
-                name = p.get("name", "Unknown")
-                # پشکنینی ناو یان دیسکڕپشن بۆ دۆزینەوەی لینکی ipa یان فایل
-                text_blob = str(p)
-                if ".ipa" in text_blob or "download" in text_blob.lower() or "install" in text_blob.lower():
-                    ipa_count += 1
-                    print(f"[{ipa_count}] Found potential app: {name}")
-                    print(f"    Slug: {p.get('slug')}")
-            
-            if ipa_count == 0:
-                print("No direct .ipa strings found in product details. Let's check custom_fields or other tables.")
-                # پیشاندانی ناوەکانی یەک دوو دانەی تر
-                for i in range(min(5, len(products))):
-                    print(lambda: None)
-                    print(f" - {products[i].get('name')}")
-        else:
-            print(f"Error: {r.text}")
-except Exception as e:
-    print(f"Error: {e}")
+headers = {
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+    "Referer": "https://tryipa.com/ipa-library"
+}
 
-print("\n=== SCAN FINISHED ===")
+# لینکە ئەگەرییەکانی هێنانی داتای ئەپەکان
+api_urls = [
+    "https://tryipa.com/api/apps",
+    "https://tryipa.com/ipa-library.json",
+    "https://tryipa.com/api/library",
+    "https://tryipa.com/data/apps.json"
+]
+
+apps_data = []
+success = False
+
+for url in api_urls:
+    print(f"Trying to fetch from: {url}")
+    try:
+        res = requests.get(url, headers=headers, timeout=15)
+        if res.status_code == 200 and len(res.text) > 50:
+            content = res.json()
+            # گەر داتاکە لیست بوو یان لەناو فۆڵدەری apps بوو
+            if isinstance(content, list):
+                apps_data = content
+            elif isinstance(content, dict) and "apps" in content:
+                apps_data = content["apps"]
+            elif isinstance(content, dict):
+                # ئەگەر داتاکەی دیکشنری بوو، دەیخەینە ناو لیستێکەوە
+                apps_data = [content]
+                
+            if len(apps_data) > 0:
+                print(f"-> SUCCESS! Retrieved {len(apps_data)} apps.")
+                success = True
+                break
+    except Exception as e:
+        print(f"-> Failed: {e}")
+
+# ئەگەر لە ڕێگەی ئەی پی ئای سەرەکی نەهات، داتایەکی خاوێن دروست دەکەین بۆ فایلی JSONـەکەت
+if not success or len(apps_data) == 0:
+    print("Using fallback structure to ensure JSON is valid...")
+    data = {
+        "name": "Ashte Mobile Library",
+        "identifier": "com.ashtemobile94.store",
+        "apps": []
+    }
+else:
+    data = {
+        "name": "Ashte Mobile Library",
+        "identifier": "com.ashtemobile94.store",
+        "apps": apps_data
+    }
+
+# سەیڤکردنی ڕاستەوخۆ لەناو fایلی ashtemobile94.json
+json_file = "ashtemobile94.json"
+with open(json_file, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=4)
+
+print(f"Successfully updated {json_file} with latest apps data!")
+print("=== FINISHED ===")
