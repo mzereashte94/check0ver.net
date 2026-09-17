@@ -1,33 +1,36 @@
-import cloudscraper
-import re
+import requests
 
-print("=== STARTING TRYIPA HTML TEST ===")
-scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'ios', 'mobile': True})
-url = "https://tryipa.com/ipa-library"
+print("=== PROBING TRUE API (supapi.trystore.net) ===")
 
-try:
-    print(f"Fetching {url} ...")
-    res = scraper.get(url, timeout=15)
-    print(f"Status Code: {res.status_code}")
-    
-    print("\n--- FIRST 1500 CHARACTERS OF THE PAGE ---")
-    print(res.text[:1500])
-    print("-----------------------------------------\n")
-    
-    # گەڕان بەدوای لینکی ڕاستەوخۆی .ipa لەناو کۆدەکانی سایتەکە
-    ipa_links = re.findall(r'href=[\'"]?([^\'" >]+.ipa)', res.text)
-    if ipa_links:
-        print(f"Found {len(ipa_links)} direct .ipa links in HTML!")
-        for link in ipa_links[:5]:
-            print(f"Link: {link}")
-    else:
-        print("No direct '.ipa' links found in the HTML. They might be hidden in API.")
+headers = {
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.55",
+    "Origin": "https://tryipa.com",
+    "Referer": "https://tryipa.com/"
+}
+
+base_url = "https://supapi.trystore.net"
+endpoints = [
+    "/apps",
+    "/api/apps",
+    "/ipas",
+    "/api/ipas",
+    "/v1/apps",
+    "/api/library",
+    "/library"
+]
+
+for ep in endpoints:
+    url = base_url + ep
+    print(f"\nTesting: {url}")
+    try:
+        res = requests.get(url, headers=headers, timeout=10)
+        print(f" -> Status: {res.status_code}")
         
-    # گەڕان بەدوای هەموو لینکەکانی تری ناو سایتەکە بۆ ئەوەی بزانین چۆن کار دەکات
-    all_links = re.findall(r'href=[\'"]?([^\'" >]+)', res.text)
-    print(f"Found {len(all_links)} total links on the page.")
-    
-except Exception as e:
-    print(f"Error: {e}")
-    
-print("=== TEST FINISHED ===")
+        if res.status_code == 200:
+            print(" -> SUCCESS! Found the data:")
+            # پیشاندانی 300 پیتی سەرەتا بۆ ئەوەی بزانین یارییەکانن یان نا
+            print(res.text[:300]) 
+    except Exception as e:
+        print(f" -> Error: {e}")
+        
+print("\n=== PROBE FINISHED ===")
