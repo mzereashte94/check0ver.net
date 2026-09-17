@@ -3,10 +3,11 @@ import requests
 import hashlib
 from datetime import datetime
 
-print("=== ASHTE MOBILE: SECURE STABLE FETCHER (FIXED) ===")
+print("=== ASHTE MOBILE: FAST & STABLE APPS EXTRACTOR ===")
 
 json_file = "ashtemobile94.json"
 
+# خەزنە سەرەکی و بڕواپێکراوەکانی IPA کە لینکەکانیان هەمیشەیین و قەت نامرن
 sources = [
     "https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps.json",
     "https://raw.githubusercontent.com/qnblackcat/AltStore/main/apps.json"
@@ -17,14 +18,14 @@ seen_bundles = set()
 
 for url in sources:
     try:
-        print(f"Fetching from: {url}")
-        res = requests.get(url, timeout=15)
+        print(f"Fetching from source: {url}")
+        res = requests.get(url, timeout=20)
         if res.status_code == 200:
             data = res.json()
             for app in data.get("apps", []):
                 name = app.get("name", "Unknown App")
                 
-                # پشکنینی لینک لەسەر ئاپەکە خۆی یان لەناو versions دا
+                # دۆزینەوەی لینکی داونلۆد جا لەسەر خۆی بێت یان لەناو بەشی versions
                 download_url = app.get("downloadURL", "")
                 versions = app.get("versions", [])
                 if not download_url and versions:
@@ -42,7 +43,7 @@ for url in sources:
                 size_bytes = app.get("size", (versions[0].get("size", 50 * 1024 * 1024) if versions else 50 * 1024 * 1024))
                 size_mb = f"{round(size_bytes / (1024 * 1024), 2)} MB"
                 icon = app.get("iconURL", "https://ashtemobile.site/logo.png")
-                desc = app.get("localizedDescription", "Working app for Ashtemobile.")
+                desc = app.get("localizedDescription", "Downloaded from Ashtemobile Source.")
                 numeric_id = int(hashlib.md5(bundle.encode()).hexdigest()[:8], 16) % (10**9)
 
                 app_entry = {
@@ -52,17 +53,17 @@ for url in sources:
                     "size": size_mb,
                     "icon": icon,
                     "badge": "",
-                    "type": "apps",
+                    "type": "games",
                     "install_url": download_url,
                     "download_url": download_url,
                     "bundleIdentifier": bundle,
                     "marketplaceID": "",
                     "developerName": "AshteMobile",
-                    "subtitle": "Permanent Link",
+                    "subtitle": "Direct & Safe",
                     "localizedDescription": desc,
                     "iconURL": icon,
                     "tintColor": "#04ecfc",
-                    "category": "apps",
+                    "category": "games",
                     "screenshots": app.get("screenshotURLs", []),
                     "versions": [
                         {
@@ -86,8 +87,9 @@ for url in sources:
                 apps_list.append(app_entry)
                 print(f" + Added: {name}")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error fetching source: {e}")
 
+# فۆرماتی کۆتایی فایلی JSON ڕێک بەو شێوازەی خۆت دەتەوێت
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
@@ -109,6 +111,17 @@ source_structure = {
             "imageURL": "https://ashtemobile.site/logo.png",
             "notify": True,
             "url": "https://www.instagram.com/ashtemobile",
+            "appID": None,
+        },
+        {
+            "title": "Telegram",
+            "identifier": "news_telegram",
+            "caption": "Ashtemobile",
+            "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+            "tintColor": "#ff007f",
+            "imageURL": "https://ashtemobile.site/logo.png",
+            "notify": True,
+            "url": "https://t.me/ashtemobile",
             "appID": None,
         }
     ]

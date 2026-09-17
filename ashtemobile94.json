@@ -155859,6 +155859,17 @@
             "notify": true,
             "url": "https://www.instagram.com/ashtemobile",
             "appID": null
+        },
+        {
+            "title": "Telegram",
+            "identifier": "news_telegram",
+            "caption": "Ashtemobile",
+            "date": "2026-09-17T14:08:17+00:00",
+            "tintColor": "#ff007f",
+            "imageURL": "https://ashtemobile.site/logo.png",
+            "notify": true,
+            "url": "https://t.me/ashtemobile",
+            "appID": null
         }
     ]
 }
