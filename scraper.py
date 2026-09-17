@@ -2,12 +2,18 @@ import json
 import hashlib
 from datetime import datetime
 
-print("=== ASHTE MOBILE: EXACT IPAOMTK GAMES INJECTOR ===")
+print("=== ASHTE MOBILE: PURE IPAOMTK GAMES INJECTOR ===")
 
 json_file = "ashtemobile94.json"
 
-# ئەمە هەمان ئەو یارییە ڕاستەقینانەیە که لە وێنەکەی سایتی IPAOMTKـدا هەن
-games_data = [
+# تەنها و تەنها یارییەکانی سایتی ipaomtk.com با لینکە ڕەسەنەکانی خۆیان (file.ipaomtk.com)
+ipaomtk_games = [
+    {
+        "name": "Castle Busters",
+        "version": "1.18.1",
+        "size": "396.62 MB",
+        "download_url": "https://file.ipaomtk.com/castle-busters/castle-busters-IPAOMTK.COM.ipa"
+    },
     {
         "name": "Secret of Mana",
         "version": "3.3.0",
@@ -37,12 +43,18 @@ games_data = [
         "version": "1.0",
         "size": "200.0 MB",
         "download_url": "https://file.ipaomtk.com/precats/precats-IPAOMTK.COM.ipa"
+    },
+    {
+        "name": "BitLife - Life Simulator",
+        "version": "3.14",
+        "size": "350.0 MB",
+        "download_url": "https://file.ipaomtk.com/bitlife/bitlife-IPAOMTK.COM.ipa"
     }
 ]
 
 apps_list = []
 
-for item in games_data:
+for item in ipaomtk_games:
     name = item["name"]
     version = item["version"]
     size_str = item["size"]
@@ -64,8 +76,8 @@ for item in games_data:
         "bundleIdentifier": bundle,
         "marketplaceID": "",
         "developerName": "AshteMobile",
-        "subtitle": "IPAOMTK Official Game",
-        "localizedDescription": f"Extracted directly from IPAOMTK for Ashtemobile.",
+        "subtitle": "IPAOMTK Official",
+        "localizedDescription": "Extracted directly from ipaomtk.com games library.",
         "iconURL": "https://ashtemobile.site/logo.png",
         "tintColor": "#04ecfc",
         "category": "games",
@@ -76,7 +88,7 @@ for item in games_data:
                 "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
                 "localizedDescription": None,
                 "downloadURL": download_url,
-                "size": 300 * 1024 * 1024,
+                "size": 400 * 1024 * 1024,
                 "buildVersion": "1.0",
                 "minOSVersion": "14.0",
             }
@@ -121,5 +133,5 @@ source_structure = {
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"\nSUCCESS! Saved {len(apps_list)} IPAOMTK games into {json_file}.")
+print(f"\nSUCCESS! Saved {len(apps_list)} pure IPAOMTK games into {json_file}.")
 print("=== FINISHED ===")
