@@ -1,47 +1,47 @@
 import requests
 import re
-import json
 
-print("=== EXTRACTING APPS FROM 'products' TABLE ===")
+print("=== SCANNING ALL PRODUCTS FOR IPA FILES ==js")
 js_url = "https://tryipa.com/assets/index-Jb0mx1SV.js"
 
 try:
-    # هێنانەوەی کلیلە شاراوەکە
     res = requests.get(js_url, timeout=15)
     match = re.search(r'["\'](eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+)["\']', res.text)
     
     if match:
         api_key = match.group(1)
-        
         headers = {
             "apikey": api_key,
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         }
         
-        # چوونە ناو خشتەی products
         url = "https://supapi.trystore.net/rest/v1/products?select=*"
-        print(f"Fetching apps from: {url}\n")
-        
         r = requests.get(url, headers=headers, timeout=15)
-        print(f"Status: {r.status_code}")
         
         if r.status_code == 200:
-            apps = r.json()
-            print(f"-> BINGO! Successfully retrieved {len(apps)} apps (products)!\n")
+            products = r.json()
+            print(f"Total items in store: {len(products)}\n")
             
-            if len(apps) > 0:
-                print("--- DATA STRUCTURE OF THE FIRST APP ---")
-                # پیشاندانی زانیارییەکانی یەکەم یاری بۆ بینینی لینکەکە
-                print(json.dumps(apps[0], indent=2, ensure_ascii=False))
-                print("---------------------------------------")
+            ipa_count = 0
+            for p in products:
+                name = p.get("name", "Unknown")
+                # پشکنینی ناو یان دیسکڕپشن بۆ دۆزینەوەی لینکی ipa یان فایل
+                text_blob = str(p)
+                if ".ipa" in text_blob or "download" in text_blob.lower() or "install" in text_blob.lower():
+                    ipa_count += 1
+                    print(f"[{ipa_count}] Found potential app: {name}")
+                    print(f"    Slug: {p.get('slug')}")
+            
+            if ipa_count == 0:
+                print("No direct .ipa strings found in product details. Let's check custom_fields or other tables.")
+                # پیشاندانی ناوەکانی یەک دوو دانەی تر
+                for i in range(min(5, len(products))):
+                    print(lambda: None)
+                    print(f" - {products[i].get('name')}")
         else:
-            print(f"Failed to fetch data. Error: {r.text}")
-            
-    else:
-        print("Could not find API key.")
-        
+            print(f"Error: {r.text}")
 except Exception as e:
     print(f"Error: {e}")
 
-print("\n=== EXTRACTION FINISHED ===")
+print("\n=== SCAN FINISHED ===")
