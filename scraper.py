@@ -1,14 +1,12 @@
 import hashlib
 import json
-import re
+import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 
 print("=== ASHTE MOBILE: HTML PARSER FOR IPAOMTK ===")
 
 json_file = "ashtemobile94.json"
-
-# لێرەدا دەتوانیت کۆدی HTMLـی سایتەکە یان لینکی پەڕەکە بدەیتە پایتۆن
 target_url = "https://ipaomtk.com/"
 
 headers = {
@@ -19,24 +17,19 @@ apps_list = []
 seen_slugs = set()
 
 try:
-    import requests
-    # بەکارهێنانی سکرێپتی ڕاستەوخۆ
+    print(f"Fetching from {target_url}...")
     res = requests.get(target_url, headers=headers, timeout=15)
     if res.status_code == 200:
         soup = BeautifulSoup(res.text, 'html.parser')
-        
-        # دۆزینەوەی هەموو کارتەکان و لینکەکان لەناو ماڵپەڕەکەدا
         cards = soup.find_all('a', href=True)
         
         for card in cards:
             href = card['href']
-            # پشکنینی لینکەکان کە بۆ یاری یان ئەپ چوون
-            if any(x in href for x in ['-ipa', 'secret-of-mana', 'clay-jam', 'mist', 'sushi', 'precats', 'gta', 'minecraft']):
-                # دۆزینەوەی ناوی یارییەکە
+            if any(x in href for x in ['-ipa', 'secret-of-mana', 'clay-jam', 'mist', 'sushi', 'precats', 'gta', 'minecraft', 'knock-knock', 'cafe-supermart', 'merge-sweets']):
                 title_elem = card.find(['h3', 'h2', 'span'])
-                name = title_elem.get_text(strip=True) if title_elem else "App Game"
+                name = title_elem.get_text(strip=True) if title_elem else ""
                 
-                if len(name) < 2 or name in ["View All", "Download", "Details"]:
+                if not name or len(name) < 2 or name in ["View All", "Download", "Details"]:
                     continue
                     
                 slug = href.strip('/').split('/')[-1]
@@ -44,7 +37,6 @@ try:
                     continue
                 seen_slugs.add(slug)
                 
-                # هێنانی وێنەی لۆگۆ ئەگەر هەبێت
                 img_elem = card.find('img')
                 icon_url = "https://ashtemobile.site/logo.png"
                 if img_elem:
@@ -52,9 +44,7 @@ try:
                     if icon_url.startswith('/'):
                         icon_url = f"https://ipaomtk.com{icon_url}"
 
-                # دروستکردنی لینکی ڕەسەنی file.ipaomtk.com
                 download_url = f"https://file.ipaomtk.com/{slug}/{slug}-IPAOMTK.COM.ipa"
-                
                 numeric_id = int(hashlib.md5(slug.encode()).hexdigest()[:8], 16) % (10**9)
                 bundle = f"com.ashtemobile.{slug.replace('-', '').replace('_', '')}"
 
@@ -102,7 +92,6 @@ try:
 except Exception as e:
     print(f"Parsing error: {e}")
 
-# فۆرماتی کۆتایی فایلی JSON
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
