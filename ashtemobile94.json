@@ -7458,6 +7458,44 @@
             "patreon": []
         },
         {
+            "id": 935592841,
+            "name": "Hole Em All: Collect Master",
+            "version": "2.15.0",
+            "size": "483.69 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151288/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2177a6d-f401-4aa8-88d5-442b2b43997e/download",
+            "download_url": "https://check0ver.net/en/iapps/a2177a6d-f401-4aa8-88d5-442b2b43997e/download",
+            "bundleIdentifier": "com.brainworks.holeemall",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/151288/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.15.0",
+                    "date": "2026-09-16T15:43:32.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2177a6d-f401-4aa8-88d5-442b2b43997e/download",
+                    "size": 507185725,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 512620377,
             "name": "Archer Hunter: Roguelike Game",
             "version": "2.48.5558",
@@ -27851,44 +27889,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9ca5c486-ff95-48fd-be4b-4870835c4fbf/download",
                     "size": 197740462,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 965696476,
-            "name": "Zoo Life: Animal Park Game",
-            "version": "5.5.0",
-            "size": "221.41 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117407/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9cfc393f-fc7f-4a64-864c-16574b91c8ce/download",
-            "download_url": "https://check0ver.net/en/iapps/9cfc393f-fc7f-4a64-864c-16574b91c8ce/download",
-            "bundleIdentifier": "com.sparklingsociety.zoolifeanimalparkgame",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/117407/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "5.5.0",
-                    "date": "2026-09-03T17:49:11.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9cfc393f-fc7f-4a64-864c-16574b91c8ce/download",
-                    "size": 232165212,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
