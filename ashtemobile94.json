@@ -5330,6 +5330,44 @@
             "patreon": []
         },
         {
+            "id": 876846956,
+            "name": "Haunted Room: Sleep Survivor",
+            "version": "10000.0.53",
+            "size": "1.08 GB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134436/5350790e-ec15-46d8-9cb1-2bc1d49fcf5b.png",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
+            "download_url": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
+            "bundleIdentifier": "com.sea.ygjsz.ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/134436/5350790e-ec15-46d8-9cb1-2bc1d49fcf5b.png",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "10000.0.53",
+                    "date": "2026-09-17T15:27:46.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a19d3440-d7ae-412c-8215-260fd064a084/download",
+                    "size": 1159641169,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 501241625,
             "name": "Bloons Blitz",
             "version": "0.9.6",
@@ -46699,44 +46737,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a27882b5-f159-4a20-86b1-3e620f299430/download",
                     "size": 107510497,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 123569478,
-            "name": "Match Hit - Puzzle Fighter",
-            "version": "1.6.23",
-            "size": "107.11 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116216/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9ec33ea7-885a-49b4-9cf4-c148bbaef24a/download",
-            "download_url": "https://check0ver.net/en/iapps/9ec33ea7-885a-49b4-9cf4-c148bbaef24a/download",
-            "bundleIdentifier": "com.combo.matcher",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116216/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.6.23",
-                    "date": "2026-08-10T19:10:32.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9ec33ea7-885a-49b4-9cf4-c148bbaef24a/download",
-                    "size": 112312975,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
