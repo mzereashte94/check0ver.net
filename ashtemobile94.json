@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 554930399,
+            "name": "Wasteland:Rogue Survivor",
+            "version": "4.1",
+            "size": "186.41 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115059/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0f3a989-8704-47ef-a339-9b43fd54092c/download",
+            "download_url": "https://check0ver.net/en/iapps/a0f3a989-8704-47ef-a339-9b43fd54092c/download",
+            "bundleIdentifier": "com.dlxstudio.LastDeadlands",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115059/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "4.1",
+                    "date": "2026-09-18T11:37:15.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0f3a989-8704-47ef-a339-9b43fd54092c/download",
+                    "size": 195465052,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 107793008,
             "name": "Heavenfall Arena",
             "version": "0.0.5",
@@ -115821,44 +115859,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e921e36-a42e-4a93-8f01-5b1b07091527/download",
                     "size": 70768394,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 554930399,
-            "name": "Wasteland:Rogue Survivor",
-            "version": "3.0",
-            "size": "170.73 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115059/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0f3a989-8704-47ef-a339-9b43fd54092c/download",
-            "download_url": "https://check0ver.net/en/iapps/a0f3a989-8704-47ef-a339-9b43fd54092c/download",
-            "bundleIdentifier": "com.dlxstudio.LastDeadlands",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115059/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "3.0",
-                    "date": "2026-03-15T23:03:20.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0f3a989-8704-47ef-a339-9b43fd54092c/download",
-                    "size": 179023380,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
