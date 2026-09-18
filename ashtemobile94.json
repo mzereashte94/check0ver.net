@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 24151822,
+            "name": "Merge Cooking®",
+            "version": "1.59.0",
+            "size": "334.66 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115650/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9c6bc018-d78c-4b87-9cb9-e7be95c66caf/download",
+            "download_url": "https://check0ver.net/en/iapps/9c6bc018-d78c-4b87-9cb9-e7be95c66caf/download",
+            "bundleIdentifier": "com.merge.cooking.theme.restaurant.food",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115650/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.59.0",
+                    "date": "2026-09-18T14:33:38.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9c6bc018-d78c-4b87-9cb9-e7be95c66caf/download",
+                    "size": 350916444,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 268147289,
             "name": "Bubble Shooter: Pop & Blast",
             "version": "123.5.1",
@@ -19073,44 +19111,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9e5fbdd3-4900-465e-98c0-80f96cb6c1e7/download",
                     "size": 451841884,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 24151822,
-            "name": "Merge Cooking®",
-            "version": "1.58.0",
-            "size": "331.98 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115650/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9c6bc018-d78c-4b87-9cb9-e7be95c66caf/download",
-            "download_url": "https://check0ver.net/en/iapps/9c6bc018-d78c-4b87-9cb9-e7be95c66caf/download",
-            "bundleIdentifier": "com.merge.cooking.theme.restaurant.food",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115650/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.58.0",
-                    "date": "2026-09-11T05:02:39.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9c6bc018-d78c-4b87-9cb9-e7be95c66caf/download",
-                    "size": 348106260,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
