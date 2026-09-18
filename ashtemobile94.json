@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 292563872,
+            "name": "Otherworld Mercenary Corps",
+            "version": "2.9.2",
+            "size": "413.45 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133112/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9cbf44c9-3be0-4828-a47f-e1b572e7fff5/download",
+            "download_url": "https://check0ver.net/en/iapps/9cbf44c9-3be0-4828-a47f-e1b572e7fff5/download",
+            "bundleIdentifier": "com.blb.ios.Mercenary",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133112/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.9.2",
+                    "date": "2026-09-18T15:47:52.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9cbf44c9-3be0-4828-a47f-e1b572e7fff5/download",
+                    "size": 433533747,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 24151822,
             "name": "Merge Cooking®",
             "version": "1.59.0",
@@ -3531,44 +3569,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1e4ed2b-23d0-40a3-8b70-49304f947cf7/download",
                     "size": 1331439861,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 292563872,
-            "name": "Otherworld Mercenary Corps",
-            "version": "2.9.0",
-            "size": "413.57 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133112/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9cbf44c9-3be0-4828-a47f-e1b572e7fff5/download",
-            "download_url": "https://check0ver.net/en/iapps/9cbf44c9-3be0-4828-a47f-e1b572e7fff5/download",
-            "bundleIdentifier": "com.blb.ios.Mercenary",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133112/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.9.0",
-                    "date": "2026-09-17T19:03:57.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9cbf44c9-3be0-4828-a47f-e1b572e7fff5/download",
-                    "size": 433659576,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
