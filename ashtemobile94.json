@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 771699487,
+            "name": "Geometry Tower: Idle Defense",
+            "version": "0.2.112",
+            "size": "132.44 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/163546/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2a62c75-db3c-4b21-9ba9-d0e12c086fe9/download",
+            "download_url": "https://check0ver.net/en/iapps/a2a62c75-db3c-4b21-9ba9-d0e12c086fe9/download",
+            "bundleIdentifier": "com.cyberjoy.geometrytower",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/163546/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.2.112",
+                    "date": "2026-09-18T09:37:30.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2a62c75-db3c-4b21-9ba9-d0e12c086fe9/download",
+                    "size": 138873405,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 993905584,
+            "name": "Banecraft : Idle RPG",
+            "version": "2.22.0",
+            "size": "335.8 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125281/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0faea1a-762c-4229-9364-5fb773aef0cc/download",
+            "download_url": "https://check0ver.net/en/iapps/a0faea1a-762c-4229-9364-5fb773aef0cc/download",
+            "bundleIdentifier": "net.gameduo.cd",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125281/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.22.0",
+                    "date": "2026-09-18T09:36:27.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0faea1a-762c-4229-9364-5fb773aef0cc/download",
+                    "size": 352111820,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 651518800,
             "name": "Gear Fight!",
             "version": "6.23.0",
@@ -16616,44 +16692,6 @@
             "patreon": []
         },
         {
-            "id": 993905584,
-            "name": "Banecraft : Idle RPG",
-            "version": "2.21.0",
-            "size": "328.64 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125281/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0faea1a-762c-4229-9364-5fb773aef0cc/download",
-            "download_url": "https://check0ver.net/en/iapps/a0faea1a-762c-4229-9364-5fb773aef0cc/download",
-            "bundleIdentifier": "net.gameduo.cd",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125281/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.21.0",
-                    "date": "2026-09-12T00:19:52.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0faea1a-762c-4229-9364-5fb773aef0cc/download",
-                    "size": 344604016,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 440373665,
             "name": "Idle Miner Tycoon: Gold digger",
             "version": "5.63.0",
@@ -27661,44 +27699,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a15caa7e-45b6-4093-83b4-391920270469/download",
                     "size": 300605767,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 771699487,
-            "name": "Geometry Tower: Idle Defense",
-            "version": "0.2.111",
-            "size": "132.4 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/163546/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2a62c75-db3c-4b21-9ba9-d0e12c086fe9/download",
-            "download_url": "https://check0ver.net/en/iapps/a2a62c75-db3c-4b21-9ba9-d0e12c086fe9/download",
-            "bundleIdentifier": "com.cyberjoy.geometrytower",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/163546/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.2.111",
-                    "date": "2026-09-03T15:31:40.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2a62c75-db3c-4b21-9ba9-d0e12c086fe9/download",
-                    "size": 138831462,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
