@@ -10,6 +10,120 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 662203803,
+            "name": "My Journey - Puzzles & Stories",
+            "version": "1.44.0916",
+            "size": "474.98 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133979/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a19912ba-8c9e-44e0-ac2c-421dc3b3aa5c/download",
+            "download_url": "https://check0ver.net/en/iapps/a19912ba-8c9e-44e0-ac2c-421dc3b3aa5c/download",
+            "bundleIdentifier": "com.zenlife.tour",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133979/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.44.0916",
+                    "date": "2026-09-18T22:42:31.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a19912ba-8c9e-44e0-ac2c-421dc3b3aa5c/download",
+                    "size": 498052628,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 913817025,
+            "name": "HungryAliens",
+            "version": "1563",
+            "size": "263.89 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114973/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e8a5b4f-4a29-46e3-883d-d18b9dd56b30/download",
+            "download_url": "https://check0ver.net/en/iapps/9e8a5b4f-4a29-46e3-883d-d18b9dd56b30/download",
+            "bundleIdentifier": "com.DetailGames.HungryAliens",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114973/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1563",
+                    "date": "2026-09-18T22:39:34.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e8a5b4f-4a29-46e3-883d-d18b9dd56b30/download",
+                    "size": 276708720,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 567754122,
+            "name": "Idle Berserker legend of kali",
+            "version": "1.217",
+            "size": "158.45 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156381/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
+            "download_url": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
+            "bundleIdentifier": "com.a1gamesstudio.berserker",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156381/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.217",
+                    "date": "2026-09-18T22:37:00.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
+                    "size": 166146867,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 292040559,
             "name": "APEX Racer",
             "version": "0.9.70",
@@ -2999,44 +3113,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9efb67ce-443b-4c62-b986-6aa35a7dd148/download",
                     "size": 393950003,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 567754122,
-            "name": "Idle Berserker legend of kali",
-            "version": "1.216",
-            "size": "155.95 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156381/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
-            "download_url": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
-            "bundleIdentifier": "com.a1gamesstudio.berserker",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/156381/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.216",
-                    "date": "2026-09-18T00:50:24.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a24ab319-c8d3-41e0-8d9f-1a0b80e564b9/download",
-                    "size": 163525427,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -18668,44 +18744,6 @@
             "patreon": []
         },
         {
-            "id": 662203803,
-            "name": "My Journey - Puzzles & Stories",
-            "version": "1.43.0910",
-            "size": "474.98 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133979/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a19912ba-8c9e-44e0-ac2c-421dc3b3aa5c/download",
-            "download_url": "https://check0ver.net/en/iapps/a19912ba-8c9e-44e0-ac2c-421dc3b3aa5c/download",
-            "bundleIdentifier": "com.zenlife.tour",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/133979/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.43.0910",
-                    "date": "2026-09-11T18:29:36.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a19912ba-8c9e-44e0-ac2c-421dc3b3aa5c/download",
-                    "size": 498052628,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 91560982,
             "name": "Snipers Duel",
             "version": "1.7.1",
@@ -18731,44 +18769,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a279463b-4816-42c7-a97b-81da03d6bc3c/download",
                     "size": 278071869,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 913817025,
-            "name": "HungryAliens",
-            "version": "1561",
-            "size": "263.76 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114973/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e8a5b4f-4a29-46e3-883d-d18b9dd56b30/download",
-            "download_url": "https://check0ver.net/en/iapps/9e8a5b4f-4a29-46e3-883d-d18b9dd56b30/download",
-            "bundleIdentifier": "com.DetailGames.HungryAliens",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/114973/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1561",
-                    "date": "2026-09-11T18:24:49.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e8a5b4f-4a29-46e3-883d-d18b9dd56b30/download",
-                    "size": 276572405,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
