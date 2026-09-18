@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 107793008,
+            "name": "Heavenfall Arena",
+            "version": "0.0.5",
+            "size": "418.6 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160893/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a287dbb4-e3fe-461c-8d93-b754a2550960/download",
+            "download_url": "https://check0ver.net/en/iapps/a287dbb4-e3fe-461c-8d93-b754a2550960/download",
+            "bundleIdentifier": "com.gamee.heavenfall.arena.idle.rpg.journey.summon.heroes.strategy",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160893/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "0.0.5",
+                    "date": "2026-09-18T11:29:53.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a287dbb4-e3fe-461c-8d93-b754a2550960/download",
+                    "size": 438933913,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 823940008,
             "name": "Flick Shot Rogues",
             "version": "1.14",
@@ -41987,44 +42025,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9eac4b82-2259-4f38-9626-ebe62caa7ecf/download",
                     "size": 104951971,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 107793008,
-            "name": "Heavenfall Arena",
-            "version": "0.0.3",
-            "size": "387.2 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160893/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a287dbb4-e3fe-461c-8d93-b754a2550960/download",
-            "download_url": "https://check0ver.net/en/iapps/a287dbb4-e3fe-461c-8d93-b754a2550960/download",
-            "bundleIdentifier": "com.gamee.heavenfall.arena.idle.rpg.journey.summon.heroes.strategy",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/160893/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "0.0.3",
-                    "date": "2026-08-18T10:54:04.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a287dbb4-e3fe-461c-8d93-b754a2550960/download",
-                    "size": 406008627,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
