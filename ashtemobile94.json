@@ -10,6 +10,82 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 104569536,
+            "name": "Brotato",
+            "version": "1.3.396",
+            "size": "198.53 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125280/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0d3a8e7-1330-49f2-90c2-8520950cf5a4/download",
+            "download_url": "https://check0ver.net/en/iapps/a0d3a8e7-1330-49f2-90c2-8520950cf5a4/download",
+            "bundleIdentifier": "com.brotato.shooting.survivors.action.games.bullethell.ios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125280/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.3.396",
+                    "date": "2026-09-18T12:32:21.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0d3a8e7-1330-49f2-90c2-8520950cf5a4/download",
+                    "size": 208173793,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 668739385,
+            "name": "Candy Crush Solitaire",
+            "version": "1.36.28",
+            "size": "235.74 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120594/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9ea65287-59b9-4118-be14-2e1ee1c7f73c/download",
+            "download_url": "https://check0ver.net/en/iapps/9ea65287-59b9-4118-be14-2e1ee1c7f73c/download",
+            "bundleIdentifier": "com.midasplayer.apps.candysolitaire",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120594/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.36.28",
+                    "date": "2026-09-18T12:29:14.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9ea65287-59b9-4118-be14-2e1ee1c7f73c/download",
+                    "size": 247191306,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 278453919,
             "name": "Starlight Music Life Sim",
             "version": "1.0.6",
@@ -39834,44 +39910,6 @@
             "patreon": []
         },
         {
-            "id": 668739385,
-            "name": "Candy Crush Solitaire",
-            "version": "1.34.17",
-            "size": "232.03 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120594/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9ea65287-59b9-4118-be14-2e1ee1c7f73c/download",
-            "download_url": "https://check0ver.net/en/iapps/9ea65287-59b9-4118-be14-2e1ee1c7f73c/download",
-            "bundleIdentifier": "com.midasplayer.apps.candysolitaire",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120594/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.34.17",
-                    "date": "2026-08-21T08:26:38.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9ea65287-59b9-4118-be14-2e1ee1c7f73c/download",
-                    "size": 243301089,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 558739409,
             "name": "Cell to Singularity: Evolution",
             "version": "49.33",
@@ -61709,44 +61747,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a0ba27eb-a4f2-4aa2-9e0e-4d1e804d3091/download",
                     "size": 100453580,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 104569536,
-            "name": "Brotato",
-            "version": "1.3.366",
-            "size": "188.68 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125280/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0d3a8e7-1330-49f2-90c2-8520950cf5a4/download",
-            "download_url": "https://check0ver.net/en/iapps/a0d3a8e7-1330-49f2-90c2-8520950cf5a4/download",
-            "bundleIdentifier": "com.brotato.shooting.survivors.action.games.bullethell.ios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/125280/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.3.366",
-                    "date": "2026-07-10T07:34:42.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0d3a8e7-1330-49f2-90c2-8520950cf5a4/download",
-                    "size": 197845319,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
