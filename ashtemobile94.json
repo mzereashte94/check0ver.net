@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 891504472,
+            "name": "Star2 Random Defense(S2RD)",
+            "version": "1.1.48",
+            "size": "174.48 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115077/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a0d5b925-2834-4565-ad65-79b31919c99f/download",
+            "download_url": "https://check0ver.net/en/iapps/a0d5b925-2834-4565-ad65-79b31919c99f/download",
+            "bundleIdentifier": "com.gaimstudio.s2rd",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115077/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.1.48",
+                    "date": "2026-09-18T20:28:29.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a0d5b925-2834-4565-ad65-79b31919c99f/download",
+                    "size": 182955540,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 393073301,
             "name": "Alliance At War",
             "version": "2.1.9",
@@ -2809,44 +2847,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a28aba22-723b-433e-b4d2-dcc27ff15833/download",
                     "size": 178341806,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 891504472,
-            "name": "Star2 Random Defense(S2RD)",
-            "version": "1.1.47",
-            "size": "174.46 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115077/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a0d5b925-2834-4565-ad65-79b31919c99f/download",
-            "download_url": "https://check0ver.net/en/iapps/a0d5b925-2834-4565-ad65-79b31919c99f/download",
-            "bundleIdentifier": "com.gaimstudio.s2rd",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115077/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.1.47",
-                    "date": "2026-09-18T00:46:48.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a0d5b925-2834-4565-ad65-79b31919c99f/download",
-                    "size": 182934568,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
