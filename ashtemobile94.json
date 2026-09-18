@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 407968681,
+            "name": "Monster Legends - Battle Game",
+            "version": "20.2.8",
+            "size": "130.11 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115539/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9d3c5f79-4cdc-48dc-90be-35760be8795d/download",
+            "download_url": "https://check0ver.net/en/iapps/9d3c5f79-4cdc-48dc-90be-35760be8795d/download",
+            "bundleIdentifier": "es.socialpoint.MonsterCity",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115539/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "20.2.8",
+                    "date": "2026-09-18T13:44:21.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9d3c5f79-4cdc-48dc-90be-35760be8795d/download",
+                    "size": 136430223,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 629526979,
             "name": "Color Block Jam",
             "version": "7.2.1",
@@ -19871,44 +19909,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9f697237-eea3-4920-af94-0b2e2588fc24/download",
                     "size": 816704389,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 407968681,
-            "name": "Monster Legends - Battle Game",
-            "version": "20.2.7",
-            "size": "130.33 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115539/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9d3c5f79-4cdc-48dc-90be-35760be8795d/download",
-            "download_url": "https://check0ver.net/en/iapps/9d3c5f79-4cdc-48dc-90be-35760be8795d/download",
-            "bundleIdentifier": "es.socialpoint.MonsterCity",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/115539/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "20.2.7",
-                    "date": "2026-09-10T17:51:21.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9d3c5f79-4cdc-48dc-90be-35760be8795d/download",
-                    "size": 136660910,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
