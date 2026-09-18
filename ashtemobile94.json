@@ -10,6 +10,120 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 59565576,
+            "name": "The Lone Necromancer: Idle RPG",
+            "version": "1.1.21",
+            "size": "226.81 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
+            "download_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
+            "bundleIdentifier": "com.lunosoft.nhnios",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "1.1.21",
+                    "date": "2026-09-18T12:46:13.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
+                    "size": 237827522,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 552663575,
+            "name": "Heroes vs Crazy Wiggler",
+            "version": "192",
+            "size": "239.76 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/164299/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a2ae5394-351a-4500-b214-8cea80b21844/download",
+            "download_url": "https://check0ver.net/en/iapps/a2ae5394-351a-4500-b214-8cea80b21844/download",
+            "bundleIdentifier": "com.ios.imi.hcw",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/164299/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "192",
+                    "date": "2026-09-18T12:43:43.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a2ae5394-351a-4500-b214-8cea80b21844/download",
+                    "size": 251406581,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
+            "id": 668969702,
+            "name": "Crozzle - Crossword Puzzles",
+            "version": "2.2.0",
+            "size": "134.47 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116328/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a018d753-f216-4e0e-8076-57f4bed596e9/download",
+            "download_url": "https://check0ver.net/en/iapps/a018d753-f216-4e0e-8076-57f4bed596e9/download",
+            "bundleIdentifier": "se.maginteractive.crozzle",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116328/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "2.2.0",
+                    "date": "2026-09-18T12:40:10.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a018d753-f216-4e0e-8076-57f4bed596e9/download",
+                    "size": 141002014,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 104569536,
             "name": "Brotato",
             "version": "1.3.396",
@@ -3987,44 +4101,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9f719dbb-a873-4304-b260-f5ee5286231e/download",
                     "size": 876001361,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 59565576,
-            "name": "The Lone Necromancer: Idle RPG",
-            "version": "1.1.20",
-            "size": "226.81 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
-            "download_url": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
-            "bundleIdentifier": "com.lunosoft.nhnios",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/120443/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "1.1.20",
-                    "date": "2026-09-17T14:40:34.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/9e7a4727-ed07-4b85-b1c9-3cad9110f71b/download",
-                    "size": 237827522,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
@@ -14374,44 +14450,6 @@
             "patreon": []
         },
         {
-            "id": 668969702,
-            "name": "Crozzle - Crossword Puzzles",
-            "version": "2.1.2",
-            "size": "134.14 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116328/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a018d753-f216-4e0e-8076-57f4bed596e9/download",
-            "download_url": "https://check0ver.net/en/iapps/a018d753-f216-4e0e-8076-57f4bed596e9/download",
-            "bundleIdentifier": "se.maginteractive.crozzle",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/116328/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "2.1.2",
-                    "date": "2026-09-13T23:05:20.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a018d753-f216-4e0e-8076-57f4bed596e9/download",
-                    "size": 140655984,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
             "id": 175564839,
             "name": "Sled Surfers",
             "version": "1.13.1",
@@ -18655,44 +18693,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/9cb5c483-839f-4ae8-a0ef-96024aef1fa8/download",
                     "size": 138820976,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 552663575,
-            "name": "Heroes vs Crazy Wiggler",
-            "version": "191",
-            "size": "235.77 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/164299/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a2ae5394-351a-4500-b214-8cea80b21844/download",
-            "download_url": "https://check0ver.net/en/iapps/a2ae5394-351a-4500-b214-8cea80b21844/download",
-            "bundleIdentifier": "com.ios.imi.hcw",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/164299/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "191",
-                    "date": "2026-09-11T08:19:43.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a2ae5394-351a-4500-b214-8cea80b21844/download",
-                    "size": 247222763,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
