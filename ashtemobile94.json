@@ -10,6 +10,44 @@
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": [
         {
+            "id": 651518800,
+            "name": "Gear Fight!",
+            "version": "6.23.0",
+            "size": "170.04 MB",
+            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/144135/512x512bb.jpg",
+            "badge": "",
+            "type": "games",
+            "install_url": "https://check0ver.net/en/iapps/a1ef2438-46bc-40be-853a-82f7ac6bc1da/download",
+            "download_url": "https://check0ver.net/en/iapps/a1ef2438-46bc-40be-853a-82f7ac6bc1da/download",
+            "bundleIdentifier": "com.EternalStudio.GearFight",
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Awesome App",
+            "localizedDescription": "Downloaded from AshteMobile Source.",
+            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/144135/512x512bb.jpg",
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": "6.23.0",
+                    "date": "2026-09-18T08:25:53.000000Z",
+                    "localizedDescription": null,
+                    "downloadURL": "https://check0ver.net/en/iapps/a1ef2438-46bc-40be-853a-82f7ac6bc1da/download",
+                    "size": 178299863,
+                    "buildVersion": null,
+                    "minOSVersion": "14.0"
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {
+                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
+                }
+            },
+            "patreon": []
+        },
+        {
             "id": 256486671,
             "name": "The Demonized: Idle RPG",
             "version": "7.27.1",
@@ -27395,44 +27433,6 @@
                     "localizedDescription": null,
                     "downloadURL": "https://check0ver.net/en/iapps/a1f50f58-195e-42b9-a8d4-b11adeda1076/download",
                     "size": 130474311,
-                    "buildVersion": null,
-                    "minOSVersion": "14.0"
-                }
-            ],
-            "appPermissions": {
-                "entitlements": [],
-                "privacy": {
-                    "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads to you."
-                }
-            },
-            "patreon": []
-        },
-        {
-            "id": 651518800,
-            "name": "Gear Fight!",
-            "version": "6.22.0",
-            "size": "170.06 MB",
-            "icon": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/144135/512x512bb.jpg",
-            "badge": "",
-            "type": "games",
-            "install_url": "https://check0ver.net/en/iapps/a1ef2438-46bc-40be-853a-82f7ac6bc1da/download",
-            "download_url": "https://check0ver.net/en/iapps/a1ef2438-46bc-40be-853a-82f7ac6bc1da/download",
-            "bundleIdentifier": "com.EternalStudio.GearFight",
-            "marketplaceID": "",
-            "developerName": "AshteMobile",
-            "subtitle": "Awesome App",
-            "localizedDescription": "Downloaded from AshteMobile Source.",
-            "iconURL": "https://public-cdn.check0ver.com/E669C4F905734AED2E9E/144135/512x512bb.jpg",
-            "tintColor": "#04ecfc",
-            "category": "games",
-            "screenshots": [],
-            "versions": [
-                {
-                    "version": "6.22.0",
-                    "date": "2026-09-03T19:02:18.000000Z",
-                    "localizedDescription": null,
-                    "downloadURL": "https://check0ver.net/en/iapps/a1ef2438-46bc-40be-853a-82f7ac6bc1da/download",
-                    "size": 178320834,
                     "buildVersion": null,
                     "minOSVersion": "14.0"
                 }
