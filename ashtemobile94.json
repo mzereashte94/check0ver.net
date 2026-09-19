@@ -1,10 +1,9 @@
 {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! Catalog with true direct CDN links.",
+    "description": "Catalog with exact copied CDN links.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
-    "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
     "tintColor": "#ff007f",
     "featuredApps": [],
     "headerURL": "https://ashtemobile.site/logo.png",
