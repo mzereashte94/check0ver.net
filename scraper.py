@@ -3,14 +3,15 @@ import json
 import requests
 from datetime import datetime
 import concurrent.futures
+import sys
 
-print("=== ASHTE MOBILE: ALTSTORE COMPLIANT SCRAPER ===")
+print("=== ASHTE MOBILE: KSIGN & FEATHER (ALTSTORE v1) SCRAPER ===")
 
 json_file = "ashtemobile94.json"
 
-# ئەو کۆدانەی کە لە وێنەکەدا دەرمان هێنا
-MY_COOKIE = "XSRF-TOKEN=eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0%3D; checkover_session=eyJpdil6InpzWUZNR1R5V0x4ZVdKV0FiMm1TYUE9PSIsInZhbHVlIjoiaV9GTGlzb2NMSFRobnZidXlyamhUSDYreERhRE9URzRreFBXS2VzeHNkNjcrRkdESjFRNnJrVFJzVVVva05CRjZCV3JuV28raEJVVFA3SW9qZFhoWndZZzBBM20vN1Zrejg3V1g4Vm5KaExVOC9MS1d4V2JqV0ZaY1Vsdy9CZVQiLCJtYWMiOiJIOWM4ZGUzYTNmZGNjODc3OTU4NzMxM2JkZTg3YThiMDU2YmRhZmU5YmE0M2JjZTJjODUyNWE4N2E4MzJmZjU5IiwidGFnIjoiIn0%3D; remember_customer_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdil6IlloOUhhnUnBUY01wamhFeFpPTUJJb1E9PSIsInZhbHVlIjoiaVZGJUUR4c0t4YTN4dkYwVjVzUmN3czQwMHZEcHNNQ3BhMll1bncrRE5jbEVIZWx5S09RTGRERWFMeWNZSU96VGdsQWQydEZMZHhYVjNPUXNXVHh1N2tqNnU1MHQ1cVhnamlOVUdxV2npoemsxNnZpUVE1L1VRd0pSZFIYV29pSzQxcVltVktkaWRBSXdYMjNDWVkzZjZkWXhQOHE0QjlSdkt6Y00vTHprVW1wQdlo4WVE1VUVOeE5HSmVSMlZGeVp6WUxMQnlhM0JXZUhoeVF4cGtjM3BpTW5GNmRYVnpxWEF3VjBwNGIzTjZPVWx4U3l0andYUlRhWGxrUjBKU01XOWhjRWRETUcxR1duRmViVFJzY2poVmJrbGFjV0pSWVZoa2RFRklXRVZKTUVzMmFFbFVUMUU5UFNJc0ltMXlZbTZsamN3WkdFME1XRTBaV1EyTW1SbU1US3hlVEVaWkdWa1pEUTFZelUwTldJMFRaSmxPRFk1TmpaaVpUTXdZV1ZrTkRFd016TXpZamxqT1dKbVptTTRNR1FpTENKMFlXY2lPaWxpZlElM0QlM0Q="
-MY_XSRF_TOKEN = "eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0="
+# برا گیان! تکایە کۆدە نوێیەکانت لێرەدا دابنێ
+MY_COOKIE = "لێرەدا_کۆدی_Cookie_نوێ_دابنێ"
+MY_XSRF_TOKEN = "لێرەدا_کۆدی_XSRF-TOKEN_نوێ_دابنێ"
 
 headers = {
     "Host": "check0ver.net",
@@ -28,8 +29,29 @@ session.headers.update(headers)
 
 raw_apps = []
 
-print("Step 1: Fetching all pages...")
-for page in range(1, 165):
+print("Step 1: Checking Authentication & Fetching pages...")
+# پشکنینی سەرەتا بۆ ئەوەی بزانین کۆدەکان کار دەکەن یان بەسەرچوون
+first_page_url = "https://check0ver.net/en/iapps?page=1"
+try:
+    response = session.get(first_page_url, timeout=15)
+    if response.status_code != 200:
+        print(f"CRITICAL ERROR: Failed to access API! Status Code: {response.status_code}")
+        print("برا گیان، کۆدەکانی Cookie و XSRF-TOKEN بەسەرچوون! تکایە لە مۆبایلەکەتەوە نوێیان بکەرەوە.")
+        sys.exit(1) # سکرێپتەکە دەوەستێنێت بۆ ئەوەی فایلە کۆنەکە خاڵی نەبێتەوە!
+        
+    data = response.json()
+    items = data.get("props", {}).get("paginator", {}).get("data", [])
+    if not items:
+        print("ERROR: Authentication successful but zero apps found.")
+        sys.exit(1)
+        
+    raw_apps.extend(items)
+except Exception as e:
+    print(f"Connection Error: {e}")
+    sys.exit(1)
+
+# هێنانی پەڕەکانی تر
+for page in range(2, 165):
     url = f"https://check0ver.net/en/iapps?page={page}"
     try:
         response = session.get(url, timeout=10)
@@ -40,7 +62,7 @@ for page in range(1, 165):
         if not items:
             break
         raw_apps.extend(items)
-    except Exception as e:
+    except Exception:
         break
 
 print(f"Step 2: Resolving links for {len(raw_apps)} apps using threads...")
@@ -52,7 +74,6 @@ def process_app(item):
     icon_url = item.get("image", "https://ashtemobile.site/logo.png")
     uuid = item.get("uuid", "")
     
-    # دروستکردنی bundle لەسەر بنەمای ناوی یارییەکە ئەگەر نەبوو
     bundle = item.get("bundle")
     if not bundle or " " in bundle:
         bundle = f"com.ashtemobile.{hashlib.md5(name.encode()).hexdigest()[:8]}"
@@ -72,8 +93,8 @@ def process_app(item):
     if not exact_cdn_url or "api/check0ver" not in exact_cdn_url:
         return None
     
-    # چارەسەری کێشەی Size بۆ ئەوەی بەرنامەکە ئیرۆر نەدات (دەبێت Integer بێت نەک دەق)
-    size_bytes = 314572800 # 300MB بە شێوەی دیفۆڵت
+    # چارەسەری کێشەی قەبارە (دەبێت بە ژمارە بێت نەک پیت)
+    size_bytes = 314572800 
     try:
         if isinstance(size_str, str):
             if "GB" in size_str:
@@ -83,7 +104,7 @@ def process_app(item):
     except:
         pass
 
-    # فۆرماتی تەواو دروستی AltStore
+    # فۆرماتی تایبەت و سەد لە سەد دروست بۆ Ksign و Feather و AltStore
     return {
         "name": name,
         "bundleIdentifier": bundle,
@@ -115,13 +136,12 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=40) as executor:
         if res:
             apps_list.append(res)
 
-print(f"\nTotal extracted: {len(apps_list)}. Generating AltStore JSON...")
+print(f"\nTotal extracted: {len(apps_list)}. Generating JSON...")
 
-# ئەمە ئەو ئایدییەیە (identifier) کە لە پێشووتردا نەبوو و بەرنامەکە داوای دەکات
 source_structure = {
     "name": "Ashtemobile",
     "identifier": "com.ashtemobile.source", 
-    "subtitle": "A source for all of my apps & games",
+    "subtitle": "Ksign & Feather Source",
     "description": "Catalog with exact copied CDN links.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
