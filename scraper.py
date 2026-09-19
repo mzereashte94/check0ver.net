@@ -4,13 +4,13 @@ import requests
 import re
 from datetime import datetime
 
-print("=== ASHTE MOBILE: CHECK0VER VIP SCRAPER (.IPA LINKS) ===")
+print("=== ASHTE MOBILE: CHECK0VER VIP SCRAPER (AUTO-AUTH + IPA LINKS) ===")
 
 json_file = "ashtemobile94.json"
 
-# کۆدەکانت لێرەدا دابنێ وەکو خۆی
-MY_COOKIE = "لێرەدا_کۆدی_Cookie_دابنێ"
-MY_XSRF_TOKEN = "لێرەدا_کۆدی_X-XSRF-TOKEN_دابنێ"
+# کۆدە ڕاستەقینەکانی خۆت کە لە وێنەکانتەوە دەرمهێناون (دەستکارییان مەکە)
+MY_COOKIE = "XSRF-TOKEN=eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0%3D; checkover_session=eyJpdil6InpzWUZNR1R5V0x4ZVdKV0FiMm1TYUE9PSIsInZhbHVlIjoiaV9GTGlzb2NMSFRobnZidXlyamhUSDYreERhRE9URzRreFBXS2VzeHNkNjcrRkdESjFRNnJrVFJzVVVva05CRjZCV3JuV28raEJVVFA3SW9qZFhoWndZZzBBM20vN1Zrejg3V1g4Vm5KaExVOC9MS1d4V2JqV0ZaY1Vsdy9CZVQiLCJtYWMiOiJIOWM4ZGUzYTNmZGNjODc3OTU4NzMxM2JkZTg3YThiMDU2YmRhZmU5YmE0M2JjZTJjODUyNWE4N2E4MzJmZjU5IiwidGFnIjoiIn0%3D; remember_customer_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdil6IlloOUhhnUnBUY01wamhFeFpPTUJJb1E9PSIsInZhbHVlIjoiaVZGJUUR4c0t4YTN4dkYwVjVzUmN3czQwMHZEcHNNQ3BhMll1bncrRE5jbEVIZWx5S09RTGRERWFMeWNZSU96VGdsQWQydEZMZHhYVjNPUXNXVHh1N2tqNnU1MHQ1cVhnamlOVUdxV2npoemsxNnZpUVE1L1VRd0pSZFIYV29pSzQxcVltVktkaWRBSXdYMjNDWVkzZjZkWXhQOHE0QjlSdkt6Y00vTHprVW1wQdlo4WVE1VUVOeE5HSmVSMlZGeVp6WUxMQnlhM0JXZUhoeVF4cGtjM3BpTW5GNmRYVnpxWEF3VjBwNGIzTjZPVWx4U3l0andYUlRhWGxrUjBKU01XOWhjRWRETUcxR1duRmViVFJzY2poVmJrbGFjV0pSWVZoa2RFRklXRVZKTUVzMmFFbFVUMUU5UFNJc0ltMXlZbTZsamN3WkdFME1XRTBaV1EyTW1SbU1US3hlVEVaWkdWa1pEUTFZelUwTldJMFRaSmxPRFk1TmpaaVpUTXdZV1ZrTkRFd016TXpZamxqT1dKbVptTTRNR1FpTENKMFlXY2lPaWxpZlElM0QlM0Q="
+MY_XSRF_TOKEN = "eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0="
 
 headers = {
     "Host": "check0ver.net",
@@ -37,7 +37,8 @@ for page in range(1, 165):
         response = requests.get(url, headers=headers, timeout=20)
         
         if response.status_code != 200:
-            print(f"Stopped or failed at page {page}. Status Code: {response.status_code}")
+            print(f"FAILED on page {page}! Status Code: {response.status_code}")
+            print(f"Reason: This usually means the Cookie has expired or Check0ver blocked GitHub's server IP.")
             break
             
         data = response.json()
@@ -56,10 +57,8 @@ for page in range(1, 165):
             uuid = item.get("uuid", "")
             description = item.get("description", f"Extracted automatically from Check0ver: {name}")
             
-            # دروستکردنی ناوی فایلەکە بە خاوێنی
             clean_name = re.sub(r'[^a-zA-Z0-9]', '', name.lower())
             
-            # لێرەدا فێڵەکەمان بەکارهێناوە بۆ ئەوەی کۆتاییەکەی ببێت بە .ipa بێ ئەوەی لینکەکە تێکبچێت
             download_url = item.get("downloadURL")
             if not download_url:
                 download_url = f"https://check0ver.net/api/iapps/{uuid}/download?file={clean_name}.ipa"
