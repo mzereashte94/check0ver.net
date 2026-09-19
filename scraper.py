@@ -5,17 +5,20 @@ from datetime import datetime
 import concurrent.futures
 import sys
 
-print("=== ASHTE MOBILE: API TOKEN SCRAPER ===")
+print("=== ASHTE MOBILE: API TOKEN BYPASS SCRAPER ===")
 
 json_file = "ashtemobile94.json"
-
-# تووکنەکەی خۆت کە لە وێنەکەدا هەیە
 API_TOKEN = "33833|hNBTRwESKR8UJGSdTO6O1PzF35LT0WJNyHKsA5925266286a"
 
 headers = {
     "Authorization": f"Bearer {API_TOKEN}",
-    "Accept": "application/json",
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6.1 Mobile/15E148 Safari/604.1"
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6.1 Mobile/15E148 Safari/604.1",
+    "Referer": "https://check0ver.net/",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin"
 }
 
 session = requests.Session()
@@ -31,10 +34,8 @@ try:
         sys.exit(1)
         
     data = res.json()
-    # ئەگەر داتاکە ڕاستەوخۆ لیست بوو یان لەناو paginator بوو
     items = data.get("data", []) or data.get("props", {}).get("paginator", {}).get("data", [])
     if not items:
-        # ئەگەر داتاکە خۆی لیست بوو
         if isinstance(data, list):
             items = data
         else:
@@ -70,7 +71,6 @@ def get_real_app(item):
     if not bundle or " " in bundle:
         bundle = f"com.ashtemobile.{hashlib.md5(name.encode()).hexdigest()[:8]}"
         
-    # هێنانی لینکی داونلۆد بە ڕێگەی API
     req_url = f"https://check0ver.net/api/iapps/{uuid}/download"
     real_link = None
     
