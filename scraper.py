@@ -1,125 +1,158 @@
 import hashlib
 import json
 import requests
+from bs4 import BeautifulSoup
+import concurrent.futures
 from datetime import datetime
+import re
 
-print("=== ASHTE MOBILE: CHECK0VER VIP SCRAPER (UNIQUE 32-CHAR HASH) ===")
+print("=== ASHTE MOBILE: CHECK0VER DEEP HTML CRAWLER ===")
 
 json_file = "ashtemobile94.json"
-
-# کۆدەکان ڕاستەوخۆ لە وێنەکانەوە دەرهێنراون 
-MY_COOKIE = "XSRF-TOKEN=eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0%3D; checkover_session=eyJpdil6InpzWUZNR1R5V0x4ZVdKV0FiMm1TYUE9PSIsInZhbHVlIjoiaV9GTGlzb2NMSFRobnZidXlyamhUSDYreERhRE9URzRreFBXS2VzeHNkNjcrRkdESjFRNnJrVFJzVVVva05CRjZCV3JuV28raEJVVFA3SW9qZFhoWndZZzBBM20vN1Zrejg3V1g4Vm5KaExVOC9MS1d4V2JqV0ZaY1Vsdy9CZVQiLCJtYWMiOiJIOWM4ZGUzYTNmZGNjODc3OTU4NzMxM2JkZTg3YThiMDU2YmRhZmU5YmE0M2JjZTJjODUyNWE4N2E4MzJmZjU5IiwidGFnIjoiIn0%3D; remember_customer_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdil6IlloOUhhnUnBUY01wamhFeFpPTUJJb1E9PSIsInZhbHVlIjoiaVZGJUUR4c0t4YTN4dkYwVjVzUmN3czQwMHZEcHNNQ3BhMll1bncrRE5jbEVIZWx5S09RTGRERWFMeWNZSU96VGdsQWQydEZMZHhYVjNPUXNXVHh1N2tqNnU1MHQ1cVhnamlOVUdxV2npoemsxNnZpUVE1L1VRd0pSZFIYV29pSzQxcVltVktkaWRBSXdYMjNDWVkzZjZkWXhQOHE0QjlSdkt6Y00vTHprVW1wQdlo4WVE1VUVOeE5HSmVSMlZGeVp6WUxMQnlhM0JXZUhoeVF4cGtjM3BpTW5GNmRYVnpxWEF3VjBwNGIzTjZPVWx4U3l0andYUlRhWGxrUjBKU01XOWhjRWRETUcxR1duRmViVFJzY2poVmJrbGFjV0pSWVZoa2RFRklXRVZKTUVzMmFFbFVUMUU5UFNJc0ltMXlZbTZsamN3WkdFME1XRTBaV1EyTW1SbU1US3hlVEVaWkdWa1pEUTFZelUwTldJMFRaSmxPRFk1TmpaaVpUTXdZV1ZrTkRFd016TXpZamxqT1dKbVptTTRNR1FpTENKMFlXY2lPaWxpZlElM0QlM0Q="
-MY_XSRF_TOKEN = "eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0="
+base_url = "https://check0ver.net/en/iapps?page="
 
 headers = {
-    "Host": "check0ver.net",
-    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6.1 Mobile/15E148 Safari/604.1",
-    "Accept": "application/json, text/plain, */*",
-    "X-Inertia": "true",
-    "X-Inertia-Version": "mimusoft-ipa-check0ver-customer-1.0.0",
-    "X-Requested-With": "XMLHttpRequest",
-    "Cookie": MY_COOKIE,
-    "X-XSRF-TOKEN": MY_XSRF_TOKEN,
-    "Priority": "u=3, i",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "same-origin"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
 }
+
+app_links = []
+seen_uuids = set()
+
+print("Step 1: Scanning Check0ver website to find game pages...")
+
+# دەتوانیت لێرەدا ژمارەی پەڕەکان زیاد بکەیت (بۆ نموونە لە 1 تا 160)
+for page in range(1, 10): 
+    url = f"{base_url}{page}"
+    try:
+        response = requests.get(url, headers=headers, timeout=15)
+        if response.status_code != 200:
+            break
+            
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # دۆزینەوەی داتاکانی پەڕەکە ڕێک وەک ئەوەی لە HTMLـەکەدا هەیە
+        app_div = soup.find('div', id='app')
+        if not app_div or not app_div.has_attr('data-page'):
+            continue
+            
+        data = json.loads(app_div['data-page'])
+        items = data.get("props", {}).get("paginator", {}).get("data", [])
+        
+        found = 0
+        for item in items:
+            uuid = item.get("uuid")
+            if uuid and uuid not in seen_uuids:
+                seen_uuids.add(uuid)
+                app_links.append(item)
+                found += 1
+                
+        print(f"Scanned page {page}... Found {found} games.")
+        if found == 0:
+            break
+    except Exception as e:
+        print(f"Error on page {page}: {e}")
+
+print(f"\nStep 2: Going INSIDE {len(app_links)} game pages to extract ORIGINAL links...")
 
 apps_list = []
 
-print("Fetching games and generating 32-character unique hashes...")
-
-for page in range(1, 165):
-    url = f"https://check0ver.net/en/iapps?page={page}"
+def process_check0ver_app(item):
     try:
-        response = requests.get(url, headers=headers, timeout=20)
+        name = item.get("name", "Unknown App")
+        uuid = item.get("uuid", "")
+        version = item.get("version", "1.0")
+        size_str = item.get("size", "300 MB")
+        icon_url = item.get("image", "https://ashtemobile.site/logo.png")
+        bundle = item.get("bundle", "com.ashtemobile.app")
         
-        if response.status_code != 200:
-            print(f"Done or stopped at page {page}.")
-            break
-            
-        data = response.json()
-        items = data.get("props", {}).get("paginator", {}).get("data", [])
+        # چوونە ناوەوەی پەڕەی تایبەتی یارییەکە
+        app_page_url = f"https://check0ver.net/en/iapps/{uuid}"
+        res = requests.get(app_page_url, headers=headers, timeout=15)
         
-        if not items:
-            break
-            
-        for item in items:
-            name = item.get("name", "Unknown App")
-            version = item.get("version", "1.0")
-            size_str = item.get("size", "300 MB")
-            icon_url = item.get("image", "https://ashtemobile.site/logo.png")
-            bundle = item.get("bundle", "com.ashtemobile.app")
-            uuid = item.get("uuid", "")
-            
-            # دروستکردنی کۆدی ٣٢ پیتی ناوازە بۆ هەر یارییەک (وەک ئەوەی داوات کرد: 2b57355ed...)
-            unique_hash = hashlib.md5(uuid.encode()).hexdigest()
-            
-            # لکاندنی کۆدە ٣٢ پیتییەکە بە فایلەکەوە ڕێک وەک سیستمەکەی خۆیان
-            download_url = f"https://check0ver.net/api/iapps/{uuid}/download?file={unique_hash}.ipa"
-            
-            numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
-            
-            size_bytes = 300 * 1024 * 1024
-            try:
-                if "GB" in size_str:
-                    size_bytes = int(float(size_str.replace("GB", "").strip()) * 1024 * 1024 * 1024)
-                elif "MB" in size_str:
-                    size_bytes = int(float(size_str.replace("MB", "").strip()) * 1024 * 1024)
-            except:
-                pass
+        download_url = None
+        
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, 'html.parser')
+            page_div = soup.find('div', id='app')
+            if page_div and page_div.has_attr('data-page'):
+                page_data = json.loads(page_div['data-page'])
+                # دەرهێنانی لینکی ئەسڵی لە ناوەڕۆکی پەڕەکە خۆی
+                app_details = page_data.get("props", {}).get("iapp", {})
+                download_url = app_details.get("downloadURL")
+        
+        # ئەگەر لەوێدا نەبوو، یەکسەر لینکە باوەکەی بۆ دروست دەکات
+        clean_name = re.sub(r'[^a-zA-Z0-9]', '', name.lower())
+        if not download_url:
+            download_url = f"https://check0ver.net/api/iapps/{uuid}/download?file={clean_name}.ipa"
+        else:
+            if ".ipa" not in download_url:
+                download_url = f"{download_url}?file={clean_name}.ipa"
 
-            app_entry = {
-                "id": numeric_id,
-                "name": name,
-                "version": version,
-                "size": size_str,
-                "icon": icon_url,
-                "badge": "MOD",
-                "type": "games",
-                "install_url": download_url,
-                "download_url": download_url,
-                "bundleIdentifier": bundle,
-                "marketplaceID": "",
-                "developerName": "AshteMobile / Check0ver",
-                "subtitle": "Check0ver Premium Hash",
-                "localizedDescription": f"Extracted automatically. Hash: {unique_hash}",
-                "iconURL": icon_url,
-                "tintColor": "#04ecfc",
-                "category": "games",
-                "screenshots": [],
-                "versions": [
-                    {
-                        "version": version,
-                        "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
-                        "localizedDescription": None,
-                        "downloadURL": download_url,
-                        "size": size_bytes,
-                        "buildVersion": "1.0",
-                        "minOSVersion": "14.0",
-                    }
-                ],
-                "appPermissions": {
-                    "entitlements": [],
-                    "privacy": {}
-                },
-                "patreon": [],
-            }
-            apps_list.append(app_entry)
-            
-        print(f" + Scraped page {page}. Total: {len(apps_list)} apps.")
+        numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9)
         
-    except Exception as e:
-        print(f"Error on page {page}: {e}")
-        break
+        size_bytes = 300 * 1024 * 1024
+        try:
+            if "GB" in size_str:
+                size_bytes = int(float(size_str.replace("GB", "").strip()) * 1024 * 1024 * 1024)
+            elif "MB" in size_str:
+                size_bytes = int(float(size_str.replace("MB", "").strip()) * 1024 * 1024)
+        except:
+            pass
 
-print(f"\nTotal collected: {len(apps_list)}. Generating JSON file...")
+        return {
+            "id": numeric_id,
+            "name": name,
+            "version": version,
+            "size": size_str,
+            "icon": icon_url,
+            "badge": "MOD",
+            "type": "games",
+            "install_url": download_url,
+            "download_url": download_url,
+            "bundleIdentifier": bundle,
+            "marketplaceID": "",
+            "developerName": "AshteMobile",
+            "subtitle": "Check0ver Original Source",
+            "localizedDescription": f"Original link extracted directly from the website for {name}.",
+            "iconURL": icon_url,
+            "tintColor": "#04ecfc",
+            "category": "games",
+            "screenshots": [],
+            "versions": [
+                {
+                    "version": version,
+                    "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+                    "localizedDescription": None,
+                    "downloadURL": download_url,
+                    "size": size_bytes,
+                    "buildVersion": "1.0",
+                    "minOSVersion": "14.0",
+                }
+            ],
+            "appPermissions": {
+                "entitlements": [],
+                "privacy": {}
+            },
+            "patreon": [],
+        }
+    except:
+        return None
+
+# بەکارهێنانی سیستەمی خێرا (Threads) بۆ چوونە ناو پەڕەکان
+with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+    results = executor.map(process_check0ver_app, app_links)
+    for res in results:
+        if res:
+            apps_list.append(res)
+            print(f" + Extracted original link for: {res['name']}")
+
+print(f"\nFinished! Extracted {len(apps_list)} games. Saving to JSON...")
 
 source_structure = {
     "name": "Ashtemobile",
     "subtitle": "A source for all of my apps & games",
-    "description": "Welcome to my source! This catalog is generated directly via VIP API.",
+    "description": "Original links extracted directly from the website posts.",
     "iconURL": "https://ashtemobile.site/logo.png",
     "website": "https://ashtemobile.site/",
     "patreonURL": "https://ashtemobile.site/Ashtemobile.json",
@@ -127,22 +160,10 @@ source_structure = {
     "featuredApps": [],
     "headerURL": "https://ashtemobile.site/logo.png",
     "apps": apps_list,
-    "news": [
-        {
-            "title": "Instagram",
-            "identifier": "news_instagram",
-            "caption": "Ashtemobile",
-            "date": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S+00:00"),
-            "tintColor": "#ff007f",
-            "imageURL": "https://ashtemobile.site/logo.png",
-            "notify": True,
-            "url": "https://www.instagram.com/ashtemobile",
-            "appID": None,
-        }
-    ]
+    "news": []
 }
 
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"SUCCESS! Finished writing {len(apps_list)} games with 32-char .ipa links to {json_file}.")
+print(f"SUCCESS! Check {json_file}")
