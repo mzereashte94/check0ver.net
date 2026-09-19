@@ -1,20 +1,21 @@
 import hashlib
 import json
 import requests
+import re
 from datetime import datetime
 
-print("=== ASHTE MOBILE: CHECK0VER VIP SCRAPER (AUTO-AUTH) ===")
+print("=== ASHTE MOBILE: CHECK0VER VIP SCRAPER (.IPA LINKS) ===")
 
 json_file = "ashtemobile94.json"
 
-# کۆدەکان ڕاستەوخۆ لە وێنەکانەوە دەرهێنراون
-MY_COOKIE = "XSRF-TOKEN=eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0%3D; checkover_session=eyJpdil6InpzWUZNR1R5V0x4ZVdKV0FiMm1TYUE9PSIsInZhbHVlIjoiaV9GTGlzb2NMSFRobnZidXlyamhUSDYreERhRE9URzRreFBXS2VzeHNkNjcrRkdESjFRNnJrVFJzVVVva05CRjZCV3JuV28raEJVVFA3SW9qZFhoWndZZzBBM20vN1Zrejg3V1g4Vm5KaExVOC9MS1d4V2JqV0ZaY1Vsdy9CZVQiLCJtYWMiOiJIOWM4ZGUzYTNmZGNjODc3OTU4NzMxM2JkZTg3YThiMDU2YmRhZmU5YmE0M2JjZTJjODUyNWE4N2E4MzJmZjU5IiwidGFnIjoiIn0%3D; remember_customer_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdil6IlloOUhhnUnBUY01wamhFeFpPTUJJb1E9PSIsInZhbHVlIjoiaVZGJUUR4c0t4YTN4dkYwVjVzUmN3czQwMHZEcHNNQ3BhMll1bncrRE5jbEVIZWx5S09RTGRERWFMeWNZSU96VGdsQWQydEZMZHhYVjNPUXNXVHh1N2tqNnU1MHQ1cVhnamlOVUdxV2npoemsxNnZpUVE1L1VRd0pSZFIYV29pSzQxcVltVktkaWRBSXdYMjNDWVkzZjZkWXhQOHE0QjlSdkt6Y00vTHprVW1wQdlo4WVE1VUVOeE5HSmVSMlZGeVp6WUxMQnlhM0JXZUhoeVF4cGtjM3BpTW5GNmRYVnpxWEF3VjBwNGIzTjZPVWx4U3l0andYUlRhWGxrUjBKU01XOWhjRWRETUcxR1duRmViVFJzY2poVmJrbGFjV0pSWVZoa2RFRklXRVZKTUVzMmFFbFVUMUU5UFNJc0ltMXlZbTZsamN3WkdFME1XRTBaV1EyTW1SbU1US3hlVEVaWkdWa1pEUTFZelUwTldJMFRaSmxPRFk1TmpaaVpUTXdZV1ZrTkRFd016TXpZamxqT1dKbVptTTRNR1FpTENKMFlXY2lPaWxpZlElM0QlM0Q="
-MY_XSRF_TOKEN = "eyJpdil6IlJzcllVdWRRSWHVvR2pLMEFoVUh6Q1E9PSIsInZhbHVlIjoiY3JzcE9pUDhNZFNvZ2k2MUM1UmN6MFVqdlpvazhqZ2tRNWd6emhpdnRZWXRIWUpGSmtLcGZrdEpyRWI2c3BHUVhuSW1selU3Z0Jxd1JpbG9uK29BR3VSMDhTNMllc3d0LzNiYjhiNzhQdFV1Nm5Rb2RwTjVIbTl1MzdPU0RGRjYiLCJtYWMiOiIwMDcyYmQyNWRkOTM2YzlxMTZmODZjMWUxMzg5YjZkNDFlMDNhOWRkYzRkYzk2NjBiZjl2NTMxZjIyOWEzMTU5IiwidGFnIjoiIn0="
+# کۆدەکانت لێرەدا دابنێ وەکو خۆی
+MY_COOKIE = "لێرەدا_کۆدی_Cookie_دابنێ"
+MY_XSRF_TOKEN = "لێرەدا_کۆدی_X-XSRF-TOKEN_دابنێ"
 
 headers = {
     "Host": "check0ver.net",
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6.1 Mobile/15E148 Safari/604.1",
-    "Accept": "text/html, application/xhtml+xml, application/json, text/plain, */*",
+    "Accept": "application/json, text/plain, */*",
     "X-Inertia": "true",
     "X-Inertia-Version": "mimusoft-ipa-check0ver-customer-1.0.0",
     "X-Requested-With": "XMLHttpRequest",
@@ -40,7 +41,6 @@ for page in range(1, 165):
             break
             
         data = response.json()
-        
         items = data.get("props", {}).get("paginator", {}).get("data", [])
         
         if not items:
@@ -56,9 +56,16 @@ for page in range(1, 165):
             uuid = item.get("uuid", "")
             description = item.get("description", f"Extracted automatically from Check0ver: {name}")
             
+            # دروستکردنی ناوی فایلەکە بە خاوێنی
+            clean_name = re.sub(r'[^a-zA-Z0-9]', '', name.lower())
+            
+            # لێرەدا فێڵەکەمان بەکارهێناوە بۆ ئەوەی کۆتاییەکەی ببێت بە .ipa بێ ئەوەی لینکەکە تێکبچێت
             download_url = item.get("downloadURL")
             if not download_url:
-                download_url = f"https://check0ver.net/api/iapps/{uuid}/download"
+                download_url = f"https://check0ver.net/api/iapps/{uuid}/download?file={clean_name}.ipa"
+            else:
+                if ".ipa" not in download_url:
+                    download_url = f"{download_url}?file={clean_name}.ipa"
             
             numeric_id = int(hashlib.md5(uuid.encode()).hexdigest()[:8], 16) % (10**9) if uuid else int(hashlib.md5(name.encode()).hexdigest()[:8], 16) % (10**9)
             
@@ -148,4 +155,4 @@ source_structure = {
 with open(json_file, "w", encoding="utf-8") as f:
     json.dump(source_structure, f, ensure_ascii=False, indent=4)
 
-print(f"SUCCESS! Finished writing {len(apps_list)} games to {json_file}.")
+print(f"SUCCESS! Finished writing {len(apps_list)} games with .ipa links to {json_file}.")
