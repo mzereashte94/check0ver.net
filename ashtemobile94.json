@@ -1,0 +1,11 @@
+{
+    "name": "Ashtemobile",
+    "identifier": "com.ashtemobile.source",
+    "subtitle": "A source for all of my apps & games",
+    "description": "Catalog with exact copied CDN links.",
+    "iconURL": "https://ashtemobile.site/logo.png",
+    "website": "https://ashtemobile.site/",
+    "tintColor": "#ff007f",
+    "apps": [],
+    "news": []
+}
