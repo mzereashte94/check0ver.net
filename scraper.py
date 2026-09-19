@@ -9,9 +9,13 @@ print("=== ASHTE MOBILE: KSIGN & FEATHER (ALTSTORE v1) SCRAPER ===")
 
 json_file = "ashtemobile94.json"
 
-# برا گیان! تکایە کۆدە نوێیەکانت لێرەدا دابنێ
-MY_COOKIE = "لێرەدا_کۆدی_Cookie_نوێ_دابنێ"
-MY_XSRF_TOKEN = "لێرەدا_کۆدی_XSRF-TOKEN_نوێ_دابنێ"
+# برا گیان! تەنها دەقە ئینگلیزییەکانی ناو کەوانەکان بسڕەوە و کۆدە نوێیەکەی خۆت دابنێ
+MY_COOKIE = "PASTE_YOUR_COOKIE_HERE"
+MY_XSRF_TOKEN = "PASTE_YOUR_XSRF_TOKEN_HERE"
+
+# پاککردنەوەی کۆدەکان لە هەر پیتێکی نەخوازراو بۆ ئەوەی ئیرۆر نەدات
+MY_COOKIE = MY_COOKIE.strip()
+MY_XSRF_TOKEN = MY_XSRF_TOKEN.strip()
 
 headers = {
     "Host": "check0ver.net",
@@ -30,14 +34,13 @@ session.headers.update(headers)
 raw_apps = []
 
 print("Step 1: Checking Authentication & Fetching pages...")
-# پشکنینی سەرەتا بۆ ئەوەی بزانین کۆدەکان کار دەکەن یان بەسەرچوون
 first_page_url = "https://check0ver.net/en/iapps?page=1"
 try:
     response = session.get(first_page_url, timeout=15)
     if response.status_code != 200:
         print(f"CRITICAL ERROR: Failed to access API! Status Code: {response.status_code}")
-        print("برا گیان، کۆدەکانی Cookie و XSRF-TOKEN بەسەرچوون! تکایە لە مۆبایلەکەتەوە نوێیان بکەرەوە.")
-        sys.exit(1) # سکرێپتەکە دەوەستێنێت بۆ ئەوەی فایلە کۆنەکە خاڵی نەبێتەوە!
+        print("کۆدەکانی Cookie و XSRF-TOKEN هەڵەن یان بەسەرچوون! تکایە نوێیان بکەرەوە.")
+        sys.exit(1)
         
     data = response.json()
     items = data.get("props", {}).get("paginator", {}).get("data", [])
@@ -93,7 +96,6 @@ def process_app(item):
     if not exact_cdn_url or "api/check0ver" not in exact_cdn_url:
         return None
     
-    # چارەسەری کێشەی قەبارە (دەبێت بە ژمارە بێت نەک پیت)
     size_bytes = 314572800 
     try:
         if isinstance(size_str, str):
@@ -104,7 +106,6 @@ def process_app(item):
     except:
         pass
 
-    # فۆرماتی تایبەت و سەد لە سەد دروست بۆ Ksign و Feather و AltStore
     return {
         "name": name,
         "bundleIdentifier": bundle,
